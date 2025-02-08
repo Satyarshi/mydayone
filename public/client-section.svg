@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1280"
+   height="735"
+   viewBox="0 0 1280 735"
+   fill="none"
+   version="1.1"
+   id="svg9"
+   sodipodi:docname="client-section.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.7422485"
+     inkscape:cx="302.85366"
+     inkscape:cy="610.63029"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg9" />
+  <g
+     clip-path="url(#clip0_1_368)"
+     id="g4"
+     transform="scale(1,0.97474058)">
+    <path
+       d="M 0,-0.335938 H 1280 V 739.22 H 0 Z"
+       fill="url(#paint0_linear_1_368)"
+       id="path1"
+       style="fill:url(#paint0_linear_1_368)" />
+    <ellipse
+       cx="274.517"
+       cy="271.82501"
+       rx="274.517"
+       ry="271.82501"
+       transform="matrix(0.866025,-0.5,-0.5,-0.866025,1159.83,316.332)"
+       fill="url(#paint1_linear_1_368)"
+       id="ellipse1"
+       style="fill:url(#paint1_linear_1_368)" />
+    <ellipse
+       cx="274.517"
+       cy="271.82501"
+       rx="274.517"
+       ry="271.82501"
+       transform="matrix(-0.866025,-0.5,-0.5,0.866025,309.969,624.406)"
+       fill="url(#paint2_linear_1_368)"
+       id="ellipse2"
+       style="fill:url(#paint2_linear_1_368)" />
+    <path
+       fill-rule="evenodd"
+       clip-rule="evenodd"
+       d="m -16.8123,619.569 c 0,0 107.6963,107.949 265.4173,107.949 157.72,0 206.114,-121.097 383.05,-108.046 176.937,13.052 269.779,80.067 422.705,90.123 297.44,19.56 506.97,-45.804 506.97,-45.804 L 1481.36,786.2 -63.3593,753.766 Z"
+       fill="#ffffff"
+       fill-opacity="0.21"
+       id="path2" />
+    <path
+       fill-rule="evenodd"
+       clip-rule="evenodd"
+       d="m 1556.49,571.809 c 0,0 -93.17,120.472 -250.68,128.727 -157.5,8.254 -162.22,-62.48 -338.227,-40.187 C 791.572,682.643 792.688,721.427 640.495,739.474 573.188,747.455 443.193,555.933 189.101,665.446 -64.9901,774.959 -485.002,495.488 -485.002,495.488 l 357.514,244.91 1683.858,13.37 z"
+       fill="#ffffff"
+       fill-opacity="0.2"
+       id="path3" />
+    <path
+       fill-rule="evenodd"
+       clip-rule="evenodd"
+       d="m -16.8116,657.852 c 0,0 32.0514,72.049 171.0846,72.049 139.034,0 176.046,-103.174 332.019,-90.123 155.973,13.051 237.815,80.067 372.624,90.123 262.194,19.56 446.904,-45.804 446.904,-45.804 L 1291.7,753.77 -31.1718,740.4 Z"
+       fill="#ffffff"
+       id="path4" />
+  </g>
+  <defs
+     id="defs9">
+    <linearGradient
+       id="paint0_linear_1_368"
+       x1="20.309401"
+       y1="-551.71301"
+       x2="1229.4301"
+       y2="321.634"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#CE3A79"
+         id="stop4" />
+      <stop
+         offset="1"
+         stop-color="#7030A0"
+         id="stop5" />
+    </linearGradient>
+    <linearGradient
+       id="paint1_linear_1_368"
+       x1="-87.088097"
+       y1="-97.950897"
+       x2="271.44699"
+       y2="216.74001"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="white"
+         stop-opacity="0.4"
+         id="stop6" />
+      <stop
+         offset="1"
+         stop-color="white"
+         stop-opacity="0"
+         id="stop7" />
+    </linearGradient>
+    <linearGradient
+       id="paint2_linear_1_368"
+       x1="-87.088097"
+       y1="-97.950897"
+       x2="271.44699"
+       y2="216.74001"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="white"
+         stop-opacity="0.4"
+         id="stop8" />
+      <stop
+         offset="1"
+         stop-color="white"
+         stop-opacity="0"
+         id="stop9" />
+    </linearGradient>
+    <clipPath
+       id="clip0_1_368">
+      <rect
+         width="1280"
+         height="735"
+         fill="#ffffff"
+         id="rect9"
+         x="0"
+         y="0" />
+    </clipPath>
+  </defs>
+</svg>
