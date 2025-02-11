@@ -32,7 +32,7 @@ const OfferingSection: React.FC = () => {
                   key={tab}
                   className={`transition-all duration-300 ${
                     activeTab === tab
-                      ? "text-[#9C27B0] font-semibold pb-2"
+                      ? "text-[#9C27B0] font-semibold pb-2 border-b-4 rounded-md border-[#9C27B0] mb-0"
                       : "text-[#7B7E85] font-semibold hover:text-[#9C27B0] pb-2"
                   }`}
                   onClick={() => setActiveTab(tab)}
@@ -43,7 +43,7 @@ const OfferingSection: React.FC = () => {
             </div>
             {/* Animated underline */}
             
-            <hr className="w-[50%] mx-auto mt-2" />
+            <hr className="w-[50%] mx-auto" />
           </div>
 
           {/* Tab Content */}

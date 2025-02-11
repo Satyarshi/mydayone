@@ -10,11 +10,11 @@ const HeroSection: React.FC = () => {
         <AnimatedShinyTextDemo text={`Introducing our new product`} />
       </div>
 
-      <h1 className="text-3xl font-bold text-black mt-6 md:text4xl">
+      <h1 className="text-5xl font-bold text-black mt-6 md:text4xl">
         Most Talent Platforms Track Progress. We Drive Results.
       </h1>
 
-      <p className="text-lg text-gray-500 mt-4 max-w-4xl">
+      <p className="text-lg text-gray-500 mt-4 max-w-5xl">
         At myDayOne, we are working towards enabling organisations with Talent
         Readiness and Assessment to drive performance, effectiveness and
         efficiency consistently. Our solutions are designed to address the pain

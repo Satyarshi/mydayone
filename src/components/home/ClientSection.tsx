@@ -16,13 +16,13 @@ const ClientSection: React.FC = () => {
               className="absolute left-1/2 transform -translate-x-1/2 z-0 top-[-30px]"
             />
             {/* "Trusted by Leading Brands" Text */}
-            <h1 className="text-[#EBE6FA] text-3xl md:text-5xl lg:text-6xl font-bold z-10 px-2">
+            <h1 className="text-[#EBE6FA] text-5xl md:text-5xl lg:text-6xl font-bold z-10 px-2">
               Trusted by Leading Brands
             </h1>
           </div>
 
           {/* Paragraph and Logos */}
-          <p className="text-white text-sm sm:text-lg mt-6 px-2">
+          <p className="text-white text-lg mt-6 px-2">
             Over 100+ Companies Trust myDayOne to Boost Talent Readiness &
             Assessment
           </p>

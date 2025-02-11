@@ -74,7 +74,7 @@ const SkillsSection: React.FC = () => {
           {/* Skill Buttons Carousel */}
           <div
             ref={scrollRef}
-            className="flex overflow-x-scroll scrollbar-hide  no-scrollbar gap-4 snap-x snap-mandatory items-center justify-start scroll-smooth"
+            className="flex overflow-x-scroll scrollbar-hide no-scrollbar gap-4 snap-x snap-mandatory items-center justify-start scroll-smooth relative scroll-home"
           >
             {[
               "Prioritisation",

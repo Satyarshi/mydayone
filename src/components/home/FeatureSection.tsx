@@ -26,74 +26,49 @@ const FeatureSection: React.FC = () => {
           />
 
           {/* Features List */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Feature 1 */}
-            <div className="flex items-start">
-              <img
-                src="/feature-1.png.svg"
-                alt="Customized Learning Paths"
-                className="w-10 h-10 mr-4"
-              />
-              <div>
-                <h3 className="text-xl font-semibold text-[#111827]">
-                  Customizable Talent Acceleration Paths
-                </h3>
-                <p className="text-[#67687A] text-lg">
-                  Adaptable journeys aligned with roles.
-                </p>
-              </div>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="flex items-start">
-              <img
-                src="/feature-2.png.svg"
-                alt="Insightful Analytics"
-                className="w-10 h-10 mr-4"
-              />
-              <div>
-                <h3 className="text-xl font-semibold text-[#111827]">
-                  Insightful Analytics
-                </h3>
-                <p className="text-[#67687A] text-lg">
-                  Real-time tracking to refine learning strategies.
-                </p>
-              </div>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="flex items-start">
-              <img
-                src="/7067626 1.png"
-                alt="Effortless Integration"
-                className="w-10 h-10 mr-4"
-              />
-              <div>
-                <h3 className="text-xl font-semibold text-[#111827]">
-                  Effortless Integration
-                </h3>
-                <p className="text-[#67687A] text-lg">
-                  Integrates smoothly with current platforms.
-                </p>
-              </div>
-            </div>
-
-            {/* Feature 4 */}
-            <div className="flex items-start">
-              <img
-                alt="Clear ROI Metrics"
-                src="/data-analysis-graph-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--analytics-logo-business-bussines-vol-1-pack-infographics-illustrations-3962174 1.png"
-                className="w-10 h-10 mr-4"
-              />
-              <div>
-                <h3 className="text-xl font-semibold text-[#111827]">
-                  Clear ROI Metrics
-                </h3>
-                <p className="text-[#67687A] text-lg">
-                  Concrete results that reflect readiness levels.
-                </p>
-              </div>
-            </div>
+          <div className="my-4">
+            <ul className="text-left mb-10 text-[#7B7E85] text-lg space-y-4">
+              <li className="flex items-start text-base">
+                <img
+                  src="/check.svg"
+                  alt="Check Icon"
+                  className="mr-2 w-4 h-4 mt-1"
+                />
+                <div >
+                  <p className="text-lg"><span className="font-semibold text-lg">Hyper-Personalized Learning Journeys: </span>Tailored plans for each employee to maximize growth and impact.</p>
+                </div>
+              </li>
+              <li className="flex items-start text-base">
+                <img
+                  src="/check.svg"
+                  alt="Check Icon"
+                  className="mr-2 w-4 h-4 mt-1"
+                />
+                <div >
+                  <p className="text-lg"><span className="font-semibold text-lg">Real-Time Insights: </span>Intuitive dashboards to track progress and make smarter decisions.</p>
+                </div>
+              </li>
+              <li className="flex items-start text-base">
+                <img
+                  src="/check.svg"
+                  alt="Check Icon"
+                  className="mr-2 w-4 h-4 mt-1"
+                />
+                <div >
+                  <p className="text-lg"><span className="font-semibold text-lg">Scalable Development: </span> Streamline learning for your entire workforce without losing personalization.</p>
+                </div>
+              </li>
+              <li className="flex items-start text-base">
+                <img
+                  src="/check.svg"
+                  alt="Check Icon"
+                  className="mr-2 w-4 h-4 mt-1"
+                />
+                <div >
+                  <p className="text-lg"><span className="font-semibold text-lg">Boost Engagement: </span>Keep employees motivated and invested with immersive experiences.</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

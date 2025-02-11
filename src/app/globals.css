@@ -399,3 +399,11 @@ html {
   scroll-snap-align: start;
   height: 100vh; /* Each section takes the full viewport height */
 }
+.relative {
+  position: relative;
+}
+
+.scroll-home {
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+}
