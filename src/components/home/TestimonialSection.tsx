@@ -22,7 +22,7 @@ const TestimonialSection: React.FC = () => {
           <div className=" w-full relative flex flex-col items-center justify-center text-center max-w-3xl space-x-4 z-10">
             <div>
               <div className="w-full text-3xl text-gray-800 font-semibold testimonial relative space-y-2">
-                <div className="flex justify-center flex-col items-center md:flex-row">
+                <div className="flex justify-center flex-col items-center md:flex-row text-lg md:text-3xl">
 
                   We Empower Organizations
                   <span
@@ -49,7 +49,7 @@ const TestimonialSection: React.FC = () => {
                   </span>
                   And Their
                 </div>
-                <div className="flex justify-center flex-col items-center md:flex-row">
+                <div className="flex justify-center flex-col items-center md:flex-row text-lg md:text-3xl">
                   teams to  seamlessly
                   <span
                     className="relative mx-0 md:mx-2 w-20 hover:w-40 transition-width inline-block"
@@ -74,7 +74,7 @@ const TestimonialSection: React.FC = () => {
                   </span>
                   implement and
                 </div>
-                <div>
+                <div className="text-lg md:text-3xl">
                   manage dynamic Talent Programs
                   with ease.
                 </div>
