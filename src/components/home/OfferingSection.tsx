@@ -53,7 +53,7 @@ const OfferingSection: React.FC = () => {
             </div>
             {/* Animated underline */}
 
-            <hr className="w-[50%] mx-auto relative top-[-5px]" />
+            <hr className="w-[70%] mx-auto relative top-[-4px]" />
           </div>
 
           {/* Tab Content */}
