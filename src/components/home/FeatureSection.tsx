@@ -11,7 +11,7 @@ const FeatureSection: React.FC = () => {
           <img
             src="/Image.svg"
             alt="Person with laptop"
-            className="w-[300px] h-auto"
+            className="w-[500px] h-auto"
           />
         </div>
 

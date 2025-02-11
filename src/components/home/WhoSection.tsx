@@ -64,9 +64,9 @@ const WhoSection: React.FC = () => {
         {/* Right Side - Illustration */}
         <div className="flex justify-center mt-8 md:mt-0">
           <img
-            src="/about-1.png.png"
+            src="/newwho.svg"
             alt="Growth Illustration"
-            className="w-[300px] md:w-[400px] h-auto"
+            className="w-[300px] md:w-[500px] h-auto"
           />
         </div>
       </div>
