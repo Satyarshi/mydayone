@@ -62,12 +62,69 @@ const OfferingSection: React.FC = () => {
           </p>
 
           {/* Product Interface Image */}
-          <div className="flex justify-center mt-8">
+          {/* <div className="flex justify-center mt-8">
             <img
               src="/mydayoneProd1.png"
               alt="Product Interface"
               className={`offer-img transition-all duration-500 opacity-100 scale-100`}
             />
+          </div> */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            {/* Left Column */}
+            <div className="grid gap-4">
+              <div className="flex flex-col justify-between h-full gap-4 lg:gap-2">
+                <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6 h-[250px]">
+                  <div className="relative flex items-center justify-center border-4 border-purple-500 rounded-full w-24 h-24">
+                    <span className="text-2xl font-bold text-gray-800">
+                      00%
+                    </span>
+                  </div>
+                  <p className="mt-4 text-center text-gray-600 text-lg">
+                    Insert some key statistic
+                  </p>
+                </div>
+                <img
+                  src="/Meeting.svg"
+                  alt="Meeting Presentation"
+                  className="rounded-xl shadow w-full max-h-52 object-cover mt-auto"
+                />
+              </div>
+            </div>
+
+            {/* Middle Column */}
+            <div className="grid gap-4">
+              <img
+                src="/Meeting.svg"
+                alt="Statistics Graphic"
+                className="rounded-xl w-full  object-cover"
+              />
+              <div className="flex items-center justify-center bg-white rounded-xl shadow p-6">
+                <p className="text-center text-lg font-semibold">
+                  Insert a two-line sentence feature
+                </p>
+              </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="grid gap-4">
+              <img
+                src="/laptop.svg"
+                alt="Meeting Presentation"
+                className="rounded-xl w-full object-cover"
+              />
+              <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6">
+                <span className="text-3xl font-bold text-gray-800">000</span>
+                <p className="mt-2 text-center text-gray-600 text-lg">
+                  Insert key metric name
+                </p>
+              </div>
+              <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6">
+                <span className="text-3xl font-bold text-gray-800">000</span>
+                <p className="mt-2 text-center text-gray-600 text-lg">
+                  Insert key metric name
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
