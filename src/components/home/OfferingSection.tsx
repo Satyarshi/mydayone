@@ -94,9 +94,9 @@ const OfferingSection: React.FC = () => {
             {/* Middle Column */}
             <div className="grid gap-4">
               <img
-                src="/Meeting.svg"
+                src="/stats.svg"
                 alt="Statistics Graphic"
-                className="rounded-xl w-full  object-cover"
+                className="rounded-xl w-full md:max-h-80 object-cover"
               />
               <div className="flex items-center justify-center bg-white rounded-xl shadow p-6">
                 <p className="text-center text-lg font-semibold">
