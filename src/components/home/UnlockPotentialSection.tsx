@@ -24,9 +24,9 @@ const UnlockPotentialSection: React.FC<Props> = ({
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
-              src="/cta_component.svg"
+              src="/Container.svg"
               alt="Purple Background"
-              className="w-full h-full object-cover rounded-3xl"
+              className="w-full h-full object-contain rounded-3xl"
             />
           </div>
 
