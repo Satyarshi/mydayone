@@ -10,11 +10,10 @@ import { useRef } from "react";
 export const SmoothScrollHero = () => {
   return (
     <div className="bg-zinc-950">
-        <Hero />
+      <Hero />
     </div>
   );
 };
-
 
 const SECTION_HEIGHT = 1500;
 
@@ -25,7 +24,7 @@ const Hero = () => {
       className="relative w-full"
     >
       <CenterImage />
-
+      <Scroller />
       <ParallaxImages />
 
       <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-zinc-950/0 to-white" />
@@ -54,24 +53,45 @@ const CenterImage = () => {
 
   return (
     <>
+      <motion.div
+        className="sticky top-0 h-screen w-full flex justify-center items-center overflow-visible "
+        style={{
+          clipPath,
+          backgroundSize,
+          opacity,
+          backgroundImage: "url(/whiteCircle.png)",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <img
+          src="/mydayone.png"
+          alt="Overlay Image"
+          className="absolute w-48 md:w-96 "
+        />
+      </motion.div>
+    </>
+  );
+};
+const Scroller = () => {
+  const { scrollY } = useScroll();
+  
+  const opacity = useTransform(scrollY, [200, 300], [1, 0]);
+
+  const translateY = useTransform(scrollY, [0, 300], [0, 60]); // Moves down by 60px
+
+  return (
     <motion.div
-      className="sticky top-0 h-screen w-full flex justify-center items-center overflow-visible "
-      style={{
-        clipPath,
-        backgroundSize,
-        opacity,
-        backgroundImage: "url(/whiteCircle.png)",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      className="fixed left-1/2 top-[calc(50vh+200px)] -translate-x-1/2 flex items-center justify-center"
+      style={{ opacity }}
     >
-      <img
-        src="/mydayone.png"
-        alt="Overlay Image"
-        className="absolute w-48 md:w-96 "
-      />
+      <div className="relative w-12 h-24 border-4 border-gray-800 rounded-full overflow-hidden">
+        <motion.div
+          className="absolute top-2 left-[40%] transform -translate-x-1/2 w-3 h-3 bg-gray-800 rounded-full"
+          style={{ y: translateY }}
+        />
+      </div>
     </motion.div>
-        </>
   );
 };
 
@@ -142,5 +162,3 @@ const ParallaxImg = ({ className, alt, src, start, end }: ParallaxImgProps) => {
     />
   );
 };
-
-
