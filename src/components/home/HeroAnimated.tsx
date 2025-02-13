@@ -24,7 +24,6 @@ const Hero = () => {
       className="relative w-full"
     >
       <CenterImage />
-      <Scroller />
       <ParallaxImages />
 
       <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-zinc-950/0 to-white" />
@@ -35,8 +34,8 @@ const Hero = () => {
 const CenterImage = () => {
   const { scrollY } = useScroll();
 
-  const clip1 = useTransform(scrollY, [0, 1500], [25, 0]);
-  const clip2 = useTransform(scrollY, [0, 1500], [75, 100]);
+  const clip1 = useTransform(scrollY, [0, 1500], [0, -100]);
+  const clip2 = useTransform(scrollY, [0, 1500], [100, 100]);
 
   const clipPath = useMotionTemplate`polygon(${clip1}% ${clip1}%, ${clip2}% ${clip1}%, ${clip2}% ${clip2}%, ${clip1}% ${clip2}%)`;
 
@@ -64,33 +63,48 @@ const CenterImage = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <img
-          src="/mydayone.png"
-          alt="Overlay Image"
-          className="absolute w-48 md:w-96 "
-        />
+        <div className="flex md:flex-row flex-col  justify-center items-center absolute w-full md:-ml-10 gap-x-10">
+          <p className="text-white text-nowrap font-thin text-xl  ">Welcome to</p>
+          <img
+            src="/mydayone.png"
+            alt="Overlay Image"
+            className="w-96 "
+          />
+          <p className="text-white text-nowrap font-thin text-xl">Est. 2023</p>
+        </div>
+        <div className="flex flex-col justify-center items-center absolute w-full md:-ml-10 gap-x-10 text-white text-xl text-center top-[80vh] gap-5  ">
+        Transform Learning into Measurable Success with <br /> myDayOne.
+        <Scroller/>
+        </div>
+
       </motion.div>
     </>
   );
 };
 const Scroller = () => {
   const { scrollY } = useScroll();
-  
+
   const opacity = useTransform(scrollY, [200, 300], [1, 0]);
 
   const translateY = useTransform(scrollY, [0, 300], [0, 60]); // Moves down by 60px
 
   return (
     <motion.div
-      className="fixed left-1/2 top-[calc(50vh+200px)] -translate-x-1/2 flex items-center justify-center"
+      className="md:absolute md:right-1 flex items-center justify-center"
       style={{ opacity }}
     >
-      <div className="relative w-12 h-24 border-4 border-gray-800 rounded-full overflow-hidden">
+      <div className="flex items-center gap-4">
+
+      <div className="relative w-8 h-14 border-2 border-gray-500 rounded-full overflow-hidden">
         <motion.div
-          className="absolute top-2 left-[40%] transform -translate-x-1/2 w-3 h-3 bg-gray-800 rounded-full"
+          className="absolute left-2 mt-2  w-3 h-3 bg-gray-500 rounded-full"
           style={{ y: translateY }}
-        />
+          />
       </div>
+      <p className="text-white text-sm font-thin">
+      Scroll to Explore
+      </p>
+          </div>
     </motion.div>
   );
 };
