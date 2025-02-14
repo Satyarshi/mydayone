@@ -32,20 +32,20 @@ const UnlockPotentialSection: React.FC<Props> = ({
 
           {/* Text Content */}
           <div className="relative py-16 px-8 rounded-xl">
-            <div className="mb-4">
+            {/* <div className="mb-4">
               <button className="bg-white text-purple-700 font-semibold px-4 py-2 rounded-full">
                 {ctaText}
               </button>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            </div> */}
+            <h1 className="text-4xl md:text-4xl font-bold mb-4 text-[#222222]">
               {title}
             </h1>
-            <p className="text-lg text-white mb-6 max-w-xl mx-auto">
+            <p className="text-lg text-[#7B7E85] mb-6 max-w-xl mx-auto">
               {description}
             </p>
             <Link href={link}>
               {" "}
-              <button className="bg-purple-500 text-white font-semibold px-6 py-3 rounded-xl">
+              <button className="bg-[#70319F] text-white font-semibold px-6 py-3 rounded-xl">
                 {buttonText}
               </button>
             </Link>

@@ -1,11 +1,25 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ImageTitle from "../Title/ImageTitle";
 import { div } from "framer-motion/client";
+import { AnimatedCircularProgressBar } from "@/components/magicui/animated-circular-progress-bar";
 
 const OfferingSection: React.FC = () => {
   // State to track the active tab
   const [activeTab, setActiveTab] = useState<string>("Products");
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    const handleIncrement = (prev: number) => {
+      if (prev === 100) {
+        return 0;
+      }
+      return prev + 10;
+    };
+    setValue(handleIncrement);
+    const interval = setInterval(() => setValue(handleIncrement), 2000);
+    return () => clearInterval(interval);
+  }, []);
 
   // Content for each tab
   const tabContent: { [key: string]: string } = {
@@ -74,11 +88,18 @@ const OfferingSection: React.FC = () => {
             <div className="grid gap-4">
               <div className="flex flex-col justify-between h-full gap-4 lg:gap-2">
                 <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6 h-[250px]">
-                  <div className="relative flex items-center justify-center border-4 border-purple-500 rounded-full w-24 h-24">
+                  {/* <div className="relative flex items-center justify-center border-4 border-purple-500 rounded-full w-24 h-24">
                     <span className="text-2xl font-bold text-gray-800">
                       00%
                     </span>
-                  </div>
+                  </div> */}
+                  <AnimatedCircularProgressBar
+                    max={100}
+                    min={0}
+                    value={value}
+                    gaugePrimaryColor="rgb(79 70 229)"
+                    gaugeSecondaryColor="rgba(0, 0, 0, 0.1)"
+                  />
                   <p className="mt-4 text-center text-gray-600 text-lg">
                     Insert some key statistic
                   </p>
