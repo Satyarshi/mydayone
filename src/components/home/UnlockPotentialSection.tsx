@@ -20,13 +20,13 @@ const UnlockPotentialSection: React.FC<Props> = ({
   return (
     <div className="flex flex-col w-full my-4 md:my-10">
       <section className=" flex flex-col items-center justify-center text-center py-3 w-full">
-        <div className="w-[90%] md:w-[70%] mx-auto relative ">
+        <div className="w-[90%] md:w-[75%] mx-auto relative ">
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
               src="/Container.svg"
               alt="Purple Background"
-              className="w-full h-full object-contain rounded-3xl"
+              className="w-full h-full object-cover rounded-3xl"
             />
           </div>
 
