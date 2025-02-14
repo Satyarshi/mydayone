@@ -72,7 +72,7 @@ const CenterImage = () => {
           />
           <p className="text-white text-nowrap font-thin text-xl">Est. 2023</p>
         </div>
-        <div className="flex flex-col justify-center items-center absolute w-full md:-ml-10 gap-x-10 text-white text-xl text-center top-[80vh] gap-5  ">
+        <div className="flex flex-col justify-center items-center absolute w-full md:-ml-10 gap-x-10 text-white text-xl text-center top-[70vh] md:top-[80vh] gap-5  ">
         Transform Learning into Measurable Success with <br /> myDayOne.
         <Scroller/>
         </div>
