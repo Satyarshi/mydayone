@@ -3,11 +3,11 @@ import ImageTitle from "../Title/ImageTitle";
 
 const FeatureSection: React.FC = () => {
   return (
-    <section className="flex flex-col items-center text-center py-3 w-full mb-16 px-2 bg-white md:flex-row md:justify-center">
-      <div className="container mx-auto text-center relative z-10 flex flex-col md:flex-row items-center justify-around">
+    <section className="flex flex-col items-center text-center md:w-11/12 w-full px-4 pb-12 mx-auto bg-white">
+      <div className="container mx-auto text-center z-10 flex flex-col lg:flex-row items-center justify-between">
         {/* Left Side - Image */}
 
-        <div className="flex justify-center md:justify-start mb-8 md:mb-0">
+        <div className="flex justify-center md:justify-start mb-5">
           <img
             src="/Image.svg"
             alt="Person with laptop"
@@ -16,7 +16,7 @@ const FeatureSection: React.FC = () => {
         </div>
 
         {/* Right Side - Features */}
-        <div className="max-w-2xl text-left relative">
+        <div className="lg:max-w-2xl text-left">
           {/* Heading */}
           <ImageTitle
             image="/features.svg"
@@ -26,8 +26,8 @@ const FeatureSection: React.FC = () => {
           />
 
           {/* Features List */}
-          <div className="my-4">
-            <ul className="text-left mb-10 text-[#7B7E85] text-lg space-y-4">
+          <div className="mt-2">
+            <ul className="text-left text-[#7B7E85] text-base md:text-lg space-y-4">
               <li className="flex items-start text-base">
                 <img
                   src="/check.svg"
@@ -35,7 +35,7 @@ const FeatureSection: React.FC = () => {
                   className="mr-2 w-4 h-4 mt-1"
                 />
                 <div >
-                  <p className="text-lg"><span className="font-semibold text-lg">Hyper-Personalized Learning Journeys: </span>Tailored plans for each employee to maximize growth and impact.</p>
+                  <p className="text-base md:text-lg"><span className="font-semibold text-base md:text-lg">Customisable Talent Acceleration Paths: </span>Adaptable journeys aligned with roles.</p>
                 </div>
               </li>
               <li className="flex items-start text-base">
@@ -45,7 +45,7 @@ const FeatureSection: React.FC = () => {
                   className="mr-2 w-4 h-4 mt-1"
                 />
                 <div >
-                  <p className="text-lg"><span className="font-semibold text-lg">Real-Time Insights: </span>Intuitive dashboards to track progress and make smarter decisions.</p>
+                  <p className="text-base md:text-lg"><span className="font-semibold text-base md:text-lg">Insightful Analytics: </span>Real-time tracking to refine learning strategies.</p>
                 </div>
               </li>
               <li className="flex items-start text-base">
@@ -55,7 +55,7 @@ const FeatureSection: React.FC = () => {
                   className="mr-2 w-4 h-4 mt-1"
                 />
                 <div >
-                  <p className="text-lg"><span className="font-semibold text-lg">Scalable Development: </span> Streamline learning for your entire workforce without losing personalization.</p>
+                  <p className="text-base md:text-lg"><span className="font-semibold text-base md:text-lg">Effortless Integration: </span> Integrates smoothly with current platforms.</p>
                 </div>
               </li>
               <li className="flex items-start text-base">
@@ -65,7 +65,7 @@ const FeatureSection: React.FC = () => {
                   className="mr-2 w-4 h-4 mt-1"
                 />
                 <div >
-                  <p className="text-lg"><span className="font-semibold text-lg">Boost Engagement: </span>Keep employees motivated and invested with immersive experiences.</p>
+                  <p className="text-base md:text-lg"><span className="font-semibold text-base md:text-lg">Clear ROI Metrics: </span>Concrete results that reflect readiness levels.</p>
                 </div>
               </li>
             </ul>

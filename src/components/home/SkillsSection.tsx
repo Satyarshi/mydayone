@@ -28,18 +28,20 @@ const SkillsSection: React.FC = () => {
   };
 
   return (
-    <section className="relative flex flex-col items-center text-center px-2 md:py-12 md:w-10/12 w-full mb-5 md:mb-32 md:px-8 mx-auto bg-white">
+    <section className="flex flex-col items-center text-center md:w-11/12 w-full px-4 pb-10 mx-auto bg-white">
       <div className="container mx-auto text-center z-10">
         {/* Title and Description */}
-        <div className="flex flex-col md:flex-row items-center justify-center mb-8 relative">
-          <ImageTitle
-            image="/Skills.svg"
-            title="Building Essential Competencies and Skills for Growth and Success"
-            oreintation="left"
-            description=""
-          />
+        <div className="flex flex-col lg:flex-row items-center lg:gap-6 justify-center mb-5">
+          <div className="lg:flex-1">
+            <ImageTitle
+              image="/Skills.svg"
+              title="Building Essential Competencies and Skills for Growth and Success"
+              oreintation="left"
+              description=""
+            />
+          </div>
 
-          <p className="text-[#7B7E85] text-lg max-w-[38rem] mx-auto text-justify">
+          <p className="text-[#7B7E85] text-base md:text-lg lg:max-w-2xl mx-auto text-justify lg:flex-[0.7]">
             We focus on enhancing core competencies and skills that empower
             readiness and talent acceleration to achieve higher productivity,
             foster collaboration and drive organizational success. Our approach
@@ -49,7 +51,7 @@ const SkillsSection: React.FC = () => {
         </div>
         <hr className="border border-[#DEDEDE]" />
         {/* Skills Carousel */}
-        <div className="flex items-center justify-center gap-2 mt-6 max-w-5xl mx-auto text-xs">
+        <div className="flex items-center justify-center gap-2 mt-5 w-full mx-auto text-xs md:text-sm">
           {/* Left Arrow */}
           <button
             onClick={scrollLeft}

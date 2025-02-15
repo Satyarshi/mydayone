@@ -16,23 +16,25 @@ const Home: React.FC = () => {
   return (
     <>
       <PageHeader title="Home" />
-      <SmoothScrollHero />
-      <HeroSection />
-      <ClientSection />
-      <StatsSection />
-      <SkillsSection />
-      <FeatureSection />
-      <WhoSection />
-      <OfferingSection />
-      <TestimonialSection />
-      <BlogsSection />
-      <UnlockPotentialSection
-        buttonText="Download Now"
-        ctaText="Ready to Accelerate Talent Readiness?"
-        description="Partner with myDayOne to drive talent readiness, talent assessment across your workforce. The future of talent growth starts here."
-        title="Ready to Accelerate Talent Readiness?"
-        link="/form#service-form"
-      />
+      <div className="">
+        <SmoothScrollHero />
+        <HeroSection />
+        <ClientSection />
+        <StatsSection />
+        <SkillsSection />
+        <FeatureSection />
+        <WhoSection />
+        <OfferingSection />
+        <TestimonialSection />
+        <BlogsSection />
+        <UnlockPotentialSection
+          buttonText="Download Now"
+          ctaText="Ready to Accelerate Talent Readiness?"
+          description="Partner with myDayOne to drive talent readiness, talent assessment across your workforce. The future of talent growth starts here."
+          title="Ready to Accelerate Talent Readiness?"
+          link="/form#service-form"
+        />
+      </div>
     </>
   );
 };

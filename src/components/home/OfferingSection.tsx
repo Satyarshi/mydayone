@@ -7,6 +7,7 @@ import { AnimatedCircularProgressBar } from "@/components/magicui/animated-circu
 const OfferingSection: React.FC = () => {
   // State to track the active tab
   const [activeTab, setActiveTab] = useState<string>("Products");
+  const [isFading, setIsFading] = useState(false);
   const [value, setValue] = useState(0);
 
   useEffect(() => {
@@ -21,6 +22,7 @@ const OfferingSection: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
+
   // Content for each tab
   const tabContent: { [key: string]: string } = {
     Products:
@@ -28,7 +30,15 @@ const OfferingSection: React.FC = () => {
     Services:
       "We provide customisable curation of consultation, coaching, content creation, program design, handholding and other bespoke support services tailored to meet unique requirements of your organisation. Our team of professionals is dedicated to ensure your talent and learning programs are more effective, insightful, effortless, hyper personalised at scale and provide desired ROI/outcomes.",
   };
-
+  const handleToggle = (tabContent: string) => {
+    if (tabContent !== activeTab) {
+      setIsFading(true);
+      setTimeout(() => {
+        setActiveTab(tabContent);
+        setIsFading(false);
+      }, 200); // Match the animation duration
+    }
+  };
   return (
     <section
       className="relative md:py-14 offer-section bg-no-repeat bg-cover bg-center"
@@ -48,30 +58,24 @@ const OfferingSection: React.FC = () => {
               {["Products", "Services"].map((tab) => (
                 <div className="flex flex-col" key={tab}>
                   <button
-                    className={`transition-all duration-500 ${
+                    onClick={() => handleToggle(tab)}
+                    className={`text-lg px-4 py-2 rounded-[50px] transition duration-300 ${
                       activeTab === tab
-                        ? "text-[#9C27B0] font-semibold pb-2 mb-0"
-                        : "text-[#7B7E85] font-semibold hover:text-[#9C27B0] pb-2"
+                        ? "text-white bg-purple-800"
+                        : "text-gray-500 hover:text-gray-800"
                     }`}
-                    onClick={() => setActiveTab(tab)}
                   >
                     {tab}
                   </button>
-                  <div
-                    className={`border-[#9C27B0] border-t-4 w-32 h-2 rounded-xl ${
-                      activeTab === tab ? "block" : "invisible"
-                    }`}
-                  ></div>
                 </div>
               ))}
             </div>
-            {/* Animated underline */}
-
-            <hr className="w-[70%] mx-auto relative top-[-4px]" />
           </div>
 
           {/* Tab Content */}
-          <p className="text-center text-[#7B7E85] max-w-3xl mx-auto mb-8 text-lg sm:text-lg">
+          <p className={`text-center text-[#7B7E85] max-w-3xl mx-auto mb-8 text-lg sm:text-lg ${
+            isFading ? "opacity-0" : "opacity-100"
+          }`}>
             {tabContent[activeTab]}
           </p>
 

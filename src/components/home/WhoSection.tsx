@@ -3,12 +3,12 @@ import ImageTitle from "../Title/ImageTitle";
 
 const WhoSection: React.FC = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center text-center md:text-left md:py-12 w-full md:mb-28 bg-white relative">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-around relative z-10 px-4">
+    <section className="relative flex flex-col items-center text-center md:w-11/12 w-full px-4 pb-10 mx-auto bg-white">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between z-10">
         {/* Left Side - Text Content */}
-        <div className="max-w-2xl">
+        <div className="lg:max-w-2xl">
           {/* Heading */}
-          <div className=" mb-6">
+          <div className=" mb-2">
             <ImageTitle
               image="/Who.svg"
               title="Empowering Ambitious Talent to Achieve Their Potential"
@@ -18,7 +18,7 @@ const WhoSection: React.FC = () => {
           </div>
 
           {/* Description */}
-          <p className="text-[#7B7E85] text-lg mb-6 text-left ">
+          <p className="text-[#7B7E85] text-base md:text-lg mb-5 text-left ">
             Our suite is designed for individuals and organizations committed to
             achieve talent readiness aiming to enhance productivity,
             effectiveness and drive impactful results.
