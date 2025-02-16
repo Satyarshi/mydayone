@@ -59,11 +59,10 @@ const OfferingSection: React.FC = () => {
                 <div className="flex flex-col" key={tab}>
                   <button
                     onClick={() => handleToggle(tab)}
-                    className={`text-lg px-4 py-2 rounded-[50px] transition duration-300 ${
-                      activeTab === tab
+                    className={`text-lg px-4 py-2 rounded-[50px] transition duration-300 ${activeTab === tab
                         ? "text-white bg-purple-800"
                         : "text-gray-500 hover:text-gray-800"
-                    }`}
+                      }`}
                   >
                     {tab}
                   </button>
@@ -73,66 +72,46 @@ const OfferingSection: React.FC = () => {
           </div>
 
           {/* Tab Content */}
-          <p className={`text-center text-[#7B7E85] max-w-3xl mx-auto mb-8 text-lg sm:text-lg ${
-            isFading ? "opacity-0" : "opacity-100"
-          }`}>
+          <p className={`text-center text-[#7B7E85] max-w-3xl mx-auto mb-8 text-lg sm:text-lg ${isFading ? "opacity-0" : "opacity-100"
+            }`}>
             {tabContent[activeTab]}
           </p>
 
-          {/* Product Interface Image */}
-          {/* <div className="flex justify-center mt-8">
-            <img
-              src="/mydayoneProd1.png"
-              alt="Product Interface"
-              className={`offer-img transition-all duration-500 opacity-100 scale-100`}
-            />
-          </div> */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-            {/* Left Column */}
-            <div className="grid gap-4">
-              <div className="flex flex-col justify-between h-full gap-4 lg:gap-2">
-                <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6 h-[250px]">
-                  {/* <div className="relative flex items-center justify-center border-4 border-purple-500 rounded-full w-24 h-24">
-                    <span className="text-2xl font-bold text-gray-800">
-                      00%
-                    </span>
-                  </div> */}
-                  <AnimatedCircularProgressBar
-                    max={100}
-                    min={0}
-                    value={value}
-                    gaugePrimaryColor="rgb(79 70 229)"
-                    gaugeSecondaryColor="rgba(0, 0, 0, 0.1)"
-                  />
-                  <p className="mt-4 text-center text-gray-600 text-lg">
-                    Insert some key statistic
-                  </p>
-                </div>
-                <img
-                  src="/Meeting.svg"
-                  alt="Meeting Presentation"
-                  className="rounded-xl shadow w-full max-h-52 object-cover mt-auto"
-                />
-              </div>
-            </div>
+          <div className="flex items-start justify-center gap-4">
+            <div className="w-[300px] flex items-center justify-center gap-4 flex-col" >
+              <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow w-full p-6">
 
-            {/* Middle Column */}
-            <div className="grid gap-4">
+                <AnimatedCircularProgressBar
+                  max={100}
+                  min={0}
+                  value={value}
+                  gaugePrimaryColor="rgb(79 70 229)"
+                  gaugeSecondaryColor="rgba(0, 0, 0, 0.1)"
+                />
+                <p className="mt-4 text-center text-gray-600 text-lg">
+                  Insert some key statistic
+                </p>
+              </div>
               <img
+                src="/Meeting.svg"
+                alt="Meeting Presentation"
+                className="rounded-xl shadow w-full max-h-52 object-cover mt-auto"
+              />
+            </div>
+            <div className=" flex flex-col items-center justify-center gap-4 overflow-hidden">
+            <img
                 src="/stats.svg"
                 alt="Statistics Graphic"
-                className="rounded-xl w-full md:max-h-80 object-cover"
+                className="rounded-xl  object-cover w-[456px]"
               />
-              <div className="flex items-center justify-center bg-white rounded-xl shadow p-6">
+              <div className="flex items-center w-full justify-center bg-white rounded-xl shadow p-6">
                 <p className="text-center text-lg font-semibold">
                   Insert a two-line sentence feature
                 </p>
               </div>
             </div>
-
-            {/* Right Column */}
-            <div className="grid gap-4">
-              <img
+            <div className="w-[315px] flex flex-col gap-4">
+            <img
                 src="/laptop.svg"
                 alt="Meeting Presentation"
                 className="rounded-xl w-full object-cover"
@@ -149,8 +128,9 @@ const OfferingSection: React.FC = () => {
                   Insert key metric name
                 </p>
               </div>
-            </div>
+            </div >
           </div>
+
         </div>
       </div>
     </section>
