@@ -53,7 +53,7 @@ const OfferingSection: React.FC = () => {
           />
 
           {/* Tabs Section */}
-          <div className="mb-10 relative">
+          <div className="mb-6 relative">
             <div className="flex justify-center gap-4 sm:gap-8 text-base sm:text-2xl relative">
               {["Products", "Services"].map((tab) => (
                 <div className="flex flex-col" key={tab}>
