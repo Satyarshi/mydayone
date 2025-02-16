@@ -77,8 +77,8 @@ const OfferingSection: React.FC = () => {
             {tabContent[activeTab]}
           </p>
 
-          <div className="flex items-start justify-center gap-4">
-            <div className="w-[300px] flex items-center justify-center gap-4 flex-col" >
+          <div className="flex items-start justify-center gap-4 flex-wrap md:flex-nowrap ">
+            <div className="w-full md:w-[300px] flex items-center justify-center gap-4 flex-col" >
               <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow w-full p-6">
 
                 <AnimatedCircularProgressBar
@@ -98,11 +98,11 @@ const OfferingSection: React.FC = () => {
                 className="rounded-xl shadow w-full max-h-52 object-cover mt-auto"
               />
             </div>
-            <div className=" flex flex-col items-center justify-center gap-4 overflow-hidden">
+            <div className="w-full md:w-[456px] flex flex-col items-center justify-center gap-4 overflow-hidden">
             <img
                 src="/stats.svg"
                 alt="Statistics Graphic"
-                className="rounded-xl  object-cover w-[456px]"
+                className="rounded-xl  object-cover md:w-[456px] "
               />
               <div className="flex items-center w-full justify-center bg-white rounded-xl shadow p-6">
                 <p className="text-center text-lg font-semibold">
@@ -110,7 +110,7 @@ const OfferingSection: React.FC = () => {
                 </p>
               </div>
             </div>
-            <div className="w-[315px] flex flex-col gap-4">
+            <div className="w-full md:w-[315px] flex flex-col gap-4">
             <img
                 src="/laptop.svg"
                 alt="Meeting Presentation"
