@@ -3,7 +3,7 @@ import ImageTitle from "../Title/ImageTitle";
 
 const WhoSection: React.FC = () => {
   return (
-    <section className="relative flex flex-col items-center text-center md:w-11/12 w-full px-4 pb-10 mx-auto bg-white">
+    <section className="relative flex flex-col items-center text-center md:w-11/12 w-full px-4 pb-10 mx-auto bg-[#fbfbfc]">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between z-10">
         {/* Left Side - Text Content */}
         <div className="lg:max-w-2xl">

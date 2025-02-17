@@ -28,7 +28,7 @@ const SkillsSection: React.FC = () => {
   };
 
   return (
-    <section className="flex flex-col items-center text-center md:w-11/12 w-full px-4 pb-10 mx-auto bg-white">
+    <section className="flex flex-col items-center text-center md:w-11/12 w-full px-4 pb-10 mx-auto bg-[#fbfbfc]">
       <div className="container mx-auto text-center z-10">
         {/* Title and Description */}
         <div className="flex flex-col lg:flex-row items-center lg:gap-6 justify-center mb-5">

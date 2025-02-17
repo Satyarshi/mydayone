@@ -26,7 +26,7 @@ const Blog: React.FC = async () => {
     const blogs = await getPopularBlogs();
 
     return (
-        <div className="relative py-5 bg-gradient-to-b from-white to-gray-50 px-2">
+        <div className="relative py-5 bg-gradient-to-b from-[#fbfbfc] to-gray-50 px-2">
             {/* Page Title */}
             <div className="relative text-center pt-8 pb-16">
                 <ImageTitle

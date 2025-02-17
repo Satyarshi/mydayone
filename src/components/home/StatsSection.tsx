@@ -4,7 +4,7 @@ const StatsSection: React.FC = () => {
   return (
     <section className="flex flex-col items-center justify-center text-center py-20 w-full">
         {/* Statistics */}
-        <div className="flex flex-wrap items-center justify-center gap-4 gap-y-7 lg:gap-14 md:gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-4 gap-y-7 lg:gap-14 md:gap-4 bg-[#fbfbfc]">
 
           <div className="w-full md:w-auto">
             <h2 className="text-5xl font-bold text-[#9C27B0]">+130%</h2>
