@@ -64,29 +64,23 @@ const CenterImage = () => {
         }}
       >
         <div className="flex md:flex-row flex-col  justify-center items-center absolute w-full md:-ml-10 gap-x-10">
-          <p className="text-white text-nowrap font-thin text-xl  ">Welcome to</p>
-          <img
-            src="/mydayone.png"
-            alt="Overlay Image"
-            className="w-96 "
-          />
+          <p className="text-white text-nowrap font-thin text-xl  ">
+            Welcome to
+          </p>
+          <img src="/mydayone.png" alt="Overlay Image" className="w-96 " />
           <p className="text-white text-nowrap font-thin text-xl">Est. 2023</p>
         </div>
         <div className="flex flex-col justify-center items-center absolute w-full md:-ml-10 gap-x-10 text-sm text-white text-center top-[80vh] md:top-[90vh] gap-5  ">
-        Transform Learning into Measurable Success with <br /> myDayOne.
-        <Scroller/>
+          Transform Learning into Measurable Success with <br /> myDayOne.
+          <Scroller />
         </div>
-
       </motion.div>
     </>
   );
 };
 const Scroller = () => {
   const { scrollY } = useScroll();
-
   const opacity = useTransform(scrollY, [200, 300], [1, 0]);
-
-  const translateY = useTransform(scrollY, [0, 300], [0, 60]); // Moves down by 60px
 
   return (
     <motion.div
@@ -94,17 +88,23 @@ const Scroller = () => {
       style={{ opacity }}
     >
       <div className="flex items-center gap-4">
-
-      <div className="relative w-8 h-14 border-2 border-gray-500 rounded-full overflow-hidden">
-        <motion.div
-          className="absolute left-2 mt-2  w-3 h-3 bg-gray-500 rounded-full"
-          style={{ y: translateY }}
+        <div className="relative w-8 h-14 border-2 border-gray-500 rounded-full overflow-hidden flex justify-center">
+          <motion.div
+            className="absolute w-3 h-3 bg-gray-500 rounded-full mt-1"
+            animate={{
+              y: [0, 40],
+              opacity: [1, 0],
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              repeatType:"loop",
+              ease: "easeInOut",
+            }}
           />
+        </div>
+        <p className="text-white text-sm font-thin">Scroll to Explore</p>
       </div>
-      <p className="text-white text-sm font-thin">
-      Scroll to Explore
-      </p>
-          </div>
     </motion.div>
   );
 };

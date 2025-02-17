@@ -28,7 +28,7 @@ const Home: React.FC = () => {
         <TestimonialSection />
         <BlogsSection />
         <UnlockPotentialSection
-          buttonText="Download Now"
+          buttonText="Explore Solutions"
           ctaText="Ready to Accelerate Talent Readiness?"
           description="Partner with myDayOne to drive talent readiness, talent assessment across your workforce. The future of talent growth starts here."
           title="Ready to Accelerate Talent Readiness?"

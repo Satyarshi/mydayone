@@ -48,6 +48,7 @@
 }
 html {
   scroll-behavior: smooth; /* Smooth transition between sections */
+  background-color: #fbfbfc;
 }
 
 .gradient-text {
@@ -62,10 +63,7 @@ html {
 .marquee:hover {
   background: linear-gradient(#914bc6, #ce3a79);
 }
-.footer-section {
-  background-image: url("/footer.svg");
-  background-size: cover;
-}
+
 /* For webkit browsers */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -196,19 +194,6 @@ html {
   }
 }
 
-/* footer responsiveness */
-
-@media (max-width: 882px) {
-  .footer {
-    gap: 2rem;
-  }
-}
-
-@media (max-width: 757px) {
-  .company {
-    flex-wrap: wrap;
-  }
-}
 
 /* product benefits responsiveness */
 .benefits {

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import ImageTitle from "../Title/ImageTitle";
 import { div } from "framer-motion/client";
-import { AnimatedCircularProgressBar } from "@/components/magicui/animated-circular-progress-bar";
+import ProgressRing from "./ProgressRing";
 
 const OfferingSection: React.FC = () => {
   // State to track the active tab
@@ -41,10 +41,10 @@ const OfferingSection: React.FC = () => {
   };
   return (
     <section
-      className="relative md:py-14 offer-section bg-no-repeat bg-cover bg-center"
+      className="relative md:py-14 offer-section bg-no-repeat bg-cover bg-center "
       style={{ backgroundImage: "url(/Rectangle.svg)" }}
     >
-      <div className="flex flex-col items-center justify-center p-4">
+      <div className="flex flex-col items-center text-center md:w-11/12 w-full px-4 mx-auto">
         <div className=" text-center pt-15">
           <ImageTitle
             image="/Offerings.svg"
@@ -53,7 +53,7 @@ const OfferingSection: React.FC = () => {
           />
 
           {/* Tabs Section */}
-          <div className="mb-6 relative">
+          <div className="mt-3 mb-7 relative">
             <div className="flex justify-center gap-4 sm:gap-8 text-base sm:text-2xl relative">
               {["Products", "Services"].map((tab) => (
                 <div className="flex flex-col" key={tab}>
@@ -72,7 +72,7 @@ const OfferingSection: React.FC = () => {
           </div>
 
           {/* Tab Content */}
-          <p className={`text-center text-[#7B7E85] max-w-3xl mx-auto mb-8 text-lg sm:text-lg ${isFading ? "opacity-0" : "opacity-100"
+          <p className={`text-center text-[#7B7E85] max-w-3xl mx-auto mb-11 text-base md:text-lg ${isFading ? "opacity-0" : "opacity-100"
             }`}>
             {tabContent[activeTab]}
           </p>
@@ -80,15 +80,8 @@ const OfferingSection: React.FC = () => {
           <div className="flex items-start justify-center gap-4 flex-wrap md:flex-nowrap ">
             <div className="w-full md:w-[300px] flex items-center justify-center gap-4 flex-col" >
               <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow w-full p-6">
-
-                <AnimatedCircularProgressBar
-                  max={100}
-                  min={0}
-                  value={value}
-                  gaugePrimaryColor="rgb(79 70 229)"
-                  gaugeSecondaryColor="rgba(0, 0, 0, 0.1)"
-                />
-                <p className="mt-4 text-center text-gray-600 text-lg">
+                <ProgressRing percentage={50} color="text-[#7030A0]" strokeWidth={5} size={160}/>
+                <p className="mt-4 text-center text-gray-600 text-base md:text-lg">
                   Insert some key statistic
                 </p>
               </div>
@@ -105,7 +98,7 @@ const OfferingSection: React.FC = () => {
                 className="rounded-xl  object-cover md:w-[456px] "
               />
               <div className="flex items-center w-full justify-center bg-white rounded-xl shadow p-6">
-                <p className="text-center text-lg font-semibold">
+                <p className="text-center text-base md:text-lg font-semibold">
                   Insert a two-line sentence feature
                 </p>
               </div>
@@ -118,13 +111,13 @@ const OfferingSection: React.FC = () => {
               />
               <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6">
                 <span className="text-3xl font-bold text-gray-800">000</span>
-                <p className="mt-2 text-center text-gray-600 text-lg">
+                <p className="mt-2 text-center text-gray-600 text-base md:text-lg">
                   Insert key metric name
                 </p>
               </div>
               <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6">
                 <span className="text-3xl font-bold text-gray-800">000</span>
-                <p className="mt-2 text-center text-gray-600 text-lg">
+                <p className="mt-2 text-center text-gray-600 text-base md:text-lg">
                   Insert key metric name
                 </p>
               </div>

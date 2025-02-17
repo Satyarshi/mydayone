@@ -20,10 +20,10 @@ const UnlockPotentialSection: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <div className="container mx-auto">
+      <div className="container mx-auto bg-[#fbfbfc]">
 
         <div className="flex flex-col my-4 md:my-10">
-          <section className=" flex flex-col items-center justify-center text-center py-3 w-full">
+          <section className=" flex flex-col items-center justify-center text-center py-3">
             <div className="w-auto md:w-[1224px] relative mx-auto ">
               {/* Background Image */}
               <div className="absolute inset-0 w-full">
@@ -57,6 +57,7 @@ const UnlockPotentialSection: React.FC<Props> = ({
             </div>
           </section>
         </div>
+        <hr className="border border-[#DEDEDE] mx-2" />
       </div>
     </>
   );

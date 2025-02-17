@@ -7,9 +7,9 @@ const TestimonialSection: React.FC = () => {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section className=" mt-10 px-2 ">
+    <section className="flex flex-col items-center text-center md:w-11/12 w-full px-4 pb-12 mx-auto">
       
-      <div className=" flex flex-col items-center text-center py-12 mt-14">
+      <div className=" flex flex-col items-center text-center pt-12 mt-14">
         {/* Title */}
         {/* <h1 className="absolute top-[-50px] text-[8rem] font-bold opacity-10 skills-heading">
           SAY'S
@@ -17,7 +17,7 @@ const TestimonialSection: React.FC = () => {
         <ImageTitle image="/sayâ€™s.svg" title="What People Say About Our Support & Services" description="" />
         
 
-        <div className="w-full relative flex items-center justify-center z-10 mt-10  mx-4">
+        <div className="w-full relative flex items-center justify-center z-10 mt-5 mx-4">
           {/* Testimonial Text */}
           <div className=" w-full relative flex flex-col items-center justify-center text-center max-w-3xl space-x-4 z-10">
             <div>
