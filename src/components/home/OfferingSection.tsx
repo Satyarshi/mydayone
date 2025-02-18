@@ -23,7 +23,6 @@ const OfferingSection: React.FC = () => {
   }, []);
 
 
-  // Content for each tab
   const tabContent: { [key: string]: string } = {
     Products:
       "Our innovative tech solutions, SPARCLE and talentSCOPE, revolutionize talent readiness acceleration and assessment in organizations. SPARCLE, powered by iTRAS (intelligent Talent Readiness Acceleration System), enhances readiness across core areas, including role-based skills and competencies readiness, leadership readiness, product/process knowledge, and onboarding. talentSCOPE is an intelligent suite designed to assess skills, competencies, behaviors, product knowledge, process knowledge, and aptitude.",
@@ -60,8 +59,8 @@ const OfferingSection: React.FC = () => {
                   <button
                     onClick={() => handleToggle(tab)}
                     className={`text-lg px-4 py-2 rounded-[50px] transition duration-300 ${activeTab === tab
-                        ? "text-white bg-purple-800"
-                        : "text-gray-500 hover:text-gray-800"
+                      ? "text-white bg-purple-800"
+                      : "text-gray-500 hover:text-gray-800"
                       }`}
                   >
                     {tab}
@@ -80,7 +79,7 @@ const OfferingSection: React.FC = () => {
           <div className="flex items-start justify-center gap-4 flex-wrap md:flex-nowrap ">
             <div className="w-full md:w-[280px] flex items-center justify-center gap-4 flex-col" >
               <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow w-full p-6">
-                <ProgressRing percentage={78} color="text-[#7030A0]" strokeWidth={5} size={160}/>
+                <ProgressRing percentage={78} color="text-[#7030A0]" strokeWidth={5} size={160} />
                 <p className="mt-4 text-center text-gray-600 text-base md:text-lg">
                   Faster Skill Readiness
                 </p>
@@ -92,19 +91,19 @@ const OfferingSection: React.FC = () => {
               />
             </div>
             <div className="w-full md:w-[436px] flex flex-col items-center justify-center gap-4 overflow-hidden">
-            <img
+              <img
                 src="/productBento.svg"
                 alt="Statistics Graphic"
                 className="rounded-xl  object-cover md:w-[506px] "
               />
               <div className="flex items-center w-full justify-center bg-white rounded-xl shadow p-6">
                 <p className="text-center text-base md:text-base font-semibold">
-                Revolutionize how talent readiness is accelerated and assessed in organisations.
+                  Revolutionize how talent readiness is accelerated and assessed in organisations.
                 </p>
               </div>
             </div>
             <div className="w-full md:w-[285px] flex flex-col gap-4">
-            <img
+              <img
                 src="/productpic1.png"
                 alt="Meeting Presentation"
                 className="rounded-xl w-full object-cover"
@@ -112,16 +111,36 @@ const OfferingSection: React.FC = () => {
               <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6">
                 <img src="/sparcleLogo.png" alt="" className="h-10" />
                 <p className="mt-2 text-center text-gray-600 text-base md:text-base">
-                Accelerating Talent Readiness
+                  Accelerating Talent Readiness
                 </p>
               </div>
               <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6">
-              <img src="/talentScope.png" alt="" className="h-10" />
+                <img src="/talentScope.png" alt="" className="h-10" />
                 <p className="mt-2 text-center text-gray-600 text-base md:text-base">
-                Assessing your Talent
+                  Assessing your Talent
                 </p>
               </div>
             </div >
+          </div>
+
+
+          <div className="flex items-start justify-center  flex-wrap md:flex-nowrap mt-10 gap-4">
+            <div>
+              <img src="/serviceTab1.png" alt="" className="max-h-[200px]" />
+            </div>
+            <div className="bg-white text-black rounded-xl shadow p-6 h-[200px] w-[200px] flex flex-col justify-end">
+              <p className="font-bold text-gray-800 text-5xl text-left">3x</p>
+              <p className="text-left text-base">More defined and repeatable people processes</p>
+            </div>
+          </div>
+          <div className="flex items-start justify-center  flex-wrap md:flex-nowrap mt-4 gap-4">
+            <div className="w-[200px] bg-white text-black rounded-xl shadow p-6 h-[200px] flex flex-col items-center justify-center">
+              <ProgressRing percentage={60} color="text-[#7030A0]" strokeWidth={5} size={140} />
+              <p className="text-sm">Higher Performance of Identified Talent</p>
+            </div>
+            <div>
+              <img src="/serviceTab2.png" className="max-h-[200px]" alt="" />
+            </div>
           </div>
 
         </div>
