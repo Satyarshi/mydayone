@@ -78,11 +78,11 @@ const OfferingSection: React.FC = () => {
           </p>
 
           <div className="flex items-start justify-center gap-4 flex-wrap md:flex-nowrap ">
-            <div className="w-full md:w-[300px] flex items-center justify-center gap-4 flex-col" >
+            <div className="w-full md:w-[280px] flex items-center justify-center gap-4 flex-col" >
               <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow w-full p-6">
-                <ProgressRing percentage={50} color="text-[#7030A0]" strokeWidth={5} size={160}/>
+                <ProgressRing percentage={78} color="text-[#7030A0]" strokeWidth={5} size={160}/>
                 <p className="mt-4 text-center text-gray-600 text-base md:text-lg">
-                  Insert some key statistic
+                  Faster Skill Readiness
                 </p>
               </div>
               <img
@@ -91,34 +91,34 @@ const OfferingSection: React.FC = () => {
                 className="rounded-xl shadow w-full max-h-52 object-cover mt-auto"
               />
             </div>
-            <div className="w-full md:w-[456px] flex flex-col items-center justify-center gap-4 overflow-hidden">
+            <div className="w-full md:w-[436px] flex flex-col items-center justify-center gap-4 overflow-hidden">
             <img
-                src="/stats.svg"
+                src="/productBento.svg"
                 alt="Statistics Graphic"
-                className="rounded-xl  object-cover md:w-[456px] "
+                className="rounded-xl  object-cover md:w-[506px] "
               />
               <div className="flex items-center w-full justify-center bg-white rounded-xl shadow p-6">
-                <p className="text-center text-base md:text-lg font-semibold">
-                  Insert a two-line sentence feature
+                <p className="text-center text-base md:text-base font-semibold">
+                Revolutionize how talent readiness is accelerated and assessed in organisations.
                 </p>
               </div>
             </div>
-            <div className="w-full md:w-[315px] flex flex-col gap-4">
+            <div className="w-full md:w-[285px] flex flex-col gap-4">
             <img
-                src="/laptop.svg"
+                src="/productpic1.png"
                 alt="Meeting Presentation"
                 className="rounded-xl w-full object-cover"
               />
               <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6">
-                <span className="text-3xl font-bold text-gray-800">000</span>
-                <p className="mt-2 text-center text-gray-600 text-base md:text-lg">
-                  Insert key metric name
+                <img src="/sparcleLogo.png" alt="" className="h-10" />
+                <p className="mt-2 text-center text-gray-600 text-base md:text-base">
+                Accelerating Talent Readiness
                 </p>
               </div>
               <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6">
-                <span className="text-3xl font-bold text-gray-800">000</span>
-                <p className="mt-2 text-center text-gray-600 text-base md:text-lg">
-                  Insert key metric name
+              <img src="/talentScope.png" alt="" className="h-10" />
+                <p className="mt-2 text-center text-gray-600 text-base md:text-base">
+                Assessing your Talent
                 </p>
               </div>
             </div >

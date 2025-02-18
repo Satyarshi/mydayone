@@ -88,12 +88,12 @@ const Scroller = () => {
       style={{ opacity }}
     >
       <div className="flex items-center gap-4">
-        <div className="relative w-8 h-14 border-2 border-gray-500 rounded-full overflow-hidden flex justify-center">
+        <div className="relative w-8 h-14 border border-white rounded-full overflow-hidden flex justify-center">
           <motion.div
-            className="absolute w-3 h-3 bg-gray-500 rounded-full mt-1"
+            className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1"
             animate={{
-              y: [0, 40],
-              opacity: [1, 0],
+              y: [5, 35,5],
+              opacity: [1, 1],
             }}
             transition={{
               duration: 1.5,
