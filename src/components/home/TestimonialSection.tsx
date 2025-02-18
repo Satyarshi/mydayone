@@ -27,7 +27,7 @@ const TestimonialSection: React.FC = () => {
                 <div className="flex justify-center flex-col items-center md:flex-row text-lg md:text-3xl">
                   We Empower Organizations
                   <span
-                    className="w-20 md:w-24 hover:w-40 mx-2 transition-width inline-block relative"
+                    className="w-24 hover:w-40 mx-2 transition-width inline-block relative"
                     onMouseEnter={() => setHovered(1)}
                     onMouseLeave={() => setHovered(null)}
                   >
@@ -62,7 +62,7 @@ const TestimonialSection: React.FC = () => {
                 <div className="flex justify-center flex-col items-center md:flex-row text-lg md:text-3xl">
                   teams to seamlessly
                   <span
-                    className="relative mx-0 md:mx-2 w-20 md:w-24 hover:w-40 transition-width inline-block"
+                    className="relative mx-0 md:mx-2 w-24 hover:w-40 transition-width inline-block"
                     onMouseEnter={() => setHovered(2)}
                     onMouseLeave={() => setHovered(null)}
                   >
