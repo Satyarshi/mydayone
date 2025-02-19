@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import ImageTitle from "../Title/ImageTitle";
-import { div } from "framer-motion/client";
+import { a, div } from "framer-motion/client";
 import ProgressRing from "./ProgressRing";
 
 const OfferingSection: React.FC = () => {
@@ -21,7 +21,6 @@ const OfferingSection: React.FC = () => {
     const interval = setInterval(() => setValue(handleIncrement), 2000);
     return () => clearInterval(interval);
   }, []);
-
 
   const tabContent: { [key: string]: string } = {
     Products:
@@ -58,10 +57,11 @@ const OfferingSection: React.FC = () => {
                 <div className="flex flex-col" key={tab}>
                   <button
                     onClick={() => handleToggle(tab)}
-                    className={`text-lg px-4 py-2 rounded-[50px] transition duration-300 ${activeTab === tab
-                      ? "text-white bg-purple-800"
-                      : "text-gray-500 hover:text-gray-800"
-                      }`}
+                    className={`text-lg px-4 py-2 rounded-[50px] transition duration-300 ${
+                      activeTab === tab
+                        ? "text-white bg-purple-800"
+                        : "text-gray-500 hover:text-gray-800"
+                    }`}
                   >
                     {tab}
                   </button>
@@ -71,78 +71,108 @@ const OfferingSection: React.FC = () => {
           </div>
 
           {/* Tab Content */}
-          <p className={`text-center text-[#7B7E85] max-w-3xl mx-auto mb-11 text-base md:text-lg ${isFading ? "opacity-0" : "opacity-100"
-            }`}>
+          <p
+            className={`text-center text-[#7B7E85] max-w-3xl mx-auto mb-11 text-base md:text-lg ${
+              isFading ? "opacity-0" : "opacity-100"
+            }`}
+          >
             {tabContent[activeTab]}
           </p>
 
-          <div className="flex items-start justify-center gap-4 flex-wrap md:flex-nowrap ">
-            <div className="w-full md:w-[280px] flex items-center justify-center gap-4 flex-col" >
-              <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow w-full p-6">
-                <ProgressRing percentage={78} color="text-[#7030A0]" strokeWidth={5} size={160} />
-                <p className="mt-4 text-center text-gray-600 text-base md:text-lg">
-                  Faster Skill Readiness
-                </p>
+          {activeTab === "Products" ? (
+            <div className={`flex items-start justify-center gap-4 flex-wrap md:flex-nowrap ${isFading ? "opacity-0" : "opacity-100"}`}>
+              <div className="w-full md:w-[280px] flex items-center justify-center gap-4 flex-col">
+                <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow w-full p-6">
+                  <ProgressRing
+                    percentage={78}
+                    color="text-[#7030A0]"
+                    strokeWidth={5}
+                    size={160}
+                  />
+                  <p className="mt-4 text-center text-gray-600 text-base md:text-lg">
+                    Faster Skill Readiness
+                  </p>
+                </div>
+                <img
+                  src="/Meeting.svg"
+                  alt="Meeting Presentation"
+                  className="rounded-xl shadow w-full max-h-52 object-cover mt-auto"
+                />
               </div>
-              <img
-                src="/Meeting.svg"
-                alt="Meeting Presentation"
-                className="rounded-xl shadow w-full max-h-52 object-cover mt-auto"
-              />
-            </div>
-            <div className="w-full md:w-[436px] flex flex-col items-center justify-center gap-4 overflow-hidden">
-              <img
-                src="/productBento.svg"
-                alt="Statistics Graphic"
-                className="rounded-xl  object-cover md:w-[506px] "
-              />
-              <div className="flex items-center w-full justify-center bg-white rounded-xl shadow p-6">
-                <p className="text-center text-base md:text-base font-semibold">
-                  Revolutionize how talent readiness is accelerated and assessed in organisations.
-                </p>
+              <div className="w-full md:w-[436px] flex flex-col items-center justify-center gap-4 overflow-hidden">
+                <img
+                  src="/productBento.svg"
+                  alt="Statistics Graphic"
+                  className="rounded-xl  object-cover md:w-[506px] "
+                />
+                <div className="flex items-center w-full justify-center bg-white rounded-xl shadow p-6">
+                  <p className="text-center text-base md:text-base font-semibold">
+                    Revolutionize how talent readiness is accelerated and
+                    assessed in organisations.
+                  </p>
+                </div>
+              </div>
+              <div className="w-full md:w-[285px] flex flex-col gap-4">
+                <img
+                  src="/productpic1.png"
+                  alt="Meeting Presentation"
+                  className="rounded-xl w-full object-cover"
+                />
+                <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6">
+                  <img src="/sparcleLogo.png" alt="" className="h-10" />
+                  <p className="mt-2 text-center text-gray-600 text-base md:text-base">
+                    Accelerating Talent Readiness
+                  </p>
+                </div>
+                <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6">
+                  <img src="/talentScope.png" alt="" className="h-10" />
+                  <p className="mt-2 text-center text-gray-600 text-base md:text-base">
+                    Assessing your Talent
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="w-full md:w-[285px] flex flex-col gap-4">
-              <img
-                src="/productpic1.png"
-                alt="Meeting Presentation"
-                className="rounded-xl w-full object-cover"
-              />
-              <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6">
-                <img src="/sparcleLogo.png" alt="" className="h-10" />
-                <p className="mt-2 text-center text-gray-600 text-base md:text-base">
-                  Accelerating Talent Readiness
-                </p>
+          ) : (
+            <div className={`${isFading ? "opacity-0" : "opacity-100"}`}>
+              <div className="flex items-start justify-center  flex-wrap md:flex-nowrap mt-10 gap-4">
+                <div>
+                  <img
+                    src="/serviceTab1.png"
+                    alt=""
+                    className="max-h-[200px]"
+                  />
+                </div>
+                <div className="bg-white text-black rounded-xl shadow p-6 h-[200px] w-[200px] flex flex-col justify-end">
+                  <p className="font-bold text-gray-800 text-5xl text-left">
+                    3x
+                  </p>
+                  <p className="text-left text-base">
+                    More defined and repeatable people processes
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6">
-                <img src="/talentScope.png" alt="" className="h-10" />
-                <p className="mt-2 text-center text-gray-600 text-base md:text-base">
-                  Assessing your Talent
-                </p>
+              <div className="flex items-start justify-center  flex-wrap md:flex-nowrap mt-4 gap-4">
+                <div className="w-[200px] bg-white text-black rounded-xl shadow p-6 h-[200px] flex flex-col items-center justify-center">
+                  <ProgressRing
+                    percentage={60}
+                    color="text-[#7030A0]"
+                    strokeWidth={5}
+                    size={140}
+                  />
+                  <p className="text-sm">
+                    Higher Performance of Identified Talent
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src="/serviceTab2.png"
+                    className="max-h-[200px]"
+                    alt=""
+                  />
+                </div>
               </div>
-            </div >
-          </div>
-
-
-          <div className="flex items-start justify-center  flex-wrap md:flex-nowrap mt-10 gap-4">
-            <div>
-              <img src="/serviceTab1.png" alt="" className="max-h-[200px]" />
             </div>
-            <div className="bg-white text-black rounded-xl shadow p-6 h-[200px] w-[200px] flex flex-col justify-end">
-              <p className="font-bold text-gray-800 text-5xl text-left">3x</p>
-              <p className="text-left text-base">More defined and repeatable people processes</p>
-            </div>
-          </div>
-          <div className="flex items-start justify-center  flex-wrap md:flex-nowrap mt-4 gap-4">
-            <div className="w-[200px] bg-white text-black rounded-xl shadow p-6 h-[200px] flex flex-col items-center justify-center">
-              <ProgressRing percentage={60} color="text-[#7030A0]" strokeWidth={5} size={140} />
-              <p className="text-sm">Higher Performance of Identified Talent</p>
-            </div>
-            <div>
-              <img src="/serviceTab2.png" className="max-h-[200px]" alt="" />
-            </div>
-          </div>
-
+          )}
         </div>
       </div>
     </section>
