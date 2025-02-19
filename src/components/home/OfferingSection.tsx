@@ -22,11 +22,15 @@ const OfferingSection: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const tabContent: { [key: string]: string } = {
-    Products:
-      "Our innovative tech solutions, SPARCLE and talentSCOPE, revolutionize talent readiness acceleration and assessment in organizations. SPARCLE, powered by iTRAS (intelligent Talent Readiness Acceleration System), enhances readiness across core areas, including role-based skills and competencies readiness, leadership readiness, product/process knowledge, and onboarding. talentSCOPE is an intelligent suite designed to assess skills, competencies, behaviors, product knowledge, process knowledge, and aptitude.",
-    Services:
-      "We provide customisable curation of consultation, coaching, content creation, program design, handholding and other bespoke support services tailored to meet unique requirements of your organisation. Our team of professionals is dedicated to ensure your talent and learning programs are more effective, insightful, effortless, hyper personalised at scale and provide desired ROI/outcomes.",
+  const tabContent: { [key: string]: () => React.JSX.Element } = {
+    Products:()=>
+    <>
+      Our innovative tech solutions, <span className="font-semibold text-gray-800"> SPARCLE </span>and <span className="font-semibold text-gray-800">talentSCOPE</span> revolutionize talent readiness and assessment in organizations. SPARCLE, powered by <span className="font-semibold text-gray-800">iTRAS (intelligent Talent Readiness Acceleration System)</span>, boosts readiness in core areas like role-based skills, leadership, product and process knowledge, and onboarding. talentSCOPE is an intelligent suite assessing skills, competencies, behaviors, product/process knowledge, and aptitude.
+    </>,
+    Services:()=>
+    <>
+      We provide customisable curation of consultation, coaching, content creation, program design, handholding and other bespoke support services tailored to meet unique requirements of your organisation. Our team of professionals is dedicated to ensure your <span className="font-semibold text-gray-800">talent and learning programs</span> are more effective, insightful, effortless, <span className="font-semibold text-gray-800">hyper personalised</span> at scale and provide desired ROI/outcomes.
+    </>
   };
   const handleToggle = (tabContent: string) => {
     if (tabContent !== activeTab) {
@@ -72,11 +76,11 @@ const OfferingSection: React.FC = () => {
 
           {/* Tab Content */}
           <p
-            className={`text-center text-[#7B7E85] max-w-3xl mx-auto mb-11 text-base md:text-lg ${
+            className={`text-center text-[#7B7E85] max-w-5xl mx-auto mb-11 text-base md:text-lg ${
               isFading ? "opacity-0" : "opacity-100"
             }`}
           >
-            {tabContent[activeTab]}
+            {tabContent[activeTab]()}
           </p>
 
           {activeTab === "Products" ? (
@@ -107,7 +111,7 @@ const OfferingSection: React.FC = () => {
                 />
                 <div className="flex items-center w-full justify-center bg-white rounded-xl shadow p-6">
                   <p className="text-center text-base md:text-base font-semibold">
-                    Revolutionize how talent readiness is accelerated and
+                  Revolutionizing how talent readiness is accelerated and
                     assessed in organisations.
                   </p>
                 </div>
@@ -125,7 +129,7 @@ const OfferingSection: React.FC = () => {
                   </p>
                 </div>
                 <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6">
-                  <img src="/talentScope.png" alt="" className="h-10" />
+                  <img src="/talentScope2.png" alt="" className="h-10" />
                   <p className="mt-2 text-center text-gray-600 text-base md:text-base">
                     Assessing your Talent
                   </p>
