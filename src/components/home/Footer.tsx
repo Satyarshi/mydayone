@@ -7,7 +7,7 @@ const Footer = () => {
   const [showProducts, setShowProducts] = useState(false);
   return (
     <footer className="bg-[#fafbfb] py-8">
-      <div className="container mx-auto px-4 flex flex-wrap justify-between gap-8">
+      <div className="container mx-auto px-20 flex flex-wrap justify-between gap-8">
         {/* Branding Section */}
         <div className="flex-1 min-w-[250px]">
           <img src="/logomyday.svg" alt="myDayOne" className="ml-2 w-52" />
