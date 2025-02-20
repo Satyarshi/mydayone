@@ -151,7 +151,7 @@ const OfferingSection: React.FC = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex items-start justify-center  flex-wrap md:flex-nowrap mt-4 gap-4">
+              <div className="flex items-start justify-center flex-wrap md:flex-nowrap mt-4 gap-4">
                 <div className="w-[200px] bg-white text-black rounded-xl shadow p-6 h-[200px] flex flex-col items-center justify-center">
                   <ProgressRing
                     percentage={60}
