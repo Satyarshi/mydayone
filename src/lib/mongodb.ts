@@ -7,7 +7,7 @@ const connectMongo = async (): Promise<void> => {
   }
 
   try {
-    await mongoose.connect('mongodb+srv://Qmint:cbw5vkGikN7DUYNx@cluster0.idytieh.mongodb.net/mydayonenext');
+    await mongoose.connect('mongodb://localhost:27017/mydayonenext');
     console.log("Connected to MongoDB");
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
