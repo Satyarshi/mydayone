@@ -13,7 +13,7 @@ const ClientSection: React.FC = () => {
             <img
               src="/Our clients.svg"
               alt="clients"
-              className="absolute left-1/2 transform -translate-x-1/2 z-0 top-[-30px]"
+              className="absolute left-1/2 transform -translate-x-1/2 z-0 top-[-40px]"
             />
             {/* "Trusted by Leading Brands" Text */}
             <h1 className="text-[#EBE6FA] text-5xl md:text-5xl lg:text-6xl font-bold z-10 px-2">
