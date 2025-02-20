@@ -1,6 +1,7 @@
 import React from "react";
 import FormSection from "@/components/form/FormSection";
 import UnlockPotentialSection from "@/components/home/UnlockPotentialSection";
+import { SubmitForm } from "../actions/mdj";
 
 export const metadata = {
   title: "MyDayOne | Contact us",
@@ -15,7 +16,7 @@ const Form: React.FC = () => {
       {/* Hero Section */}
       <section className="flex justify-center items-center p-4 overflow-hidden">
         <FormSection
-          apiEndpoint="/api/mdj-form"
+          saveFunction={SubmitForm}
           pdfPath="/SBMDJ F1.pdf"
           downloadName="Manager_Development_Journey.pdf"
           description={`Here is an exciting "Strengths based Manager Development Journey". Please fill the details to download the journey.`}

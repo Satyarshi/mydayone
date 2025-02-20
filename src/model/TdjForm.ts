@@ -14,7 +14,7 @@ const TdjFormSchema = new Schema<ITdjForm>(
   {
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
-    email: { type: String, required: true, unique: true },
+    email: { type: String, required: true },
     phone: { type: String, required: true },
     companyName: { type: String },
     companyEmail: { type: String },
@@ -23,15 +23,6 @@ const TdjFormSchema = new Schema<ITdjForm>(
   { timestamps: true }
 );
 
-// 🔹 Pre-Save Middleware: Check if Email Already Exists
-TdjFormSchema.pre<ITdjForm>("save", async function (next) {
-  const existingUser = await mongoose.models.TdjForm.findOne({ email: this.email });
-  if (existingUser) {
-    const error = new Error("Email already exists. Please use a different email.");
-    return next(error);
-  }
-  next();
-});
 
 const TdjForm = mongoose.models.TdjForm || mongoose.model<ITdjForm>("TdjForm", TdjFormSchema);
 
