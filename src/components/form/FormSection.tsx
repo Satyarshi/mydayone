@@ -219,7 +219,7 @@ const FormSection: React.FC<FormSectionProps> = ({
             }`}
             disabled={loading}
           >
-            {loading ? "Submitting..." : "Download the Resources"}
+            {loading ? "Submitting..." : "Download Now"}
           </button>
         </form>
       </div>
