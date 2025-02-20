@@ -41,8 +41,7 @@ const BlogsSection: React.FC = () => {
           innovative technology-driven solutions Al- based agents and
           hyper-personalized, automated talent readiness journeys.
           <br />
-          Over 100+ Companies Trust myDayOne to Boost Employee Performance and
-          Engagement Talent Readiness and Talent Assessment.
+        
         </p>
       </div>
     </section>
