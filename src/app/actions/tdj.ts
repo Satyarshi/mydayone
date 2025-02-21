@@ -5,7 +5,6 @@ import TdjForm from "@/model/TdjForm";
 export interface FormData {
     firstName: string;
     lastName: string;
-    email: string;
     phone: string;
     companyName?: string;
     companyEmail?: string;
@@ -20,8 +19,11 @@ export async function SubmitForm(formData: FormData): Promise<{ success: boolean
         await form.save();
 
         return { success: true, message: "Form submitted successfully" };
-    } catch (error) {
+    } catch (error: any) {
         console.log(error);
+        if (error.name === "ValidationError") {
+            return { success: false, message: "Please enter a valid company email" };
+        }
         return { success: false, message: "Something went wrong" };
     }
 }

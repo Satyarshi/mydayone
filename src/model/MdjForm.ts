@@ -3,10 +3,9 @@ import mongoose, { Schema, Document } from "mongoose";
 interface IMdjForm extends Document {
   firstName: string;
   lastName: string;
-  email: string;
   phone: string;
   companyName?: string;
-  companyEmail?: string;
+  companyEmail: string;
   designation?: string;
 }
 
@@ -14,11 +13,21 @@ const MdjFormSchema = new Schema<IMdjForm>(
   {
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
-    email: { type: String, required: true },
     phone: { type: String, required: true },
-    companyName: { type: String },
-    companyEmail: { type: String },
-    designation: { type: String },
+    companyName: { type: String, required: true },
+    companyEmail: { type: String, required: true,
+      validate:{
+        validator: function(email: string){
+          const blockedDomains = ["gmail.com", "yahoo.com", "outlook.com", "hotmail.com", "icloud.com"]
+
+          const emailDomain = email.split("@")[1];
+
+          return !!emailDomain && !blockedDomains.includes(emailDomain.toLowerCase());
+        },
+        message: "Please enter a valid company email"
+      }
+    },
+    designation: { type: String, required: true},
   },
   { timestamps: true }
 );

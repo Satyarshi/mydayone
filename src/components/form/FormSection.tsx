@@ -84,7 +84,6 @@ const FormSection: React.FC<FormSectionProps> = ({
     e.preventDefault();
     setLoading(true);
     const formData = {
-      email: (e.target as HTMLFormElement).email.value,
       phone: (e.target as HTMLFormElement).phone.value,
       firstName: (e.target as HTMLFormElement).firstName.value,
       lastName: (e.target as HTMLFormElement).lastName.value,
@@ -126,7 +125,7 @@ const FormSection: React.FC<FormSectionProps> = ({
         <ImageTitle
           description={description}
           image="/Connect.svg"
-          title="Comprehensive Services to Drive Your Success Forward"
+          title="Comprehensive Products and Services to Drive Your Success Forward"
         />
       </div>
       <img src="/Active Indicator.svg" alt="line" className="my-8" />
@@ -135,11 +134,11 @@ const FormSection: React.FC<FormSectionProps> = ({
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <label className="block text-sm font-semibold mb-2 text-left">
-                Email*
+                Company Email*
               </label>
               <input
                 type="email"
-                name="email"
+                name="companyEmail"
                 className="w-full p-3 rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[#7030A0]"
                 required
               />
@@ -180,36 +179,26 @@ const FormSection: React.FC<FormSectionProps> = ({
               />
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div>
+          <div>
               <label className="block text-sm font-semibold mb-2 text-left">
-                Company Name
+                Company Name*
               </label>
               <input
                 type="text"
                 name="companyName"
                 className="w-full p-3 rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[#7030A0]"
+                required
               />
             </div>
-            <div>
-              <label className="block text-sm font-semibold mb-2 text-left">
-                Company Email
-              </label>
-              <input
-                type="text"
-                name="companyEmail"
-                className="w-full p-3 rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[#7030A0]"
-              />
-            </div>
-          </div>
           <div>
             <label className="block text-sm font-semibold mb-2 text-left">
-              Designation
+              Designation*
             </label>
             <input
               type="text"
               name="designation"
               className="w-full p-3 rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[#7030A0]"
+              required
             />
           </div>
           <button
