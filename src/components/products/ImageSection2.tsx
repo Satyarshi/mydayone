@@ -3,7 +3,7 @@ import Image from "next/image";
 import HeroSection from "../HeroSection";
 
 interface ImageSectionProps {
-  shinyText: string;
+  shinyText?: string;
   heading: string;
   subheading: string;
   buttonText: string;

@@ -27,7 +27,7 @@ const Product1: React.FC = () => {
       <section className="flex flex-col justify-center items-center p-4 overflow-hidden">
         <img src="/talentScope.png" alt="" className="mt-24 w-96" />
         <ImageSection
-          shinyText={productsData.heroSection.shinyText}
+         
           heading={productsData.heroSection.heading}
           subheading={productsData.heroSection.subheading}
           buttonText={productsData.heroSection.buttonText}

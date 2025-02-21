@@ -3,7 +3,7 @@ import Link from "next/link";
 import { AnimatedShinyTextDemo } from "./AnimatedShinyTextDemo";
 
 interface HeroSectionProps {
-  shinyText: string;
+  shinyText?: string;
   heading: string;
   subheading: string;
   buttonText: string;
@@ -19,7 +19,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     <>
       {/* Headline Section */}
       <div className=" bg-[#fff] py-5  rounded-lg text-xs inline-block">
-        <AnimatedShinyTextDemo text={shinyText}  />
+        { shinyText &&
+          <AnimatedShinyTextDemo text={shinyText}  />
+        }
       </div>
       <h1 className="text-3xl md:text-5xl font-bold mb-4">{heading}</h1>
 

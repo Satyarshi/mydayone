@@ -3,7 +3,7 @@ import Image from "next/image";
 import HeroSection from "../HeroSection";
 
 interface ImageSectionProps {
-  shinyText: string;
+  shinyText?: string;
   heading: string;
   subheading: string;
   buttonText: string;
@@ -18,7 +18,7 @@ const ImageSection: React.FC<ImageSectionProps> = ({
   return (
     <section className="flex flex-col items-center text-center py-5">
       <HeroSection 
-        shinyText={shinyText}
+        shinyText={shinyText || undefined}
         heading={heading}
         subheading={subheading}
         buttonText={buttonText}

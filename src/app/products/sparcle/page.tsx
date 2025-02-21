@@ -26,7 +26,6 @@ const Product1: React.FC = () => {
     <PageHeader title="Sparcle" description="Revolutionize Talent Development with AI Precision" />
       <section className="flex justify-center items-center p-4 overflow-hidden mt-10 md:mt-24">
         <ImageSection
-          shinyText={productData.heroSection.shinyText}
           heading={productData.heroSection.heading}
           subheading={productData.heroSection.subheading}
           buttonText={productData.heroSection.buttonText}
