@@ -18,6 +18,9 @@ const MdjFormSchema = new Schema<IMdjForm>(
     companyEmail: { type: String, required: true,
       validate:{
         validator: function(email: string){
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+          if (!emailRegex.test(email)) return false;
+          
           const blockedDomains = ["gmail.com", "yahoo.com", "outlook.com", "hotmail.com", "icloud.com"]
 
           const emailDomain = email.split("@")[1];
