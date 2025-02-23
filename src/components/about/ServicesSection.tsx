@@ -164,10 +164,10 @@ const ServiceSection: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-6">
             {/* Additional Features Carousel */}
             <div className="overflow-hidden w-1/4 md:w-1/2 flex justify-center relative">
-              <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none" />
+              <div className="absolute left-0 top-0 bottom-0 w-10 md:w-20 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none" />
 
               {/* Right Fade Gradient */}
-              <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none" />
+              <div className="absolute right-0 top-0 bottom-0 w-10 md:w-20 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none" />
               <motion.div
                 className="flex space-x-6"
                 animate={{ x: [0, -600] }}
