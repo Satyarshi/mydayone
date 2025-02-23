@@ -26,7 +26,7 @@ const featureCards = [
 
 const ServiceSection: React.FC = () => {
   const [animationValues, setAnimationValues] = useState<{ x: string[] }>({
-    x: ["0%", "-40%"],
+    x: ["0%", "-50%"],
   });
   useEffect(() => {
     Aos.init({ offset: 200 });
@@ -36,7 +36,7 @@ const ServiceSection: React.FC = () => {
         setAnimationValues({ x: ["0%", "-30%"] });
       } else {
         // Smaller screens
-        setAnimationValues({ x: ["0%", "-40%"] });
+        setAnimationValues({ x: ["0%", "-50%"] });
       }
     };
     handleResize();
