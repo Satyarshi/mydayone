@@ -1,14 +1,36 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import ImageTitle from "../Title/ImageTitle";
 import ProgressRing from "../home/ProgressRing";
+import { motion, useTransform, useScroll } from "framer-motion";
+
+const featureCards = [
+  {
+    title: "Continuous Reinforcement Tools",
+    description:
+      "Engage with micro-learning, gamification and continuous nudges to embed skills effectively.",
+  },
+  {
+    title: "Hyper-Personalized Talent Readiness Journey",
+    description:
+      "Engage learners with hyper-personalized journeys tailored to their roles, KPIs and career paths.",
+  },
+  {
+    title: "Customizable Skill Assessments",
+    description:
+      "Self, manager and 360° team feedback for a well-rounded view of capabilities.",
+  },
+];
 
 const ServiceSection: React.FC = () => {
   useEffect(() => {
     Aos.init({ offset: 200 });
   }, []);
+
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollXProgress } = useScroll({ container: containerRef });
 
   return (
     <section className="relative py-12 w-full mt-10">
@@ -138,44 +160,29 @@ const ServiceSection: React.FC = () => {
           </div>
 
           {/* Additional Features */}
-          <div className="flex flex-wrap gap-4 justify-center">
-            <div
-              className="bg-white p-4 rounded-xl shadow-md w-64 md:w-80 text-sm text-left"
-              data-aos="fade-up"
-              data-aos-duration="500"
-              data-aos-delay="50"
-            >
-              <h3 className="font-semibold">Continuous Reinforcement Tools</h3>
-              <p className="mt-1">
-                Engage with micro-learning, gamification and continuous nudges
-                to embed skills effectively.
-              </p>
-            </div>
-            <div
-              className="bg-white p-4 rounded-xl shadow-md w-64 md:w-80 text-sm text-left"
-              data-aos="fade-up"
-              data-aos-duration="500"
-              data-aos-delay="50"
-            >
-              <h3 className="font-semibold">
-                Hyper-Personalized Talent Readiness Journey
-              </h3>
-              <p className="mt-1">
-                Engage learners with hyper-personalized journeys tailored to
-                their roles, KPIs and career paths.
-              </p>
-            </div>
-            <div
-              className="bg-white p-4 rounded-xl shadow-md w-64 md:w-80 text-sm text-left"
-              data-aos="fade-up"
-              data-aos-duration="500"
-              data-aos-delay="50"
-            >
-              <h3 className="font-semibold">Customizable Skill Assessments</h3>
-              <p className="mt-1">
-                Self, manager and 360° team feedback for a well-rounded view of
-                capabilities.
-              </p>
+
+          <div className="flex flex-wrap justify-center gap-6">
+            {/* Additional Features Carousel */}
+            <div className="overflow-hidden w-2/12 md:w-1/2 flex justify-center">
+              <div className="absolute inset-0 mask-fade z-20 pointer-events-none"></div>
+              <motion.div
+                className="flex space-x-6"
+                animate={{ x: [0, -600] }}
+                transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+              >
+                {[...featureCards, ...featureCards].map((feature, index) => (
+                  <div
+                    key={index}
+                    className={`bg-white p-4 rounded-xl shadow-md w-64 md:w-80 text-sm text-left flex-shrink-0 m-2`}
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    data-aos-delay="50"
+                  >
+                    <h3 className="font-semibold">{feature.title}</h3>
+                    <p className="mt-1">{feature.description}</p>
+                  </div>
+                ))}
+              </motion.div>
             </div>
           </div>
         </div>
