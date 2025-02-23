@@ -1,10 +1,10 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import ImageTitle from "../Title/ImageTitle";
 import ProgressRing from "../home/ProgressRing";
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 
 const featureCards = [
   {
@@ -25,12 +25,24 @@ const featureCards = [
 ];
 
 const ServiceSection: React.FC = () => {
+  const [animationValues, setAnimationValues] = useState<{ x: string[] }>({
+    x: ["0%", "-40%"],
+  });
   useEffect(() => {
     Aos.init({ offset: 200 });
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        // Larger screens
+        setAnimationValues({ x: ["0%", "-30%"] });
+      } else {
+        // Smaller screens
+        setAnimationValues({ x: ["0%", "-40%"] });
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollXProgress } = useScroll({ container: containerRef });
 
   return (
     <section className="relative py-12 w-full mt-10">
@@ -163,14 +175,12 @@ const ServiceSection: React.FC = () => {
 
           <div className="flex flex-wrap justify-center gap-6">
             {/* Additional Features Carousel */}
-            <div className="overflow-hidden w-1/4 md:w-1/2 flex justify-center relative">
+            <div className="overflow-hidden w-1/4 max-w-[50%] md:w-1/2 flex justify-center relative">
               <div className="absolute left-0 top-0 bottom-0 w-10 md:w-20 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none" />
-
-              {/* Right Fade Gradient */}
               <div className="absolute right-0 top-0 bottom-0 w-10 md:w-20 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none" />
               <motion.div
                 className="flex space-x-6"
-                animate={{ x: [0, -600] }}
+                animate={animationValues}
                 transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
               >
                 {[...featureCards, ...featureCards].map((feature, index) => (
