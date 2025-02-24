@@ -9,7 +9,7 @@ interface ProductSkillsProps {
 
 const ProductSkills: React.FC<ProductSkillsProps> = ({ title, description }) => {
   return (
-    <section className="relative flex flex-col items-center text-center py-12 w-full bg-white">
+    <section className="relative flex flex-col items-center text-center py-12 w-full ">
       <div className="container mx-auto text-center z-10">
         {/* Title and Description */}
         <div className="flex flex-col md:flex-row items-center justify-center mb-8 relative">

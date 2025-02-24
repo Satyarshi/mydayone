@@ -13,7 +13,7 @@ const PricingSection: React.FC = () => {
         {/* Pricing Cards */}
         <div className="flex justify-center gap-8 mt-10 flex-wrap text-justify">
           {/* Standard Plan */}
-          <div className="bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 w-full md:w-80 z-20 flex flex-col h-full">
+          <div className=" rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 w-full md:w-80 z-20 flex flex-col h-full">
             <div className="flex-grow text-center">
               <h2 className="text-xl font-bold mb-4 price-card">Starter</h2>
               <img src="/Price21.png" alt="standard price" className="w-full" />
