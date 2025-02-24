@@ -29,6 +29,16 @@ const ServiceSection: React.FC = () => {
       message: (e.target as HTMLFormElement).message.value,
     };
 
+    const emailDomain = formData.email.split("@")[1];
+    const publicDomains = ["gmail.com", "yahoo.com", "outlook.com", "hotmail.com", "aol.com", "icloud.com"]; 
+
+    if (publicDomains.some(domain => emailDomain.endsWith(domain))) {
+      toast.error("Please use a business email address.", {
+      position: "top-center",
+      autoClose: 2000,
+      });
+      return;
+    }
     console.log(formData);
     fetch("http://localhost:8123/api/form-submit", {
       headers: {
@@ -100,6 +110,7 @@ const ServiceSection: React.FC = () => {
                 type="text"
                 name="companyName"
                 className="w-full p-3 rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[#7030A0]"
+                required
               />
             </div>
           </div>
@@ -140,9 +151,11 @@ const ServiceSection: React.FC = () => {
               value={selectedValue}
               onChange={handleChange}
               className="w-full p-3 rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[#7030A0]"
+              required
+
             >
               <option value="" disabled>
-                Select employee headcount <span className="text-red-500">*</span>
+                Select employee headcount 
               </option>
               <option value="upto 100">upto 100</option>
               <option value="101-1000">101-1000</option>
@@ -161,6 +174,8 @@ const ServiceSection: React.FC = () => {
               value={serviceValue}
               onChange={handleServiceChange}
               className="w-full p-3 rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[#7030A0]"
+              required
+
             >
               <option value="" disabled>
                 Select services
