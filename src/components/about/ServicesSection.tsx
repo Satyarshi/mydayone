@@ -86,7 +86,7 @@ const ServiceSection: React.FC = () => {
               </div>
 
               <div
-                className="bg-white p-6 rounded-2xl w-72 shadow-lg flex flex-col justify-between"
+                className="bg-white p-6 rounded-2xl w-72 shadow-lg flex flex-col min-h-96 justify-between"
                 data-aos="zoom-in-left"
                 data-aos-duration="500"
                 data-aos-delay="50"
@@ -103,13 +103,15 @@ const ServiceSection: React.FC = () => {
                   <h2 className="text-2xl font-medium text-left">Exposure</h2>
                   <p className="text-base mt-2 text-left">
                     Partnering with senior executives for exposure to strategic
-                    decision-making and leadership development.
+                    decision-making and leadership development. Gain first-hand
+                    insights into high-impact business strategies and cultivate
+                    the skills needed to drive organizational success.
                   </p>
                 </div>
               </div>
 
               <div
-                className="bg-white p-6 rounded-2xl w-72 shadow-lg flex flex-col justify-between"
+                className="bg-white p-6 rounded-2xl w-72 min-h-96 shadow-lg flex flex-col justify-between"
                 data-aos="zoom-in-left"
                 data-aos-duration="500"
                 data-aos-delay="50"

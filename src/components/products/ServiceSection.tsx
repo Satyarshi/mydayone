@@ -94,7 +94,7 @@ const SectionPage = ({ page }: { page: any }) => (
         {page.stats.map((stat: any, idx: number) => (
           <div
             key={idx}
-            className="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-4 rounded-3xl text-left cursor-pointer w-full md:w-80"
+            className="shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-4 rounded-3xl text-left cursor-pointer w-full md:w-80"
           >
             <p className="text-2xl font-bold">{stat.label}</p>
             <p className="text-gray-600">{stat.text}</p>
