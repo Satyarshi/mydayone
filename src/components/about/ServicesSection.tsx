@@ -63,10 +63,11 @@ const ServiceSection: React.FC = () => {
                 data-aos-duration="500"
                 data-aos-delay="50"
               >
-                <div className="flex justify-center items-center w-full">
+                <div className="flex justify-center items-center w-full ">
                   <ProgressRing
                     percentage={70}
-                    color="text-[#7030A0]"
+                    color="text-white"
+                    textColor="#fff"
                     strokeWidth={5}
                     size={160}
                   />
