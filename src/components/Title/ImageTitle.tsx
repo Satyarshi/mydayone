@@ -2,7 +2,7 @@ import React from "react";
 
 interface ImageTitleProps {
 	title: string;
-	description: string;
+	description: string | JSX.Element;
 	image: string;
 	oreintation?: string;
 }
