@@ -29,6 +29,16 @@ const ServiceSection: React.FC = () => {
       message: (e.target as HTMLFormElement).message.value,
     };
 
+    const emailDomain = formData.email.split("@")[1];
+    const publicDomains = ["gmail.com", "yahoo.com", "outlook.com", "hotmail.com", "aol.com", "icloud.com"]; 
+
+    if (publicDomains.some(domain => emailDomain.endsWith(domain))) {
+      toast.error("Please use a business email address.", {
+      position: "top-center",
+      autoClose: 2000,
+      });
+      return;
+    }
     console.log(formData);
     fetch("http://localhost:8123/api/form-submit", {
       headers: {
@@ -60,34 +70,30 @@ const ServiceSection: React.FC = () => {
   };
 
   return (
-    <section className=" flex flex-col items-center py-36">
+    <section className=" flex items-start py-36 justify-between mx-20 ">
       {/* Background Heading */}
-      <div className="md:px-32 ">
+      <div className=" w-1/2">
         <ImageTitle
-          description=" Our innovative tech solutions, talentScope and Sparcle, revolutionize how learning
-        is implemented and managed. talentScope delivers a comprehensive suite for
-        tracking learning progress, ensuring holistic development. Sparcle is our
-        intelligent assistant, designed to enhance engagement, providing
-        personalized recommendations that drive tangible outcomes. Together,
-        these products empower professionals and organizations to accelerate
-        their growth journey."
+          description={
+            <>
+             Our innovative tech solutions, <span className="font-semibold text-gray-800"> SPARCLE </span>and <span className="font-semibold text-gray-800">talentSCOPE</span> revolutionize talent readiness and assessment in organizations. SPARCLE, powered by <span className="font-semibold text-gray-800">iTRAS (intelligent Talent Readiness Acceleration System)</span>, boosts readiness in core areas like role-based skills, leadership, product and process knowledge, and onboarding. talentSCOPE is an intelligent suite assessing skills, competencies, behaviors, product/process knowledge, and aptitude.
+            </>
+          }
           image="/Connect.svg"
-          title="Comprehensive Services to Drive Your Success Forward"
+          title="Comprehensive Products & Services to Drive Your Success Forward"
+          oreintation="left"
         />
       </div>
-      <div className="mb-10" id="service-form">
-
-      </div>
+  
       {/* CTA Button */}
-      <img src="/Active Indicator.svg" alt="line" className="my-8" />
-      {/* Feedback Form Section */}
-      <div className="w-full max-w-3xl bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 rounded-2xl">
+      
+      <div className="max-w-xl w-1/2 bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 rounded-2xl">
         <form className="space-y-6" onSubmit={handleSubmit} >
           {/* Name Fields */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <label className="block text-sm font-semibold mb-2 text-left">
-                Name*
+                Name <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -98,12 +104,13 @@ const ServiceSection: React.FC = () => {
             </div>
             <div>
               <label className="block text-sm font-semibold mb-2 text-left">
-                Company Name
+                Company Name <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
                 name="companyName"
                 className="w-full p-3 rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[#7030A0]"
+                required
               />
             </div>
           </div>
@@ -112,7 +119,7 @@ const ServiceSection: React.FC = () => {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <label className="block text-sm font-semibold mb-2 text-left">
-                Email*
+                Email <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
@@ -123,7 +130,7 @@ const ServiceSection: React.FC = () => {
             </div>
             <div>
               <label className="block text-sm font-semibold mb-2 text-left">
-                Phone no.*
+                Phone no. <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -137,16 +144,18 @@ const ServiceSection: React.FC = () => {
           {/* Employee HeadCount */}
           <div className="relative">
             <label className="block text-sm font-semibold mb-2 text-left">
-              Employee Headcount
+              Employee Headcount <span className="text-red-500">*</span>
             </label>
             <select
               name="employeeHeadCount"
               value={selectedValue}
               onChange={handleChange}
               className="w-full p-3 rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[#7030A0]"
+              required
+
             >
               <option value="" disabled>
-                Select employee headcount
+                Select employee headcount 
               </option>
               <option value="upto 100">upto 100</option>
               <option value="101-1000">101-1000</option>
@@ -158,18 +167,20 @@ const ServiceSection: React.FC = () => {
           {/* Services Dropdown */}
           <div className="relative">
             <label className="block text-sm font-semibold mb-2 text-left">
-              Services Interested in
+              Services & Products Interested in <span className="text-red-500">*</span>
             </label>
             <select
               name="services"
               value={serviceValue}
               onChange={handleServiceChange}
               className="w-full p-3 rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[#7030A0]"
+              required
+
             >
               <option value="" disabled>
                 Select services
               </option>
-              <option value="Sparcle">Sparcle</option>
+              <option value="Sparcle">SPARCLE</option>
               <option value="talentScope">talentScope</option>
               <option value="Service">Service</option>
               <option value="Others">Others</option>
