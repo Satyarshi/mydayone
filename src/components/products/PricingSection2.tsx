@@ -16,7 +16,7 @@ const PricingSection: React.FC = () => {
           <div className=" rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 w-full md:w-80 z-20 flex flex-col h-full">
             <div className="flex-grow text-center">
               <h2 className="text-xl font-bold mb-4 price-card">Starter</h2>
-              <img src="/Price21.png" alt="standard price" className="w-full" />
+              <img src="/sparcle-price-1.svg" alt="standard price" className="w-full" />
               <div className="text-gray-600 my-4 price-text">
                 Get started with...
               </div>
@@ -63,7 +63,7 @@ const PricingSection: React.FC = () => {
               <h2 className="text-xl mb-4 font-bold price-card">
                 Professional
               </h2>
-              <img src="/Price22.png" alt="plus price" className="w-full" />
+              <img src="/sparcle-price-2.svg" alt="plus price" className="w-full" />
               <div className="text-gray-600 my-4 price-text">
                 All Starter features and...
               </div>
@@ -109,7 +109,7 @@ const PricingSection: React.FC = () => {
             <div className="flex-grow text-center">
               <h2 className="text-xl font-bold mb-4 price-card">Enterprise</h2>
               <img
-                src="/Price23.png"
+                src="/sparcle-price-3.svg"
                 alt="company price"
                 className="w-full"
               />

@@ -18,7 +18,11 @@ const PricingSection: React.FC = () => {
           <div className="bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 w-full md:w-80 z-20 flex flex-col h-full">
             <div className="flex-grow text-center">
               <h2 className="text-xl font-bold mb-4 price-card">Basic</h2>
-              <img src="/Price1.png" alt="standard price" className="w-full" />
+              <img
+                src="/talent-price-1.svg"
+                alt="standard price"
+                className="w-full"
+              />
               <div className="text-gray-600 my-4 price-text">
                 Get started with...
               </div>
@@ -67,7 +71,11 @@ const PricingSection: React.FC = () => {
           <div className="bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 w-full md:w-80 z-20 flex flex-col h-full">
             <div className="flex-grow text-center">
               <h2 className="text-xl font-bold mb-4 price-card">Pro</h2>
-              <img src="/Price2.png" alt="plus price" className="w-full" />
+              <img
+                src="/talent-price-2.svg"
+                alt="plus price"
+                className="w-full"
+              />
               <div className="text-gray-600 my-4 price-text">
                 All Basic features and...
               </div>
@@ -119,7 +127,11 @@ const PricingSection: React.FC = () => {
           <div className="bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 w-full md:w-80 z-20 flex flex-col h-full">
             <div className="flex-grow text-center">
               <h2 className="text-xl font-bold mb-4 price-card">Enterprise</h2>
-              <img src="/Price3.png" alt="company price" className="w-full" />
+              <img
+                src="/talent-price-3.svg"
+                alt="company price"
+                className="w-full"
+              />
               <div className="text-gray-600 my-4 price-text">
                 All Pro features and...
               </div>
