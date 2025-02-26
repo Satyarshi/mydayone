@@ -93,10 +93,10 @@ const Header: React.FC<HeaderProps> = ({ showCareers }) => {
               {isDropdownOpen && (
                 <div className="absolute left-0 mt-2 bg-white border rounded shadow-lg z-20">
                   <Link href="/products/sparcle" className="block px-4 py-2 hover:bg-gray-200 text-black" onClick={handleLinkClick}>
-                    Sparcle
+                    SPARCLE
                   </Link>
                   <Link href="/products/talentscope" className="block px-4 py-2 hover:bg-gray-200 text-black" onClick={handleLinkClick}>
-                    TalentScope
+                    talentScope
                   </Link>
                 </div>
               )}

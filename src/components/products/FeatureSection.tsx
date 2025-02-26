@@ -56,7 +56,7 @@ const FeatureSection: React.FC = () => {
         <div className="flex flex-wrap justify-center gap-6 p-6">
           {/* Main Sections */}
           <div className="flex flex-col gap-4 max-w-7xl w-full md:flex-row">
-            <div className="flex flex-wrap gap-6 justify-center">
+            <div className="flex md:flex-nowrap flex-wrap gap-6 justify-center">
               <div
                 className="bg-gradient-to-b from-[#C7397C] to-[#73319F] text-white p-6 rounded-2xl w-72 shadow-lg min-h-96 flex flex-col justify-between"
                 data-aos="zoom-in-left"
@@ -131,9 +131,9 @@ const FeatureSection: React.FC = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex gap-4 additional-features">
+              <div className="md:w-1/4">
                 <div
-                  className="p-3 mx-2 text-left bg-gray-100 rounded-3xl shadow-lg cursor-pointer hover:shadow-lg transition"
+                  className="p-3 mb-4  text-left bg-gray-100 rounded-3xl shadow-lg cursor-pointer hover:shadow-lg transition"
                   data-aos="zoom-in-left"
                   data-aos-duration="500"
                   data-aos-delay="50"
@@ -145,12 +145,12 @@ const FeatureSection: React.FC = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h2 className="text-md font-medium mb-1">
+                  <h2 className="text-sm font-medium mb-1">
                     IDP development best practices
                   </h2>
                 </div>
                 <div
-                  className="p-3 mx-2 text-left bg-gray-100 rounded-3xl shadow-lg cursor-pointer hover:shadow-lg transition"
+                  className="p-3  text-left bg-gray-100 rounded-3xl shadow-lg cursor-pointer hover:shadow-lg transition"
                   data-aos="zoom-in-left"
                   data-aos-duration="500"
                   data-aos-delay="50"
@@ -162,7 +162,7 @@ const FeatureSection: React.FC = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h2 className="text-md font-medium mb-1">
+                  <h2 className="text-sm font-medium mb-1">
                   Comprehensive solution for role based development
                   </h2>
                 </div>

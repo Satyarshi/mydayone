@@ -40,7 +40,7 @@ const BenefitsSection: React.FC<BenefitsSectionProps> = ({
                 {listItems.map((feature, index) => (
                   <li key={index} className="flex items-start text-base">
                     <img
-                      src="/Vector.svg"
+                      src="/check.svg"
                       alt="Check Icon"
                       className="mr-3 w-5 h-5"
                     />
