@@ -14,7 +14,7 @@ const ProductSkills: React.FC<ProductSkillsProps> = ({ title, description }) => 
         {/* Title and Description */}
         <div className="flex flex-col md:flex-row items-center justify-center mb-8 relative">
           <div className="relative md:w-1/2">
-            <ImageTitle image="/Process.png" title={title} description={''} oreintation="left"/>
+            <ImageTitle image="/process1.svg" title={title} description={''} oreintation="left"/>
             
           </div>
           <p className="text-[#7B7E85] text-lg max-w-xl mx-auto text-justify">

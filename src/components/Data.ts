@@ -5,14 +5,14 @@ export const productsData = {
 		shinyText: "What’s new? Instantly issue virtual card’s",
 		heading: "Empower Readiness with Data-Driven Feedback",
 		subheading:
-			"talentSCOPE simplifies assessments with AI-powered tools for individuals, leaders, teams and organizations. Create actionable insights and seamlessly accelerate readiness of skills/competencies, behaviours, aptitude, product knowledge, process adherence.",
+			"talentScope simplifies assessments with AI-powered tools for individuals, leaders, teams and organizations. Create actionable insights and seamlessly accelerate readiness of skills/competencies, behaviours, aptitude, product knowledge, process adherence.",
 		buttonText: "Avail Your Free Demo Today",
 	},
 	benefitsSection: {
 		title: "Why Choose talentScope?",
 		descriptionTitle: "Delivering Actionable Insights to Drive Readiness",
 		descriptionText:
-			"talentSCOPE helps you accelerate talent readiness through real-time feedback tailored to individual needs. Designed for developing talent our platform offers multiple tools needed to streamline your Talent assessment process.",
+			"talentScope helps you accelerate talent readiness through real-time feedback tailored to individual needs. Designed for developing talent our platform offers multiple tools needed to streamline your Talent assessment process.",
 		listItems: [
 			{
 				title:"For Organisations: ",
@@ -102,25 +102,25 @@ export const productsData = {
 			shinyText: "What’s new? Instantly issue virtual card’s",
 			heading: "Transform How You Accelerate Talent Readiness ",
 			subheading:
-				"Sparcle is your AI-powered suite for identifying, creating, managing and measuring hyper-personalized readiness journeys for individuals, leaders, teams, and organisations. Drive Role readiness, Leadership readiness, onboarding readiness, product/service readiness with hyperpersonalised journeys for every roles in your organisation.Obtain exciting ROI at every level of the journey. KP1 to KP4, for all your readiness programs with insightful tracking and zero manual efforts! ",
+				"SPARCLE is your AI-powered suite for identifying, creating, managing and measuring hyper-personalized readiness journeys for individuals, leaders, teams, and organisations. Drive Role readiness, Leadership readiness, onboarding readiness, product/service readiness with hyperpersonalised journeys for every roles in your organisation.Obtain exciting ROI at every level of the journey. KP1 to KP4, for all your readiness programs with insightful tracking and zero manual efforts! ",
 			buttonText: "Try Your Free Sample Talent Readiness Journey Today",
 		},
 		benefitsSection: {
 			title: "Empowering Learners, Enhancing Business Impact",
-			descriptionTitle: "What Sets Sparcle Apart?",
+			descriptionTitle: "What Sets SPARCLE Apart?",
 			descriptionText:
-				"Experience the power of AI-driven talent readiness that tailors growth paths for each employee. Sparcle combines personalized journey, real-time insights, effortless program modifications and scalable automation to align workforce readiness acceleration with your organization’s goals.",
+				"Experience the power of AI-driven talent readiness that tailors growth paths for each employee. SPARCLE combines personalized journey, real-time insights, effortless program modifications and scalable automation to align workforce readiness acceleration with your organization’s goals.",
 			listItems: [
 				{ title:"For HR Teams:",para:" Drive measurable ROI by aligning readiness programs with strategic business goals using insightful tracking and effortless program modification."},
 					{title:"For Leaders: ",para:" Gain actionable feedback to manage performance and mentoring while accelerating team readiness for higher responsibilities."},
 					{title:"For Employees: ",para:" Enjoy personalized readiness programs tailored to individual strengths and aspirations, supported by real-time cohort feedback."},
-					{title:"Unique Benefit: ", para:"Sparcle ensures readiness aligns seamlessly with career growth, fostering a culture of continuous improvement."},
+					{title:"Unique Benefit: ", para:"SPARCLE ensures readiness aligns seamlessly with career growth, fostering a culture of continuous improvement."},
 			],
 		},
 		skillsSection: {
 			title: "See the Results, Trust the Process",
 			description:
-				"The Sparcle Process (powered by iTRAS, iTRAS is intelligent Talent Readiness Acceleration System) starts with assessing needs through behavioral intelligence, followed by AI-driven personalized readiness journeys. Readiness acceleration is supported by continuous micro-learning, social sharing and real-time feedback, with impact measured through analytics tracking skills acquisition and leadership readiness. Results may include 50% faster leadership readiness, a 30% acceleration in employee skills/competencies and improved team collaboration and productivity.",
+				"The SPARCLE Process (powered by iTRAS, iTRAS is intelligent Talent Readiness Acceleration System) starts with assessing needs through behavioral intelligence, followed by AI-driven personalized readiness journeys. Readiness acceleration is supported by continuous micro-learning, social sharing and real-time feedback, with impact measured through analytics tracking skills acquisition and leadership readiness. Results may include 50% faster leadership readiness, a 30% acceleration in employee skills/competencies and improved team collaboration and productivity.",
 		},
 	};
 

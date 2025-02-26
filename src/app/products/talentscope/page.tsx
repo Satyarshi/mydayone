@@ -14,7 +14,7 @@ import PageHeader from "@/components/ui/PageHeader";
 // import BlogSection from "@/components/blog-main/BlogSection";
 
 export const metadata = {
-  title: "MyDayOne | TalentScope",
+  title: "MyDayOne | talentScope",
   description: "Smarter Feedback. Stronger Teams",
   keywords: "Feedback, Teams, Smarter, Stronger",
 };
@@ -22,10 +22,9 @@ export const metadata = {
 const Product1: React.FC = () => {
   return (
     <>
-      <PageHeader title="TalentScope" description="Smarter Feedback. Stronger Teams" />
+      <PageHeader title="talentScope" description="Smarter Feedback. Stronger Teams" />
       {/* Hero Section */}
       <section className="flex flex-col justify-center items-center p-4 overflow-hidden">
-        <img src="/talentScope.png" alt="" className="mt-24 w-96" />
         <ImageSection
          
           heading={productsData.heroSection.heading}

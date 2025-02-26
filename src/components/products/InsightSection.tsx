@@ -48,7 +48,7 @@ const InsightSection: React.FC = () => {
     <section className="relative pb-12 w-full ">
       <div className="container mx-auto text-center z-10 px-4 sm:px-6 lg:px-8">
         <ImageTitle
-          image="/Insight.svg"
+          image="/INSIGHTS.svg"
           title="Features That Power Transformation"
           description=""
         />
@@ -75,7 +75,7 @@ const InsightSection: React.FC = () => {
                 <div>
                   <h2 className="text-2xl font-medium text-left">Less</h2>
                   <p className="text-base mt-2 text-left">
-                    Reduction in manual effort with talentSCOPE’s automation.
+                    Reduction in manual effort with talentScope’s automation.
                   </p>
                 </div>
               </div>
@@ -97,7 +97,7 @@ const InsightSection: React.FC = () => {
                 <div>
                   <h2 className="text-2xl font-medium text-left">Higher</h2>
                   <p className="text-base mt-2 text-left">
-                    Participation in assessment process with talentSCOPE
+                    Participation in assessment process with talentScope
                     hyperpersonalised response features.
                   </p>
                 </div>

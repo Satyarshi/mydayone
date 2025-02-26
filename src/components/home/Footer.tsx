@@ -68,10 +68,10 @@ const Footer = () => {
               {showProducts && (
                 <ul className="ml-4 mt-2 space-y-1">
                   <li>
-                    <a href="/products/sparcle">Sparcle</a>
+                    <a href="/products/sparcle">SPARCLE</a>
                   </li>
                   <li>
-                    <a href="/products/talentscope">TalentScope</a>
+                    <a href="/products/talentscope">talentScope</a>
                   </li>
                 </ul>
               )}

@@ -16,7 +16,7 @@ const pages = [
     title: "End to end Readiness Solutions for Enhanced Workforce Performance",
     heading: "Readiness Program Design",
     description:
-      "Sparcle assists in creating bespoke learning programs tailored to the specific needs of your workforce. From content creation to delivery, we ensure that the learning experience aligns with business objectives and employee skill levels.",
+      "SPARCLE assists in creating bespoke learning programs tailored to the specific needs of your workforce. From content creation to delivery, we ensure that the learning experience aligns with business objectives and employee skill levels.",
     stats: [
       { label: "95%", text: "faster implementation of feedback processes." },
       {
@@ -125,7 +125,7 @@ const VerticalSwiper = () => {
         onSwiper={setSwiperInstance}
         onSlideChange={(swiper) => setActivePage(swiper.activeIndex)}
         modules={[Autoplay, Pagination]}
-        autoplay={{ delay: 2000 }}
+        autoplay={{ delay: 6000 }}
         className=" w-full max-w-[90vw] "
       >
         {pages.map((page, index) => (

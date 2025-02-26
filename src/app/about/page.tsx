@@ -17,7 +17,7 @@ const About: React.FC = () => {
     <>
     <PageHeader title="About Us" description="We are a team of professionals who are passionate about helping businesses grow." />
       {/* Hero Section */}
-      <section className="flex justify-center items-center p-4 overflow-hidden mt-16">
+      <section className="flex justify-center items-center p-4 overflow-hidden mt-20">
         <HeroSection />
       </section>
 

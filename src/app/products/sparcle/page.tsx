@@ -15,7 +15,7 @@ import BlogsSection from "@/components/home/BlogSection";
 
 
 export const metadata = {
-  title: "MyDayOne | Sparcle",
+  title: "MyDayOne | SPARCLE",
   description: "Revolutionize Talent Development with AI Precision",
   keywords: "AI, Talent Development, Revolutionize, Precision",
 }; 
@@ -23,7 +23,7 @@ export const metadata = {
 const Product1: React.FC = () => {
   return (
     <>
-    <PageHeader title="Sparcle" description="Revolutionize Talent Development with AI Precision" />
+    <PageHeader title="SPARCLE" description="Revolutionize Talent Development with AI Precision" />
       <section className="flex justify-center items-center p-4 overflow-hidden mt-10 md:mt-24">
         <ImageSection
           heading={productData.heroSection.heading}
@@ -78,7 +78,7 @@ const Product1: React.FC = () => {
 
       <BlogsSection />
     
-      <UnlockPotentialSection buttonText="Join Us" ctaText="Start today" description="Book Your Free Demo Today!" title="See Sparcle in Action" link="/form#service-form"  />
+      <UnlockPotentialSection buttonText="Join Us" ctaText="Start today" description="Book Your Free Demo Today!" title="See SPARCLE in Action" link="/form#service-form"  />
       </>
   );
 };

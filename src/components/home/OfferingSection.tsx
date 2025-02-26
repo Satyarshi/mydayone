@@ -25,7 +25,7 @@ const OfferingSection: React.FC = () => {
   const tabContent: { [key: string]: () => React.JSX.Element } = {
     Products:()=>
     <>
-      Our innovative tech solutions, <span className="font-semibold text-gray-800"> SPARCLE </span>and <span className="font-semibold text-gray-800">talentSCOPE</span> revolutionize talent readiness and assessment in organizations. SPARCLE, powered by <span className="font-semibold text-gray-800">iTRAS (intelligent Talent Readiness Acceleration System)</span>, boosts readiness in core areas like role-based skills, leadership, product and process knowledge, and onboarding. talentSCOPE is an intelligent suite assessing skills, competencies, behaviors, product/process knowledge, and aptitude.
+      Our innovative tech solutions, <span className="font-semibold text-gray-800"> SPARCLE </span>and <span className="font-semibold text-gray-800">talentScope</span> revolutionize talent readiness and assessment in organizations. SPARCLE, powered by <span className="font-semibold text-gray-800">iTRAS (intelligent Talent Readiness Acceleration System)</span>, boosts readiness in core areas like role-based skills, leadership, product and process knowledge, and onboarding. talentScope is an intelligent suite assessing skills, competencies, behaviors, product/process knowledge, and aptitude.
     </>,
     Services:()=>
     <>
@@ -123,13 +123,13 @@ const OfferingSection: React.FC = () => {
                   className="rounded-xl w-full object-cover"
                 />
                 <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6">
-                  <img src="/sparcleLogo.png" alt="" className="h-10" />
+                  <img src="/SPARCLELogo.png" alt="" className="h-10" />
                   <p className="mt-2 text-center text-gray-600 text-base md:text-base">
                     Accelerating Talent Readiness
                   </p>
                 </div>
                 <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6">
-                  <img src="/talentScope2.png" alt="" className="h-10" />
+                  <img src="/talentscope2.png" alt="" className="h-10" />
                   <p className="mt-2 text-center text-gray-600 text-base md:text-base">
                     Assessing your Talent
                   </p>

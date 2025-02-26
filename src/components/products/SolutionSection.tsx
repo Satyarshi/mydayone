@@ -113,7 +113,7 @@ const VerticalSwiper = ({ pages }: VerticalSwiperProps) => {
         onSlideChange={handleSlideChange}
         modules={[Autoplay, Pagination]}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3500 }}
+        autoplay={{ delay: 6500 }}
         className="max-h-[600px] w-full max-w-[85vw]"
       >
         {pages.map((page, index) => (

@@ -48,7 +48,7 @@ const ServiceSection: React.FC = () => {
     <section className="relative py-12 w-full mt-10">
       <div className="container mx-auto text-center z-10 px-4 sm:px-6 lg:px-8">
         <ImageTitle
-          image="/Insight.svg"
+          image="/INSIGHTS.svg"
           title="Enhance Talent Readiness with Continuous Improvement"
           description=""
         />
