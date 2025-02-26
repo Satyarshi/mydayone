@@ -24,12 +24,9 @@ const PricingSection: React.FC = () => {
               <ul className="text-left mt-6 price-feature">
                 {[
                   { text: "For small ", bold: "teams" },
-                  { text: "One pre-", bold: "360 assessment" },
+                  { text: "One ", bold: "baseline assessment" },
                   { text: "Learning ", bold: "reinforcements" },
-                  // { text: "Set Up Fee – INR 99,000  for one Standard Journey", bold: "" },
-                  // { text: "Monthly Licence Fee – INR 999 / licence (concurrent users) ", bold: "" },
-                  // { text: "Onboarding Fee – INR 49,000/ upto 20 employees", bold: "" },
-                  { text: "Personalized ", bold: "consultation" },
+                  { text: "Role Based ", bold: "Individual Development Plan (IDP)" },
                   { text : "Free onboarding ", bold: "consultation" },
                 ].map((feature, index) => (
                   <li key={index} className="flex items-center mb-2">
@@ -63,23 +60,21 @@ const PricingSection: React.FC = () => {
           {/* Plus Plan */}
           <div className="bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 w-full md:w-80 z-20 flex flex-col h-full">
             <div className="flex-grow text-center">
-              <h2 className="text-xl font-bold mb-4 price-card">
+              <h2 className="text-xl mb-4 font-bold price-card">
                 Professional
               </h2>
               <img src="/Price22.png" alt="plus price" className="w-full" />
               <div className="text-gray-600 my-4 price-text">
-                All Standard features and...
+                All Starter features and...
               </div>
               <hr />
               <ul className="text-left mt-6 price-feature">
                 {[
-                  { text: "For ", bold: "Growing organizations" },
-                  { text: "Pre and post ", bold: "360-degree assessments" },
-                  { text: "Continuous ", bold: "mini-assessments" },
-                  // { text: "Custom Individual Development Plans ", bold: "(IDPs)" },
-                  // { text: "Set Up Fee: INR 2,99,000 for 10 customized journeys" },
-                  // { text: "Monthly License Fee: INR 1,999 per license (concurrent users)", bold: "" },
-                  { text : "Free onboarding ", bold: "consultation" },
+                  { text: "For ", bold: "Growing organisations" },
+                  { text: "One Pre and post ", bold: "assessments" },
+                  { text: "Continuous ", bold: "Peer feedback module" },
+                  { text : "Hyper personalised ", bold: "Readiness Journey" },
+                  { text: "Group", bold: " consultation" },
                 ].map((feature, index) => (
                   <li key={index} className="flex items-center mb-2">
                     <img
@@ -118,22 +113,19 @@ const PricingSection: React.FC = () => {
                 alt="company price"
                 className="w-full"
               />
-              <div className="text-gray-600 my-4 price-text">
-                All Plus features and...
+              <div className="text-gray-600 my-5 price-text">
+                All Professional features and...
               </div>
               <hr />
               <ul className="text-left mt-6 price-feature">
                 {[
-                  { text: "For", bold: "Large-scale organizations" },
-                  { text: "Custom integrations", bold: "" },
-                  { text: "Priority support", bold: "" },
-                  { text: "Comprehensive solutions for ", bold: "organizational needs" },
-                  { text: "Full ", bold: "compensation package" },
-                  { text: "Leadership and executive ", bold: "support" },
+                  { text: "For", bold: " Large-scale organisations" },
+                  { text: "Custom ", bold: "integrations" },
+                  { text: "Priority ", bold: "support" },
+                  { text: "Integrated ", bold: "Readiness package" },
                   { text: "Workload ", bold: "management" },
-                  { text: "Role-based ", bold: "permissions" },
-                  { text: "Personalized ", bold: "consultation sessions" },
-                  { text : "Free onboarding ", bold: "consultation" },
+                  { text: "Integration with  ", bold: "succession management" },
+                  { text : "9 ", bold: "Box Framework" },
                 ].map((feature, index) => (
                   <li key={index} className="flex items-center mb-2">
                     <img
