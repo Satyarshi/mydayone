@@ -107,7 +107,7 @@ const OfferingSection: React.FC = () => {
                 <img
                   src="/productBento.svg"
                   alt="Statistics Graphic"
-                  className="rounded-xl  object-cover md:w-[506px] "
+                  className="rounded-xl object-cover md:w-[506px] "
                 />
                 <div className="flex items-center w-full justify-center bg-white rounded-xl shadow p-6">
                   <p className="text-center text-base md:text-base font-semibold">

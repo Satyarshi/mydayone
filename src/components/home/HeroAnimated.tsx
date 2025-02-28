@@ -26,7 +26,7 @@ const Hero = () => {
       <CenterImage />
       <ParallaxImages />
 
-      <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-zinc-950/0 to-white" />
+      <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-zinc-950/0 to-[#fbfbfc]" />
     </div>
   );
 };
@@ -46,7 +46,7 @@ const CenterImage = () => {
   );
   const opacity = useTransform(
     scrollY,
-    [SECTION_HEIGHT, SECTION_HEIGHT + 500],
+    [SECTION_HEIGHT, SECTION_HEIGHT + 3500], // original it was  + 500
     [1, 0]
   );
 
@@ -92,13 +92,13 @@ const Scroller = () => {
           <motion.div
             className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1"
             animate={{
-              y: [5, 35,5],
+              y: [5, 35, 5],
               opacity: [1, 1],
             }}
             transition={{
               duration: 1.5,
               repeat: Infinity,
-              repeatType:"loop",
+              repeatType: "loop",
               ease: "easeInOut",
             }}
           />

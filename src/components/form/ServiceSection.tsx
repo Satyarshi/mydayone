@@ -70,9 +70,9 @@ const ServiceSection: React.FC = () => {
   };
 
   return (
-    <section className=" flex items-start py-36 justify-between mx-20 ">
+    <section className=" flex flex-col xl:flex-row items-center xl:items-start xl:gap-0 gap-20 py-36 justify-between mx-20 ">
       {/* Background Heading */}
-      <div className=" w-1/2">
+      <div className="xl:w-1/2">
         <ImageTitle
           description={
             <>
@@ -81,13 +81,13 @@ const ServiceSection: React.FC = () => {
           }
           image="/Connect.svg"
           title="Comprehensive Products & Services to Drive Your Success Forward"
-          oreintation="left"
+          oreintation={window.innerWidth >= 1280 ? "left" : ""}
         />
       </div>
   
       {/* CTA Button */}
       
-      <div className="max-w-xl w-1/2 bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 rounded-2xl">
+      <div className="max-w-xl xl:w-1/2 w-full bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 rounded-2xl">
         <form className="space-y-6" onSubmit={handleSubmit} >
           {/* Name Fields */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">

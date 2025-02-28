@@ -20,7 +20,7 @@ const ProcessSection: React.FC = () => {
           {/* Heading */}
           <ImageTitle
             image="/Process.png"
-            title="How We Deliver Tangible Impact"
+            title="How We Deliver Tangible Impact ?"
             description=""
             oreintation="left"
           />
