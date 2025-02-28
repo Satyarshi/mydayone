@@ -205,7 +205,13 @@ html {
 
 @media (max-width: 1024px) {
   .benefits {
-    height: 1450px;
+    height: var(--benefits-height, 1450px)
+  }
+}
+
+@media ((min-width: 515px) and (max-width: 1024px)) {
+  .benefits {
+    height: 1550px;
   }
 }
 

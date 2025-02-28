@@ -298,3 +298,77 @@ export const productsData = {
 		  ],
 		},
 	  ];
+
+	export const solution = {
+		 sparcle: [
+			{
+			  id: 1,
+			  image: "/sparcleHero6.png",
+			  title: "End to end Readiness Solutions for Enhanced Workforce Performance",
+			  heading: "Readiness Program Design",
+			  description:
+				"SPARCLE assists in creating bespoke learning programs tailored to the specific needs of your workforce. From content creation to delivery, we ensure that the learning experience aligns with business objectives and employee skill levels.",
+			  stats: [
+				{ label: "95%", text: "faster implementation of feedback processes." },
+				{
+				  label: "80%",
+				  text: "of learners report better alignment with readiness goals.",
+				},
+			  ],
+			},
+			{
+			  id: 2,
+			  heading: "Tailored product for every stage of readiness",
+			  title: "Next level Development",
+			  image: "/sparcleHero6.png",
+			  description:
+				"Enhanced integration to streamline your feedback processes and align business outcomes with talent readiness",
+			  stats: [
+				{
+				  label: "90%",
+				  text: "improved team readiness through the feedback loop.",
+				},
+				{
+				  label: "85%",
+				  text: "of learners achieve faster readiness with tailored plans.",
+				},
+			  ],
+			},
+		  ],
+		  talentscop: [
+			{
+			  id: 1,
+			  image: "/sparcleHero6.png",
+			  title: "End-to-End Talent Readiness Assessment Solutions",
+			  heading: "Assessment Design",
+			  description:
+				"talentScope assists in creating bespoke assessment programs for specific assessment needs of the organisation - skills/ competencies, behaviours, aptitude, product knowledge, process adherence. From instrument curation to delivery, we ensure that the assessment experience aligns with business objectives and employee readiness levels.",
+			  stats: [
+				{ label: "95%", text: "faster implementation of feedback processes." },
+				{
+				  label: "80%",
+				  text: "of learners report better alignment with readiness goals.",
+				},
+			  ],
+			},
+			{
+			  id: 2,
+			  heading: "Tailored product for every level of readiness",
+			  title: "For Next level Readiness",
+			  image: "/sparcleHero6.png",
+			  description:
+				"Enhanced integration to streamline your feedback processes and align business outcomes with talent readiness.",
+			  stats: [
+				{
+				  label: "90%",
+				  text: "improved team collaboration through the feedback loop.",
+				},
+				{
+				  label: "85%",
+				  text: "of learners achieve faster readiness with tailored plans.",
+				},
+			  ],
+			},
+		  ],
+		  
+	}

@@ -7,7 +7,7 @@ import ServiceSection from "@/components/products/ServiceSection";
 import SolutionSection from "@/components/products/SolutionSection";
 import ImageSection from "@/components/products/ImageSection";
 import FeatureSection from "@/components/products/FeatureSection";
-import { productData,page } from "@/components/Data";
+import { productData,page,solution } from "@/components/Data";
 import ResourceSection from "@/components/products/ResourceSection";
 import UnlockPotentialSection from "@/components/home/UnlockPotentialSection";
 import PageHeader from "@/components/ui/PageHeader";
@@ -48,6 +48,7 @@ const Product1: React.FC = () => {
           descriptionTitle={productData.benefitsSection.descriptionTitle}
           descriptionText={productData.benefitsSection.descriptionText}
           listItems={productData.benefitsSection.listItems}
+          height="1650px"
         />
       </section>
 
@@ -67,7 +68,7 @@ const Product1: React.FC = () => {
 
       {/* Services Section */}
       <section className="flex justify-center items-center md:px-10 ">
-        <ServiceSection />
+        <ServiceSection pages={solution.sparcle}/>
       </section>
 
 

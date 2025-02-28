@@ -9,48 +9,33 @@ import ImageTitle from "../Title/ImageTitle";
 import { image } from "framer-motion/client";
 import { release } from "os";
 
-const pages = [
-  {
-    id: 1,
-    image: "/sparcleHero6.png",
-    title: "End to end Readiness Solutions for Enhanced Workforce Performance",
-    heading: "Readiness Program Design",
-    description:
-      "SPARCLE assists in creating bespoke learning programs tailored to the specific needs of your workforce. From content creation to delivery, we ensure that the learning experience aligns with business objectives and employee skill levels.",
-    stats: [
-      { label: "95%", text: "faster implementation of feedback processes." },
-      {
-        label: "80%",
-        text: "of learners report better alignment with readiness goals.",
-      },
-    ],
-  },
-  {
-    id: 2,
-    heading: "Tailored product for every stage of readiness",
-    title: "Next level Development",
-    image: "/sparcleHero6.png",
-    description:
-      "Enhanced integration to streamline your feedback processes and align business outcomes with talent readiness",
-    stats: [
-      {
-        label: "90%",
-        text: "improved team readiness through the feedback loop.",
-      },
-      {
-        label: "85%",
-        text: "of learners achieve faster readiness with tailored plans.",
-      },
-    ],
-  },
-];
+interface Stat {
+  label: string;
+  text: string;
+}
+
+interface Page {
+  id: number;
+  heading: string;
+  title: string;
+  image: string;
+  description: string;
+  stats: Stat[];
+}
+
+interface VerticalSwiperProps {
+  pages: Page[]; // Type for pages prop
+}
 
 const ProgressBars = ({
   activePage,
   onBarClick,
+  pages
 }: {
   activePage: number;
   onBarClick: (index: number) => void;
+  pages: Page[]; // Declare the type for the `pages` prop here
+
 }) => (
   <div className=" invisible md:visible flex flex-col items-center justify-center space-y-2 md:space-y-4">
     {pages.map((page, index) => (
@@ -65,9 +50,9 @@ const ProgressBars = ({
   </div>
 );
 
-const SectionPage = ({ page }: { page: any }) => (
-  <div className="section-page flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 lg:space-x-8 h-[820px] ">
-    <div className="w-0 md:w-1/3 rounded-lg lg:flex lg:items-center lg:justify-center h-48 lg:h-auto hidden">
+const SectionPage = ({ page }: { page: Page }) => (
+  <div className="section-page flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 lg:space-x-8 h-[880px] sm:h-[620px] ">
+    <div className="w-0 md:w-1/3 rounded-lg lg:flex lg:items-start lg:justify-center h-48 lg:h-auto hidden">
       <img
         src={page.image}
         alt={page.title}
@@ -105,7 +90,7 @@ const SectionPage = ({ page }: { page: any }) => (
   </div>
 );
 
-const VerticalSwiper = () => {
+const VerticalSwiper = ({ pages }: VerticalSwiperProps) => {
   const [activePage, setActivePage] = useState(0);
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 
@@ -126,7 +111,7 @@ const VerticalSwiper = () => {
         onSlideChange={(swiper) => setActivePage(swiper.activeIndex)}
         modules={[Autoplay, Pagination]}
         autoplay={{ delay: 6000 }}
-        className="max-h-[830px] w-full max-w-[90vw] "
+        className="max-h-[900px] w-full max-w-[90vw] "
       >
         {pages.map((page, index) => (
           <SwiperSlide key={index}>
@@ -134,7 +119,7 @@ const VerticalSwiper = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <ProgressBars activePage={activePage} onBarClick={handleBarClick} />
+      <ProgressBars activePage={activePage} onBarClick={handleBarClick} pages={pages}/>
     </div>
   );
 };

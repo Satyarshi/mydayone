@@ -10,6 +10,7 @@ interface BenefitsSectionProps {
     title: string;
     para: string;
   }[];
+  height?: string;
   };
 
 
@@ -18,9 +19,10 @@ const BenefitsSection: React.FC<BenefitsSectionProps> = ({
   descriptionTitle,
   descriptionText,
   listItems,
+  height = "auto", // Default height
 }) => {
   return (
-    <section className="relative benefits pb-20">
+    <section className="relative benefits pb-20" style={{ "--benefits-height": height } as React.CSSProperties}>
       {/* Content Container */}
       <div className=" flex flex-col items-center justify-center product-content">
         <div className=" text-center pt-15 md:mx-20 lg:px-0 top-56">
