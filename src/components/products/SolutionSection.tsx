@@ -40,15 +40,16 @@ const ProgressBars = ({
       <div
         key={page.id}
         onClick={() => onBarClick(index)}
-        className={`w-1 h-8 md:w-2 md:h-10 rounded-full cursor-pointer transition-colors duration-300 ${activePage === index ? "bg-purple-600" : "bg-purple-300"
-          }`}
+        className={`w-1 h-8 md:w-2 md:h-10 rounded-full cursor-pointer transition-colors duration-300 ${
+          activePage === index ? "bg-purple-600" : "bg-purple-300"
+        }`}
       />
     ))}
   </div>
 );
 
 const SectionPage = ({ page }: { page: Page }) => (
-  <div className="section-page flex flex-col my-8 lg:flex-row justify-between space-y-8 lg:space-y-0 lg:space-x-8 ">
+  <div className="section-page flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 lg:space-x-8 bg-[#fbfbfc]">
     <div className="relative px-4 w-full lg:w-2/3 min-h-[450px]">
       <ImageTitle
         description={page.description}
@@ -60,7 +61,8 @@ const SectionPage = ({ page }: { page: Page }) => (
         {page.stats.map((stat: Stat, idx: number) => (
           <div
             key={idx}
-            className="shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-4 rounded-3xl text-left cursor-pointer w-full md:w-80">
+            className="shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-4 rounded-3xl text-left cursor-pointer w-full md:w-80"
+          >
             <p className="text-2xl font-bold">{stat.label}</p>
             <p className="text-gray-600 text-base md:text-lg">{stat.text}</p>
           </div>
@@ -94,8 +96,6 @@ const VerticalSwiper = ({ pages }: VerticalSwiperProps) => {
     setActivePage(swiper.activeIndex);
   };
 
- 
-
   return (
     <div className="flex flex-col md:flex-row items-center gap-2 mx-2 md:mx-8">
       {/* Progress Bars */}
@@ -117,7 +117,7 @@ const VerticalSwiper = ({ pages }: VerticalSwiperProps) => {
         className="max-h-[720px] w-full max-w-[85vw]"
       >
         {pages.map((page, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="bg-[#fbfbfc]">
             <SectionPage page={page} />
           </SwiperSlide>
         ))}
