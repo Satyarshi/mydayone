@@ -56,7 +56,7 @@ const SectionPage = ({ page }: { page: Page }) => (
         title={page.title}
         oreintation="left"
       />
-      <div className="mt-4 flex flex-row flex-wrap space-y-4 lg:space-y-0 lg:space-x-4">
+      <div className="mt-4 flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
         {page.stats.map((stat: Stat, idx: number) => (
           <div
             key={idx}
@@ -67,7 +67,7 @@ const SectionPage = ({ page }: { page: Page }) => (
         ))}
       </div>
     </div>
-    <div className="w-full lg:w-1/3 rounded-lg flex items-center justify-center h-48 lg:h-auto invisible md:visible">
+    <div className="w-full lg:w-1/3 rounded-lg flex items-center justify-center h-48 lg:h-auto invisible lg:visible">
       <img
         src={page.image}
         alt="skills"
