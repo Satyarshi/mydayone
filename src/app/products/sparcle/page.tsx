@@ -72,7 +72,7 @@ const Product1: React.FC = () => {
 
 
       {/* Pricing Section */}
-      <section className="flex justify-center items-center p-4 mt-20 overflow-hidden">
+      <section className="flex justify-center items-center p-4 overflow-hidden">
         <PricingSection />
       </section>
 

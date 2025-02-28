@@ -62,7 +62,7 @@ const SectionPage = ({ page }: { page: Page }) => (
             key={idx}
             className="shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-4 rounded-3xl text-left cursor-pointer w-full md:w-80">
             <p className="text-2xl font-bold">{stat.label}</p>
-            <p className="text-gray-600">{stat.text}</p>
+            <p className="text-gray-600 text-base md:text-lg">{stat.text}</p>
           </div>
         ))}
       </div>
@@ -114,7 +114,7 @@ const VerticalSwiper = ({ pages }: VerticalSwiperProps) => {
         modules={[Autoplay, Pagination]}
         pagination={{ clickable: true }}
         autoplay={{ delay: 6500 }}
-        className="max-h-[600px] w-full max-w-[85vw]"
+        className="max-h-[720px] w-full max-w-[85vw]"
       >
         {pages.map((page, index) => (
           <SwiperSlide key={index}>

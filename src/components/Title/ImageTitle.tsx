@@ -18,7 +18,7 @@ const ImageTitle = ({title,description,image,oreintation}:ImageTitleProps ) => {
 						<h2 className={`text-4xl text-wrap md:text-5xl font-bold text-[#111827] `}>
 							{title}
 						</h2>
-						<p className="text-gray-500 text-sm md:text-lg ">
+						<p className="text-gray-500 text-base md:text-lg ">
 							{description}
 						</p>
 					</div>

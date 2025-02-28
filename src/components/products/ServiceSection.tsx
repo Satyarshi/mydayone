@@ -52,7 +52,7 @@ const ProgressBars = ({
   activePage: number;
   onBarClick: (index: number) => void;
 }) => (
-  <div className="flex flex-col items-center justify-center space-y-2 md:space-y-4">
+  <div className=" invisible md:visible flex flex-col items-center justify-center space-y-2 md:space-y-4">
     {pages.map((page, index) => (
       <div
         key={page.id}
@@ -66,8 +66,8 @@ const ProgressBars = ({
 );
 
 const SectionPage = ({ page }: { page: any }) => (
-  <div className="section-page flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 lg:space-x-8 h-[600px] ">
-    <div className="w-0 md:w-1/3  rounded-lg flex items-center justify-center h-48 lg:h-auto">
+  <div className="section-page flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 lg:space-x-8 h-[820px] ">
+    <div className="w-0 md:w-1/3 rounded-lg lg:flex lg:items-center lg:justify-center h-48 lg:h-auto hidden">
       <img
         src={page.image}
         alt={page.title}
@@ -88,9 +88,9 @@ const SectionPage = ({ page }: { page: any }) => (
         <h2 className="text-xl md:text-2xl t= font-semibold text-[#4A4A4A]">
           {page.heading}
         </h2>
-        <p className=" text-gray-500">{page.description}</p>
+        <p className=" text-gray-500 text-base lg:text-lg">{page.description}</p>
       </div>
-      <div className="mt-4 flex flex-row space-y-0 space-x-4">
+      <div className="mt-4 flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
         {page.stats.map((stat: any, idx: number) => (
           <div
             key={idx}
@@ -115,7 +115,7 @@ const VerticalSwiper = () => {
   };
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-col md:flex-row items-center gap-2 mx-2 md:mx-8">
       {/* Progress Bars */}
 
       {/* Swiper Component */}
@@ -126,7 +126,7 @@ const VerticalSwiper = () => {
         onSlideChange={(swiper) => setActivePage(swiper.activeIndex)}
         modules={[Autoplay, Pagination]}
         autoplay={{ delay: 6000 }}
-        className=" w-full max-w-[90vw] "
+        className="max-h-[830px] w-full max-w-[90vw] "
       >
         {pages.map((page, index) => (
           <SwiperSlide key={index}>
