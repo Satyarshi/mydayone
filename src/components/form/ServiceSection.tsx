@@ -4,11 +4,12 @@ import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ImageTitle from "../Title/ImageTitle";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ServiceSection: React.FC = () => {
   const [selectedValue, setSelectedValue] = useState<string>("");
   const [serviceValue, setServiceValue] = useState<string>("");
+  const [orientation, setOrientation] = useState<string>("");
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedValue(event.target.value);
@@ -16,6 +17,16 @@ const ServiceSection: React.FC = () => {
   const handleServiceChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setServiceValue(event.target.value);
   };
+  useEffect(() => {
+    const updateOrientation = () => {
+      setOrientation(window.innerWidth >= 1280 ? "left" : "");
+    };
+
+    updateOrientation(); // Set on initial render
+    window.addEventListener("resize", updateOrientation);
+
+    return () => window.removeEventListener("resize", updateOrientation);
+  }, []);
   // Function to handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(); // Prevent default form submission behavior
@@ -30,12 +41,19 @@ const ServiceSection: React.FC = () => {
     };
 
     const emailDomain = formData.email.split("@")[1];
-    const publicDomains = ["gmail.com", "yahoo.com", "outlook.com", "hotmail.com", "aol.com", "icloud.com"]; 
+    const publicDomains = [
+      "gmail.com",
+      "yahoo.com",
+      "outlook.com",
+      "hotmail.com",
+      "aol.com",
+      "icloud.com",
+    ];
 
-    if (publicDomains.some(domain => emailDomain.endsWith(domain))) {
+    if (publicDomains.some((domain) => emailDomain.endsWith(domain))) {
       toast.error("Please use a business email address.", {
-      position: "top-center",
-      autoClose: 2000,
+        position: "top-center",
+        autoClose: 2000,
       });
       return;
     }
@@ -76,19 +94,30 @@ const ServiceSection: React.FC = () => {
         <ImageTitle
           description={
             <>
-             Our innovative tech solutions, <span className="font-semibold text-gray-800"> SPARCLE </span>and <span className="font-semibold text-gray-800">talentScope</span> revolutionize talent readiness and assessment in organizations. SPARCLE, powered by <span className="font-semibold text-gray-800">iTRAS (intelligent Talent Readiness Acceleration System)</span>, boosts readiness in core areas like role-based skills, leadership, product and process knowledge, and onboarding. talentScope is an intelligent suite assessing skills, competencies, behaviors, product/process knowledge, and aptitude.
+              Our innovative tech solutions,{" "}
+              <span className="font-semibold text-gray-800"> SPARCLE </span>and{" "}
+              <span className="font-semibold text-gray-800">talentScope</span>{" "}
+              revolutionize talent readiness and assessment in organizations.
+              SPARCLE, powered by{" "}
+              <span className="font-semibold text-gray-800">
+                iTRAS (intelligent Talent Readiness Acceleration System)
+              </span>
+              , boosts readiness in core areas like role-based skills,
+              leadership, product and process knowledge, and onboarding.
+              talentScope is an intelligent suite assessing skills,
+              competencies, behaviors, product/process knowledge, and aptitude.
             </>
           }
           image="/Connect.svg"
           title="Comprehensive Products & Services to Drive Your Success Forward"
-          oreintation={window.innerWidth >= 1280 ? "left" : ""}
+          oreintation={orientation}
         />
       </div>
-  
+
       {/* CTA Button */}
-      
+
       <div className="max-w-xl xl:w-1/2 w-full bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 rounded-2xl">
-        <form className="space-y-6" onSubmit={handleSubmit} >
+        <form className="space-y-6" onSubmit={handleSubmit}>
           {/* Name Fields */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
@@ -152,10 +181,9 @@ const ServiceSection: React.FC = () => {
               onChange={handleChange}
               className="w-full p-3 rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[#7030A0]"
               required
-
             >
               <option value="" disabled>
-                Select employee headcount 
+                Select employee headcount
               </option>
               <option value="upto 100">upto 100</option>
               <option value="101-1000">101-1000</option>
@@ -167,7 +195,8 @@ const ServiceSection: React.FC = () => {
           {/* Services Dropdown */}
           <div className="relative">
             <label className="block text-sm font-semibold mb-2 text-left">
-              Services & Products Interested in <span className="text-red-500">*</span>
+              Services & Products Interested in{" "}
+              <span className="text-red-500">*</span>
             </label>
             <select
               name="services"
@@ -175,7 +204,6 @@ const ServiceSection: React.FC = () => {
               onChange={handleServiceChange}
               className="w-full p-3 rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[#7030A0]"
               required
-
             >
               <option value="" disabled>
                 Select services
