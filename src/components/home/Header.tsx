@@ -202,7 +202,7 @@ const Header: React.FC<HeaderProps> = ({ showCareers }) => {
               </Link>
             </nav>
             <div className="mt-8">
-              <Link href={"/form"} className="bg-[#7030a0] text-white px-4 py-2 rounded w-full mt-4">Contact Us</Link>
+              <Link href={"/form"} className="bg-[#7030a0] text-white px-4 py-2 rounded w-full mt-4" onClick={handleLinkClick}>Contact Us</Link>
             </div>
           </div>
         )}
