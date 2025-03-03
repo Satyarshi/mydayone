@@ -3,13 +3,13 @@ import ImageTitle from "../Title/ImageTitle";
 
 const FeatureSection: React.FC = () => {
   return (
-    <section className="flex flex-col items-center text-center py-3 w-full mb-16 px-2 bg-white md:flex-row md:justify-center">
+    <section className="flex flex-col items-center text-center py-3 w-full mb-16 px-2 md:flex-row md:justify-center">
       <div className="container mx-auto text-center relative z-10 flex flex-col md:flex-row items-center justify-around">
         {/* Left Side - Image */}
 
         <div className="flex justify-center md:justify-start mb-8 md:mb-0">
           <img
-            src="/servicesec2.png"
+            src="/service-process.svg"
             alt="Person with laptop"
             className="h-auto"
           />

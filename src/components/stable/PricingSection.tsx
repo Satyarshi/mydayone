@@ -10,7 +10,7 @@ const PricingSection: React.FC = () => {
   ]
 
   return (
-    <div className="relative py-12 px-0 md:px-20">
+    <div className="flex flex-col items-center text-center md:w-11/12 w-full px-4 pb-10 mx-auto bg-[#fbfbfc]">
       {/* Background Text */}
       
       {/* Foreground Content */}

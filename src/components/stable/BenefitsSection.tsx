@@ -44,9 +44,9 @@ const BenefitsSection: React.FC = () => {
             {/* Data Visualization Section */}
             <div className="flex justify-center items-center lg:w-1/2">
               <img
-                src="/servicesec1.png"
+                src="/service-result.svg"
                 alt="graph image"
-                className="w-[30rem]"
+                className="w-[35rem]"
               />
             </div>
           </div>

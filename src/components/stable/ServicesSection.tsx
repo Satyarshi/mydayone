@@ -69,7 +69,7 @@ const ServicesSection: React.FC = () => {
   };
 
   return (
-    <div className="relative ">
+    <div className="flex flex-col items-center text-center md:w-11/12 w-full px-4 mx-auto bg-[#fbfbfc]">
       <div className="flex flex-col items-center text-center pb-16">
         <ImageTitle
           image="/Services.svg"
@@ -86,7 +86,7 @@ const ServicesSection: React.FC = () => {
               className={`text-lg  px-4 py-2 rounded-[50px] transition duration-300 ${
                 activeCategory === category
                   ? "text-white bg-purple-800"
-                  : "text-gray-500 hover:text-gray-800"
+                  : "text-[#FFFFFF] hover:text-gray-800 bg-[#E4E4E4]"
               }`}
             >
               {category}
