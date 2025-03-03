@@ -67,18 +67,11 @@ const InsightSection: React.FC = () => {
           </div>
         </div>
         <div
-          className="w-full flex relative p-6 rounded-xl  justify-center"
+          className="w-full flex justify-center"
           data-aos="zoom-in-left"
           data-aos-duration="500"
         >
-          {/* Nested grid inside the first card */}
-          <div className="flex items-center shadow-lg gap-x-4 bg-gradient-to-r from-[#CF3A7A] to-[#9C27B0] text-white rounded-xl p-6 text-left h-max ">
-            <div className="text-3xl font-bold px-10">3.4X</div>
-            <div>
-              <h2 className="text-lg font-semibold">Measurable</h2>
-              <p>results achieved over baseline performance metrics.</p>
-            </div>
-          </div>
+          <img src="/service-feature.svg" alt="" />
         </div>
         {/* Bottom row of small cards */}
       </div>
