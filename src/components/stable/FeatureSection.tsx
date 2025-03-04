@@ -16,7 +16,7 @@ const FeatureSection: React.FC = () => {
         </div>
 
         {/* Right Side - Features */}
-        <div className="max-w-2xl text-left relative">
+        <div className="max-w-2xl text-left p-5 relative">
           {/* Heading */}
           <ImageTitle
             image="/Process.png"
@@ -30,8 +30,8 @@ const FeatureSection: React.FC = () => {
             {/* Feature 1 */}
             <div className="flex items-start gap-x-2">
               <div>
-                <div className="text-white text-xl bg-purple-800 h-10 w-10 flex justify-center items-center rounded-lg ">
-                  <i className="fa-solid fa-1 w-full before:h-full before:flex before:justify-center before:items-center"></i>
+                <div className="h-10 w-10 flex justify-center items-center">
+                  <img src="/bg-1.svg" alt="1" />
                 </div>
               </div>
               <div>
@@ -47,8 +47,8 @@ const FeatureSection: React.FC = () => {
             {/* Feature 2 */}
             <div className="flex items-start  gap-x-2">
               <div>
-                <div className="text-white text-xl bg-purple-800 h-10 w-10 flex justify-center items-center rounded-lg ">
-                  <i className="fa-solid fa-2 w-full before:h-full before:flex before:justify-center before:items-center"></i>
+                <div className="h-10 w-10 flex justify-center items-center">
+                  <img src="/bg-2.svg" alt="2" />
                 </div>
               </div>
               <div>
@@ -62,8 +62,8 @@ const FeatureSection: React.FC = () => {
             {/* Feature 3 */}
             <div className="flex items-start  gap-x-2">
               <div>
-                <div className="text-white text-xl bg-purple-800 h-10 w-10 flex justify-center items-center rounded-lg ">
-                  <i className="fa-solid fa-3 w-full before:h-full before:flex before:justify-center before:items-center"></i>
+                <div className="h-10 w-10 flex justify-center items-center">
+                  <img src="/bg-3.svg" alt="3" />
                 </div>
               </div>
               <div>
@@ -78,8 +78,8 @@ const FeatureSection: React.FC = () => {
             {/* Feature 4 */}
             <div className="flex items-start  gap-x-2">
               <div>
-                <div className="text-white text-xl bg-purple-800 h-10 w-10 flex justify-center items-center rounded-lg ">
-                  <i className="fa-solid fa-4 w-full before:h-full before:flex before:justify-center before:items-center"></i>
+                <div className="h-10 w-10 flex justify-center items-center">
+                  <img src="/bg-4.svg" alt="4" />
                 </div>
               </div>
               <div>

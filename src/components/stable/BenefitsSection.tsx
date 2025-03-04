@@ -8,7 +8,7 @@ const listItems = [
 ]
 const BenefitsSection: React.FC = () => {
   return (
-    <section className="relative benefits  max-h-[100vh] overflow-hidden">
+    <section className="relative benefits max-h-[100vh] overflow-hidden">
       {/* Content Container */}
       <div className=" flex flex-col items-center justify-center product-content">
         <div className=" text-center pt-15 md:mx-20 lg:px-0 top-56">

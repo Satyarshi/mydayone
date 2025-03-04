@@ -44,7 +44,7 @@ const SeSection: React.FC = () => {
               className={`p-4 shadow-[0_4px_12px_rgba(0,0,0,0.2)] rounded-xl bg-white text-left`}
             >
               <h3 className="text-2xl font-semibold">{plan.title}</h3>
-              <p className="text-gray-500 text-sm mt-2">{plan.description}</p>
+              <p className="text-gray-500 md:text-base text-sm mt-2">{plan.description}</p>
             </div>
           ))}
         </div>

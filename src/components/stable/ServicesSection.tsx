@@ -26,7 +26,7 @@ const ServicesSection: React.FC = () => {
         gradient: "hover:bg-gradient-to-b hover:from-pink-100 to-transparent",
       },
     ],
-    "For User and Employees": [
+    "For User & Employees": [
       {
         title: "Define",
         description:
