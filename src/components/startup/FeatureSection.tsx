@@ -1,198 +1,85 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import Aos from "aos";
-import { PlayIcon } from "@radix-ui/react-icons";
-import "aos/dist/aos.css";
+import React from "react";
 import ImageTitle from "../Title/ImageTitle";
-import { motion } from "framer-motion";
-import ProgressRing from "../home/ProgressRing";
 
-const featureCards = [
-  {
-    title: "Culturally sensitive",
-    description:
-      "",
-  },
-  {
-    title: "Hyper-Personalized for every budget",
-    description:
-      "",
-  },
-  {
-    title: "Cost-effective solutions",
-    description:
-      "",
-  },
-];
 
 const FeatureSection: React.FC = () => {
-  const [animationValues, setAnimationValues] = useState<{ x: string[] }>({
-    x: ["0%", "-50%"],
-  });
-  useEffect(() => {
-    Aos.init({ offset: 200 });
-    const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        // Larger screens
-        setAnimationValues({ x: ["0%", "-30%"] });
-      } else {
-        // Smaller screens
-        setAnimationValues({ x: ["0%", "-50%"] });
-      }
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
-    <section className="relative pb-12 w-full ">
-      <div className="container mx-auto text-center z-10 px-4 sm:px-6 lg:px-8">
-        <ImageTitle
-          image="/Features.png"
-          title="Unlock Innovation in Talent Talent Readiness Journey"
-          description=""
-        />
-        <div className="flex flex-wrap justify-center gap-6 p-6">
-          {/* Main Sections */}
-          <div className="flex flex-col gap-4 max-w-7xl w-full md:flex-row">
-            <div className="flex md:flex-nowrap flex-wrap gap-6 justify-center">
-              <div
-                className="bg-gradient-to-b from-[#C7397C] to-[#73319F] text-white p-6 rounded-2xl w-72 shadow-lg min-h-96 flex flex-col justify-between"
-                data-aos="zoom-in-left"
-                data-aos-duration="500"
-                data-aos-delay="50"
-              >
-                <div className="flex justify-center items-center w-full ">
-                  <ProgressRing
-                    percentage={90}
-                    color="text-white"
-                    textColor="#fff"
-                    strokeWidth={5}
-                    size={160}
-                  />
-                </div>
-                <div>
-                  <h2 className="text-2xl font-medium text-left">Leadership</h2>
-                  <p className="text-base mt-2 text-left">
-                    Decades of real-world leadership experience in people
-                    readiness, performance, and change management. Programs that
-                    help you grow through your people.
-                  </p>
-                </div>
-              </div>
+    <section
+      className="relative startup pb-20 "
+    >
+      {/* Content Container */}
+      <div className=" flex flex-col items-center justify-center product-content">
+        <div className=" text-center pt-15 md:mx-20 lg:px-0 top-56">
+          {/* Title Section */}
 
-              <div
-                className="bg-white p-6 rounded-2xl w-72 shadow-lg flex flex-col min-h-96 justify-between"
-                data-aos="zoom-in-left"
-                data-aos-duration="500"
-                data-aos-delay="50"
-              >
-                <div className="flex justify-center items-center w-full">
-                  <ProgressRing
-                    percentage={70}
-                    color="text-[#7030A0]"
-                    strokeWidth={5}
-                    size={160}
+          {/* Description */}
+          <div className="flex flex-col lg:flex-row justify-evenly items-start px-8 py-16 space-y-12 lg:space-y-0 lg:space-x-12">
+            <div className="text-left lg:w-1/2">
+              <ImageTitle
+                image="/features.svg.svg"
+                title={`Features That Power Transformation`}
+                description=""
+                oreintation="left"
+              />
+              <ul className="text-left mb-10 text-[#7B7E85] sm:text-lg space-y-4">
+                <li className="flex items-start text-base">
+                  <img
+                    src="/check.svg"
+                    alt="Check Icon"
+                    className="mr-3 w-5 h-5"
                   />
-                </div>
-                <div>
-                  <h2 className="text-2xl font-medium text-left">
-                    Organizations
-                  </h2>
-                  <p className="text-base mt-2 text-left">
-                    Proprietary digital tools to amplify program impact.
-                  </p>
-                </div>
-              </div>
-
-              <div
-                className="bg-white p-6 rounded-2xl w-72 shadow-lg flex min-h-96 flex-col justify-between"
-                data-aos="zoom-in-left"
-                data-aos-duration="500"
-                data-aos-delay="50"
-              >
-                <div className="flex justify-center items-center w-full">
-                  <ProgressRing
-                    percentage={35}
-                    color="text-[#7030A0]"
-                    strokeWidth={5}
-                    size={160}
+                  <div>Decades of <span className="font-semibold">real-world leadership experience</span> in people readiness, performance, and change management. Programs that help you grow through your people.</div>
+                </li>
+                <li className="flex items-start text-base">
+                  <img
+                    src="/check.svg"
+                    alt="Check Icon"
+                    className="mr-3 w-5 h-5"
                   />
-                </div>
-                <div>
-                  <h2 className="text-2xl font-medium text-left">
-                    Acceleration
-                  </h2>
-                  <p className="text-base mt-2 text-left">
-                  Real world optimised processes to ensure costs are affordable .
-                  </p>
-                </div>
-              </div>
-              <div className="md:w-1/4">
-                <div
-                  className="p-3 mb-4  text-left bg-gray-100 rounded-3xl shadow-lg cursor-pointer hover:shadow-lg transition"
-                  data-aos="zoom-in-left"
-                  data-aos-duration="500"
-                  data-aos-delay="50"
-                >
-                  <div className="h-[150px] bg-gray-300 rounded-2xl mb-3 overflow-hidden">
-                    <img
-                      src="/sparcle-img-1.svg"
-                      alt="Placeholder"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h2 className="text-sm font-medium mb-1">
-                  Access to industry stalwarts for specialized assignments.
-                  </h2>
-                </div>
-                <div
-                  className="p-3  text-left bg-gray-100 rounded-3xl shadow-lg cursor-pointer hover:shadow-lg transition"
-                  data-aos="zoom-in-left"
-                  data-aos-duration="500"
-                  data-aos-delay="50"
-                >
-                  <div className="h-[150px] bg-gray-300 rounded-2xl mb-3 flex items-center justify-center overflow-hidden">
-                    <img
-                      src="/sparcle-img-2.svg"
-                      alt="Placeholder"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h2 className="text-sm font-medium mb-1">
-                  A behaviour-based approach ensuring measurable, lasting impact
-                  </h2>
-                </div>
-              </div>
+                  <div>Proprietary <span className="font-semibold">digital tools</span> to amplify program impact.</div>
+                </li>
+                <li className="flex items-start text-base">
+                  <img
+                    src="/check.svg"
+                    alt="Check Icon"
+                    className="mr-3 w-5 h-5"
+                  />
+                  <div>Real world <span className="font-semibold">optimised processes</span> to ensure costs are affordable.</div>
+                </li>
+                <li className="flex items-start text-base">
+                  <img
+                    src="/check.svg"
+                    alt="Check Icon"
+                    className="mr-3 w-5 h-5"
+                  />
+                  <div><span className="font-semibold">Culturally sensitive, cost-effective solutions</span> Hyper Personalized for every budget.</div>
+                </li>
+                <li className="flex items-start text-base">
+                  <img
+                    src="/check.svg"
+                    alt="Check Icon"
+                    className="mr-3 w-5 h-5"
+                  />
+                  <div>A <span className="font-semibold">behaviour-based approach</span> ensuring measurable, lasting impact.</div>
+                </li>
+                <li className="flex items-start text-base">
+                  <img
+                    src="/check.svg"
+                    alt="Check Icon"
+                    className="mr-3 w-5 h-5"
+                  />
+                  <div><span className="font-semibold">Access to industry stalwarts</span> for specialized assignments.</div>
+                </li>
+              </ul>
             </div>
-          </div>
 
-          {/* Additional Features */}
-
-          <div className="flex flex-wrap justify-center gap-6">
-            {/* Additional Features Carousel */}
-            <div className="overflow-hidden w-1/4 max-w-[50%] md:w-1/2 flex justify-center relative">
-              <div className="absolute left-0 top-0 bottom-0 w-10 md:w-20 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none" />
-              <div className="absolute right-0 top-0 bottom-0 w-10 md:w-20 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none" />
-              <motion.div
-                className="flex space-x-6"
-                animate={animationValues}
-                transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-              >
-                {[...featureCards, ...featureCards].map((feature, index) => (
-                  <div
-                    key={index}
-                    className={`bg-white p-4 rounded-xl shadow-md w-64 md:w-80 text-sm text-left flex-shrink-0 m-2`}
-                    data-aos="fade-up"
-                    data-aos-duration="500"
-                    data-aos-delay="50"
-                  >
-                    <h3 className="font-semibold">{feature.title}</h3>
-                    <p className="mt-1">{feature.description}</p>
-                  </div>
-                ))}
-              </motion.div>
+            {/* Data Visualization Section */}
+            <div className="flex justify-center lg:w-1/2">
+              <img
+                src="/startup-feature.svg"
+                alt="graph image"
+                className="md:w-[50rem]"
+              />
             </div>
           </div>
         </div>

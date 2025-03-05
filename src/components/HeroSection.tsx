@@ -18,7 +18,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <>
       {/* Headline Section */}
-      <div className=" bg-[#fff] py-5  rounded-lg text-xs inline-block">
+      <div className=" py-5  rounded-lg text-xs inline-block">
         { shinyText &&
           <AnimatedShinyTextDemo text={shinyText}  />
         }

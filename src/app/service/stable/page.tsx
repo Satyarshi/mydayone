@@ -29,7 +29,7 @@ const Service: React.FC = () => {
       />
       {/* Hero Section */}
       <section className="flex justify-center items-center p-4 md:px-24 overflow-hidden">
-        <div className="flex flex-col items-center text-center md:py-20">
+        <div className="flex flex-col items-center text-center pt-10 md:py-20">
           <HeroSection
             shinyText="Services that Drive Growth"
             heading="Transforming Talent Readiness for Organizational Growth"

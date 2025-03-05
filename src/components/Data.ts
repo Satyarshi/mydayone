@@ -235,67 +235,37 @@ export const productsData = {
 		},
 	  ];
 
-	  export const startupData = {
-		heroSection: {
-			shinyText: "What’s new? Instantly issue virtual card’s",
-			heading: "Transform How You Accelerate Talent Readiness ",
-			subheading:
-				"SPARCLE is your AI-powered suite for identifying, creating, managing and measuring hyper-personalized readiness journeys for individuals, leaders, teams, and organisations. Drive Role readiness, Leadership readiness, onboarding readiness, product/service readiness with hyperpersonalised journeys for every roles in your organisation.Obtain exciting ROI at every level of the journey. KP1 to KP4, for all your readiness programs with insightful tracking and zero manual efforts! ",
-			buttonText: "Try Your Free Sample Talent Readiness Journey Today",
-		},
-		benefitsSection: {
-			title: "Empowering Learners, Enhancing Business Impact",
-			descriptionTitle: "What Sets SPARCLE Apart?",
-			descriptionText:
-				"Experience the power of AI-driven talent readiness that tailors growth paths for each employee. SPARCLE combines personalized journey, real-time insights, effortless program modifications and scalable automation to align workforce readiness acceleration with your organization’s goals.",
-			listItems: [
-				{ title:"Growth-Driven Talent Strategies:",para:" Attract, assess, and develop the talent you need."},
-					{title:"Leadership Development: ",para:" Equip leaders with future-focussed readiness."},
-					{title:"Performance Engineering: ",para:" Hyper-personalize performance for role holders and align daily work with enterprise goals."},
-					{title:"Culture & Change Management: ", para:"Build an adaptive, high-performing culture for your teams."},
-					{title:"Organisation Development: ", para:"Sustain scalability with custom OD frameworks, processes, and policies."},
-			],
-		},
-		skillsSection: {
-			title: "See the Results, Trust the Process",
-			description:
-				"The SPARCLE Process (powered by iTRAS, iTRAS is intelligent Talent Readiness Acceleration System) starts with assessing needs through behavioral intelligence, followed by AI-driven personalized readiness journeys. Readiness acceleration is supported by continuous micro-learning, social sharing and real-time feedback, with impact measured through analytics tracking skills acquisition and leadership readiness. Results may include 50% faster leadership readiness, a 30% acceleration in employee skills/competencies and improved team collaboration and productivity.",
-		},
-	};
 
 	export const test = [
 		{
 		  id: 1,
-		  heading: "For HR and Leaders",
-		  title: "Simplify Talent Readiness Journeys for Administrators",
-		  image: "/sparcleHero3.png",
+		  heading: "For Founders/Management",
+		  title: "Effortless Management, Maximum Impact",
+		  image: "/founder.svg",
 		  description:
-			"Automated baselining save hours with instant analysis and detailed reporting, while workflow integration ensures seamless syncing with HR systems. Customizable IDPs align development plans with company frameworks, and real-time progress reports provide quick insights into team and individual performance.",
-		  stats: [
-			{ label: "78%", text: "faster skill readiness for learners." },
-			{
-			  label: "60%",
-			  text: "of learners reported increased engagement with learning content.",
-			},
-		  ],
+			"Explore Solutions ",
+			listItems: [
+				{ para: "Customizable <span class='font-semibold'>HR processes & SOPs for your size of organisation</span>" },
+				{ para: "<span class='font-semibold'>Facilitate Visioning/Values/Strategy Alignment sessions</span> with Founders /Leadership" },
+				{ para: "<span class='font-semibold'>HR Tech Implementation</span> for efficiency" },
+				{ para: "Data-driven <span class='font-semibold'>Performance & Readiness Systems</span>" },
+				{ para: "Support with Workforce<span class='font-semibold'> Hiring, Onboarding and Skilling</span>" },
+			  ],
 		},
 		{
 		  id: 2,
 		  heading: "For Users or Employees",
-		  title: "Empower Employees with Personalized Growth",
-		  image: "/sparcleHero4.png",
+		  title: "Empower Your Team with Future-Ready Skills",
+		  image: "/users.svg",
 		  description:
-			"Engaging learning tools like micro-learning, leaderboards, and reflection spaces keep employees motivated, while career pathway insights align learning with meaningful progression. Real-time feedback through 360° assessments and continuous coaching fosters ongoing development.",
-		  stats: [
-			{
-			  label: "90%",
-			  text: "improved team collaboration through the feedback loop.",
-			},
-			{
-			  label: "85%",
-			  text: "of learners achieve faster upskilling with tailored plans.",
-			},
-		  ],
+			"Transform Your Workforce ",
+			listItems: [
+				{para:"Engaging <span class='font-semibold'> Talent Development Journeys </span>"},
+				{para:"Leadership & Team <span class='font-semibold'>Performance</span>"},
+				{para:"Employee <span class='font-semibold'>Engagement & Retention Programs</span>"},
+				{para:"<span class='font-semibold'>Competency & Business Excellence</span> Frameworks"},
+			],
+
 		},
 	  ];
 

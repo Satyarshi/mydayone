@@ -101,10 +101,10 @@ const Header: React.FC<HeaderProps> = ({ showCareers }) => {
                 </div>
               )}
             </div>
-            <Link href="/service/stable" className={`${isActive("/service/stable")} hover:text-[#8f04f7]`} onClick={handleLinkClick}>
+            {/* <Link href="/service/stable" className={`${isActive("/service/stable")} hover:text-[#8f04f7]`} onClick={handleLinkClick}>
               Service
-            </Link>
-            {/* <div className="relative">
+            </Link> */}
+            <div className="relative">
               <button className={`${isActive("/service")} hover:text-[#8f04f7]`} onClick={toggleServiceDropdown}>
                 Service
               </button>
@@ -119,7 +119,7 @@ const Header: React.FC<HeaderProps> = ({ showCareers }) => {
                   </Link>
                 </div>
               )}
-            </div> */}
+            </div>
             <Link href="/about" className={`${isActive("/about")} hover:text-[#8f04f7]`} onClick={handleLinkClick}>
               About
             </Link>
@@ -159,10 +159,10 @@ const Header: React.FC<HeaderProps> = ({ showCareers }) => {
               <Link href="/about" className={`${isActive("/about")} hover:text-[#8f04f7]`} onClick={handleLinkClick}>
                 About
               </Link>
-              <Link href="/service/stable" className={`${isActive("/service/stable")} hover:text-[#8f04f7]`} onClick={handleLinkClick}>
+              {/* <Link href="/service/stable" className={`${isActive("/service/stable")} hover:text-[#8f04f7]`} onClick={handleLinkClick}>
                 Service
-              </Link>
-              {/* <div className="relative">
+              </Link> */}
+              <div className="relative">
                 <button className={`${isActive("/service")} hover:text-[#8f04f7]`} onClick={toggleServiceDropdown}>
                   Service
                 </button>
@@ -176,7 +176,7 @@ const Header: React.FC<HeaderProps> = ({ showCareers }) => {
                     </Link>
                   </div>
                 )}
-              </div> */}
+              </div>
               <div className="relative">
                 <button className={`${isActive("/products")} hover:text-[#8f04f7]`} onClick={toggleDropdown}>
                   Products

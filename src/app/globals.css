@@ -221,6 +221,31 @@ html {
   }
 }
 
+.startup {
+  background: url(/Rectangle.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 1024px) {
+  .startup {
+    height: var(--startup-height, 1300px)
+  }
+}
+
+@media ((min-width: 515px) and (max-width: 1024px)) {
+  .startup {
+    height: 1300px;
+  }
+}
+
+@media (max-width: 370px) {
+  .startup {
+    height: 1550px;
+  }
+}
+
 /* price responsiveness */
 
 .price-card {

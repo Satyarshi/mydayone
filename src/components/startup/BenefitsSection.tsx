@@ -1,77 +1,75 @@
 import React from "react";
-import Link from "next/link";
 import ImageTitle from "../Title/ImageTitle";
+import Link from "next/link";
 
-interface BenefitsSectionProps {
+interface Benefit {
   title: string;
-  descriptionTitle: string;
-  descriptionText: string;
-  listItems: {
-    title: string;
-    para: string;
-  }[];
-  };
+  description: string;
+}
 
+const benefits: Benefit[] = [
+  {
+    title: "Growth-Driven Talent Strategies",
+    description: "Attract, assess, and develop the talent you need.",
+  },
+  {
+    title: "Leadership Development",
+    description: "Equip leaders with future-focused readiness.",
+  },
+  {
+    title: "Performance Engineering",
+    description:
+      "Hyper-personalize performance and align work with enterprise goals.",
+  },
+  {
+    title: "Culture & Change Management",
+    description: "Build an adaptive, high-performing culture for your teams.",
+  },
+  {
+    title: "Organisation Development",
+    description:
+      "Sustain scalability with custom OD frameworks, processes, and policies.",
+  },
+];
 
-const BenefitsSection: React.FC<BenefitsSectionProps> = ({
-  title,
-  descriptionTitle,
-  descriptionText,
-  listItems,
-}) => {
+const BenefitCard: React.FC<Benefit> = ({ title, description }) => (
+  <div className="bg-white p-4 rounded-xl shadow-md drop-shadow-md w-64 md:w-80 text-sm text-left flex-shrink-0 m-2">
+    <h3 className="text-base font-semibold">{title}</h3>
+    <p className="text-gray-600 text-sm mt-2">{description}</p>
+  </div>
+);
+
+const BenefitsSection: React.FC = () => {
   return (
-    <section className="relative benefits pb-20">
-      {/* Content Container */}
-      <div className=" flex flex-col items-center justify-center product-content">
-        <div className=" text-center pt-15 md:mx-20 lg:px-0 top-56">
-          {/* Title Section */}
-          <ImageTitle image="/Benefits.svg" title={title} description="" />
+    <section className="py-16 px-6 text-center">
+      {/* Heading */}
 
-          {/* Description */}
-          <div className="flex flex-col lg:flex-row justify-evenly items-start px-8 py-16 space-y-12 lg:space-y-0 lg:space-x-12">
-            <div className="text-left lg:w-1/2">
-              <h2 className="text-3xl font-bold text-[#111827] mb-5">
-                {descriptionTitle}
-              </h2>
-              <p className="text-justify text-[#7B7E85] mb-8 text-base sm:text-base">
-                {descriptionText}
-              </p>
-              <ul className="text-left mb-10 text-[#7B7E85] sm:text-lg space-y-4">
-                {listItems.map((feature, index) => (
-                  <li key={index} className="flex items-start text-base">
-                    <img
-                      src="/check.svg"
-                      alt="Check Icon"
-                      className="mr-3 w-5 h-5"
-                    />
-                      <div>
-                    <span className="font-semibold">
-                    {feature.title}
-                    </span> 
-                    {feature.para}
-                      </div>
-                  </li>
-                ))}
-              </ul>
-              {/* CTA Button */}
-              <Link href="/form#service-form">
-                <button className="bg-[#7030A0] text-white font-semibold py-3 px-6 rounded-xl hover:bg-purple-700 transition">
-                Experience the Benefits
-                </button>
-              </Link>
-            </div>
+      <ImageTitle
+        image="/Benefits.svg"
+        title={`Why Choose MyDayOne ?`}
+        description="Our custom solutions are designed to address your organization's most pressing talent development challenges, ensuring that each initiative is strategically aligned with your long-term goals."
+        oreintation=""
+      />
+      <div className="mt-10 flex flex-col items-center gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
+          {benefits.slice(0, 3).map((benefit, index) => (
+            <BenefitCard key={index} {...benefit} />
+          ))}
+        </div>
 
-            {/* Data Visualization Section */}
-            <div className="flex justify-center lg:w-1/2">
-              <img
-                src="/sparcleHero1.png"
-                alt="graph image"
-                className="w-[30rem]"
-              />
-            </div>
-          </div>
+        <div className="flex flex-wrap justify-center gap-6">
+          {benefits.slice(3, 5).map((benefit, index) => (
+            <BenefitCard key={index} {...benefit} />
+          ))}
         </div>
       </div>
+
+      {/* Button */}
+      <Link href="/form#service-form">
+        <button className="mt-8 bg-[#7030A0] text-white px-6 py-3 rounded-xl font-medium hover:bg-purple-700 transition">
+          Get in Touch
+        </button>
+      </Link>
     </section>
   );
 };
