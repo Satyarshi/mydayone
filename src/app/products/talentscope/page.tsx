@@ -27,7 +27,7 @@ const Product1: React.FC = () => {
         description="Smarter Feedback. Stronger Teams"
       />
       {/* Hero Section */}
-      <section className="flex flex-col justify-center items-center p-4 overflow-hidden">
+      <section className="flex flex-col justify-center items-center p-4 overflow-hidden mt-10 md:mt-24">
         <ImageSection
           heading={productsData.heroSection.heading}
           subheading={productsData.heroSection.subheading}

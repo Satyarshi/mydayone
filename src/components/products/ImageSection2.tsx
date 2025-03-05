@@ -26,7 +26,7 @@ const ImageSection: React.FC<ImageSectionProps> = ({
       
       {/* Image Section */}
       <div className="relative w-full flex justify-center">
-        <Image src="/mDOMock (2).png" alt="image" width={1024} height={758} />
+        <Image src="/talent scope product mockup.svg" alt="image" width={1024} height={758} />
       </div>
     </section>
   );
