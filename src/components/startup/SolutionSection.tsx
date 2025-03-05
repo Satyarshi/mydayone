@@ -115,7 +115,7 @@ const VerticalSwiper = ({ pages }: VerticalSwiperProps) => {
         onSlideChange={(swiper) => setActivePage(swiper.activeIndex)}
         modules={[Autoplay, Pagination]}
         autoplay={{ delay: 6000 }}
-        className="max-h-[600px] w-full max-w-[90vw] "
+        className="max-h-[700px] w-full max-w-[90vw] "
       >
         {pages.map((page, index) => (
           <SwiperSlide key={index}>
