@@ -75,10 +75,10 @@ const Product1: React.FC = () => {
       </section>
 
       <UnlockPotentialSection
-        buttonText="Join Us"
+        buttonText="Let’s Talk"
         ctaText="Start today"
-        description="Book Your Free Demo Today!"
-        title="See SPARCLE in Action"
+        description="Let’s co-create your roadmap to success."
+        title="Ready to Scale with the Right People Strategy?"
         link="/form#service-form"
       />
     </>
