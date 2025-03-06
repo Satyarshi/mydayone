@@ -75,7 +75,7 @@ const InsightSection: React.FC = () => {
                 <div>
                   <h2 className="text-2xl font-medium text-left">Less</h2>
                   <p className="text-base mt-2 text-left">
-                    Reduction in manual effort with talentScope’s automation.
+                    Reduction in manual effort with talentSCOPE’s automation.
                   </p>
                 </div>
               </div>
@@ -97,7 +97,7 @@ const InsightSection: React.FC = () => {
                 <div>
                   <h2 className="text-2xl font-medium text-left">Higher</h2>
                   <p className="text-base mt-2 text-left">
-                    Participation in assessment process with talentScope
+                    Participation in assessment process with talentSCOPE
                     hyperpersonalised response features.
                   </p>
                 </div>

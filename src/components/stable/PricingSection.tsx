@@ -1,11 +1,10 @@
 import React from "react";
 import ImageTitle from "../Title/ImageTitle";
 import Link from "next/link";
+
 const PricingSection: React.FC = () => {
   const images = [
-    "/pricingModel (2).svg",
     "/pricingModel (3).svg",
-    "/pricingModel (4).svg",
     "/pricingModel (1).svg",
   ];
 
@@ -22,11 +21,11 @@ const PricingSection: React.FC = () => {
         />
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
           {images.map((image, index) => (
             <div key={index} className=" p-0 ">
               <div className="flex items-center justify-center m-0 p-0 transition-all duration-300 hover:scale-105 hover:bg-opacity-100 ease-in-out hover:cursor-pointer">
-                <img src={image} alt="Pricing Model" className="w-[124rem]" />
+                <img src={image} alt="Pricing Model" className="w-[20rem]" />
               </div>
             </div>
           ))}

@@ -50,7 +50,7 @@ const FeatureSection: React.FC = () => {
       <div className="container mx-auto text-center z-10 px-4 sm:px-6 lg:px-8">
         <ImageTitle
           image="/Features.png"
-          title="Unlock Innovation in Talent Talent Readiness Journey"
+          title="Unlock Innovation in Talent Readiness Journey"
           description=""
         />
         <div className="flex flex-wrap justify-center gap-6 p-6">

@@ -96,7 +96,7 @@ const Header: React.FC<HeaderProps> = ({ showCareers }) => {
                     SPARCLE
                   </Link>
                   <Link href="/products/talentscope" className="block px-4 py-2 hover:bg-gray-200 text-black" onClick={handleLinkClick}>
-                    talentScope
+                    talentSCOPE
                   </Link>
                 </div>
               )}
@@ -187,7 +187,7 @@ const Header: React.FC<HeaderProps> = ({ showCareers }) => {
                       SPARCLE
                     </Link>
                     <Link href="/products/talentscope" className="block px-4 py-2 hover:bg-gray-200" onClick={handleLinkClick}>
-                      talentScope
+                      talentSCOPE
                     </Link>
                   </div>
                 )}

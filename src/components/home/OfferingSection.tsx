@@ -25,7 +25,7 @@ const OfferingSection: React.FC = () => {
   const tabContent: { [key: string]: () => React.JSX.Element } = {
     Products:()=>
     <>
-      Our innovative tech solutions, <span className="font-semibold text-gray-800"> SPARCLE </span>and <span className="font-semibold text-gray-800">talentScope</span> revolutionize talent readiness and assessment in organizations. SPARCLE, powered by <span className="font-semibold text-gray-800">iTRAS (intelligent Talent Readiness Acceleration System)</span>, boosts readiness in core areas like role-based skills, leadership, product and process knowledge, and onboarding. talentScope is an intelligent suite assessing skills, competencies, behaviors, product/process knowledge, and aptitude.
+      Our innovative tech solutions, <span className="font-semibold text-gray-800"> SPARCLE </span>and <span className="font-semibold text-gray-800">talentSCOPE</span> revolutionize talent readiness and assessment in organizations. SPARCLE, powered by <span className="font-semibold text-gray-800">iTRAS (intelligent Talent Readiness Acceleration System)</span>, boosts readiness in core areas like role-based skills, leadership, product and process knowledge, and onboarding. talentSCOPE is an intelligent suite assessing skills, competencies, behaviors, product/process knowledge, and aptitude.
     </>,
     Services:()=>
     <>

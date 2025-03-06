@@ -14,7 +14,7 @@ import PageHeader from "@/components/ui/PageHeader";
 // import BlogSection from "@/components/blog-main/BlogSection";
 
 export const metadata = {
-  title: "MyDayOne | talentScope",
+  title: "MyDayOne | talentSCOPE",
   description: "Smarter Feedback. Stronger Teams",
   keywords: "Feedback, Teams, Smarter, Stronger",
 };
@@ -23,7 +23,7 @@ const Product1: React.FC = () => {
   return (
     <>
       <PageHeader
-        title="talentScope"
+        title="talentSCOPE"
         description="Smarter Feedback. Stronger Teams"
       />
       {/* Hero Section */}
@@ -79,7 +79,7 @@ const Product1: React.FC = () => {
       <UnlockPotentialSection
         buttonText="Join Us"
         ctaText="Start today"
-        description="Simplify assessments and accelerate growth with talentScope ."
+        description="Simplify assessments and accelerate growth with talentSCOPE ."
         title="Ready to Transform Feedback into Action?"
         link="/form#service-form"
       />

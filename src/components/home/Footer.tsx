@@ -71,7 +71,7 @@ const Footer = () => {
                     <a href="/products/sparcle">SPARCLE</a>
                   </li>
                   <li>
-                    <a href="/products/talentscope">talentScope</a>
+                    <a href="/products/talentscope">talentSCOPE</a>
                   </li>
                 </ul>
               )}

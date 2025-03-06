@@ -5,14 +5,14 @@ export const productsData = {
 		shinyText: "What’s new? Instantly issue virtual card’s",
 		heading: "Empower Readiness with Data-Driven Feedback",
 		subheading:
-			"talentScope simplifies assessments with AI-powered tools for individuals, leaders, teams and organizations. Create actionable insights and seamlessly accelerate readiness of skills/competencies, behaviours, aptitude, product knowledge, process adherence.",
+			"talentSCOPE simplifies assessments with AI-powered tools for individuals, leaders, teams and organizations. Create actionable insights and seamlessly accelerate readiness of skills/competencies, behaviours, aptitude, product knowledge, process adherence.",
 		buttonText: "Avail Your Free Demo Today",
 	},
 	benefitsSection: {
-		title: "Why Choose talentScope?",
+		title: "Why Choose talentSCOPE?",
 		descriptionTitle: "Delivering Actionable Insights to Drive Readiness",
 		descriptionText:
-			"talentScope helps you accelerate talent readiness through real-time feedback tailored to individual needs. Designed for developing talent our platform offers multiple tools needed to streamline your Talent assessment process.",
+			"talentSCOPE helps you accelerate talent readiness through real-time feedback tailored to individual needs. Designed for developing talent our platform offers multiple tools needed to streamline your Talent assessment process.",
 		listItems: [
 			{
 				title:"For Organisations: ",
@@ -32,7 +32,7 @@ export const productsData = {
 			},
 			{
 				title:"Unique Benefit: ",
-				para:"talentScope turns feedback into actionable development plans, fostering continuous growth, alignment and readiness.",
+				para:"talentSCOPE turns feedback into actionable development plans, fostering continuous growth, alignment and readiness.",
 			},
 
 		],
@@ -51,7 +51,7 @@ export const productsData = {
 		  description:
 			"Automate the process to save time on setup, tracking and reporting, use customizable dashboards for real-time progress tracking and align feedback with competency frameworks and talent readiness strategies",
 		  stats: [
-			{ label: "100%", text: "visibility into assessment progress with talentScope." },
+			{ label: "100%", text: "visibility into assessment progress with talentSCOPE." },
 			{
 			  label: "60%",
 			  text: "of organisations reported increased participation by feedback seekers and givers.",
@@ -68,7 +68,7 @@ export const productsData = {
 		  stats: [
 			{
 			  label: "80%",
-			  text: "learners reported actionable takeaways from talentScope assessments.",
+			  text: "learners reported actionable takeaways from talentSCOPE assessments.",
 			},
 			{
 			  label: "85%",
@@ -312,7 +312,7 @@ export const productsData = {
 			  title: "End-to-End Talent Readiness Assessment Solutions",
 			  heading: "Assessment Design",
 			  description:
-				"talentScope assists in creating bespoke assessment programs for specific assessment needs of the organisation - skills/ competencies, behaviours, aptitude, product knowledge, process adherence. From instrument curation to delivery, we ensure that the assessment experience aligns with business objectives and employee readiness levels.",
+				"talentSCOPE assists in creating bespoke assessment programs for specific assessment needs of the organisation - skills/ competencies, behaviours, aptitude, product knowledge, process adherence. From instrument curation to delivery, we ensure that the assessment experience aligns with business objectives and employee readiness levels.",
 			  stats: [
 				{ label: "95%", text: "faster implementation of feedback processes." },
 				{

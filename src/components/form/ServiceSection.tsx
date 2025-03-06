@@ -96,7 +96,7 @@ const ServiceSection: React.FC = () => {
             <>
               Our innovative tech solutions,{" "}
               <span className="font-semibold text-gray-800"> SPARCLE </span>and{" "}
-              <span className="font-semibold text-gray-800">talentScope</span>{" "}
+              <span className="font-semibold text-gray-800">talentSCOPE</span>{" "}
               revolutionize talent readiness and assessment in organizations.
               SPARCLE, powered by{" "}
               <span className="font-semibold text-gray-800">
@@ -104,7 +104,7 @@ const ServiceSection: React.FC = () => {
               </span>
               , boosts readiness in core areas like role-based skills,
               leadership, product and process knowledge, and onboarding.
-              talentScope is an intelligent suite assessing skills,
+              talentSCOPE is an intelligent suite assessing skills,
               competencies, behaviors, product/process knowledge, and aptitude.
             </>
           }
@@ -209,7 +209,7 @@ const ServiceSection: React.FC = () => {
                 Select services
               </option>
               <option value="SPARCLE">SPARCLE</option>
-              <option value="talentScope">talentScope</option>
+              <option value="talentSCOPE">talentSCOPE</option>
               <option value="Service">Service</option>
               <option value="Others">Others</option>
             </select>

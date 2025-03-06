@@ -33,11 +33,12 @@ const benefits: Benefit[] = [
 ];
 
 const BenefitCard: React.FC<Benefit> = ({ title, description }) => (
-  <div className="bg-white p-4 rounded-xl shadow-md drop-shadow-md w-64 md:w-80 text-sm text-left flex-shrink-0 m-2">
+  <div className="bg-white p-4 rounded-xl shadow-md drop-shadow-md flex-1 min-w-[200px] max-w-[300px] text-sm text-left m-2">
     <h3 className="text-base font-semibold">{title}</h3>
     <p className="text-gray-600 text-sm mt-2">{description}</p>
   </div>
 );
+
 
 const BenefitsSection: React.FC = () => {
   return (
@@ -51,13 +52,13 @@ const BenefitsSection: React.FC = () => {
         oreintation=""
       />
       <div className="mt-10 flex flex-col items-center gap-6">
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-col md:flex-row justify-center gap-6">
           {benefits.slice(0, 3).map((benefit, index) => (
             <BenefitCard key={index} {...benefit} />
           ))}
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-col md:flex-row justify-center gap-6">
           {benefits.slice(3, 5).map((benefit, index) => (
             <BenefitCard key={index} {...benefit} />
           ))}
