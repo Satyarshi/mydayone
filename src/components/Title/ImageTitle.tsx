@@ -15,7 +15,7 @@ const ImageTitle = ({title,description,image,oreintation}:ImageTitleProps ) => {
 				<img src={image} alt="blogs" className="relative top-12" />
 					<div className="w-14 rounded-full z-10 border-2 mb-2 border-purple-800 "></div>
 					<div className={`${oreintation=='left'?"text-left":oreintation=='right'? 'text-right':'text-center' }  space-y-5 z-10`}>
-						<h2 className={`text-4xl text-wrap md:text-5xl font-bold text-[#111827] `}>
+						<h2 className={`text-4xl text-wrap md:text-5xl font-bold stroke-black text-[#111827] `}>
 							{title}
 						</h2>
 						<p className="text-gray-500 text-base md:text-lg ">
