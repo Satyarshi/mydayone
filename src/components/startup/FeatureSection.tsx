@@ -16,7 +16,7 @@ const FeatureSection: React.FC = () => {
           <div className="flex flex-col lg:flex-row justify-evenly items-start px-8 py-16 space-y-12 lg:space-y-0 lg:space-x-12">
             <div className="text-left lg:w-1/2">
               <ImageTitle
-                image="/features.svg.svg"
+                image="/features.svg"
                 title={`Features That Power Transformation`}
                 description=""
                 oreintation="left"

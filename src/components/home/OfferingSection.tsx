@@ -43,7 +43,7 @@ const OfferingSection: React.FC = () => {
   };
   return (
     <section
-      className="relative md:py-14 offer-section bg-no-repeat bg-cover bg-center "
+      className="relative md:py-20 offer-section bg-no-repeat bg-cover bg-center "
       style={{ backgroundImage: "url(/Rectangle.svg)" }}
     >
       <div className="flex flex-col items-center text-center md:w-11/12 w-full px-4 mx-auto">
@@ -64,7 +64,7 @@ const OfferingSection: React.FC = () => {
                     className={`text-lg px-4 py-2 rounded-[50px] transition duration-300 ${
                       activeTab === tab
                         ? "text-white bg-purple-800"
-                        : "text-gray-500 hover:text-gray-800"
+                        : "text-[#FFFFFF] hover:text-gray-800 bg-[#E4E4E4]"
                     }`}
                   >
                     {tab}

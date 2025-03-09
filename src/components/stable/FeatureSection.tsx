@@ -19,7 +19,7 @@ const FeatureSection: React.FC = () => {
         <div className="max-w-2xl text-left p-5 relative">
           {/* Heading */}
           <ImageTitle
-            image="/Process.png"
+            image="/process1.svg"
             title="Hyper-Personalised Solutions for Sustained Readiness"
             description=""
             oreintation="left"

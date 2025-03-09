@@ -49,7 +49,7 @@ const FeatureSection: React.FC = () => {
     <section className="relative pb-12 w-full ">
       <div className="container mx-auto text-center z-10 px-4 sm:px-6 lg:px-8">
         <ImageTitle
-          image="/Features.png"
+          image="/features.svg"
           title="Unlock Innovation in Talent Readiness Journey"
           description=""
         />
