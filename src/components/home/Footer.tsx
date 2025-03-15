@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const Footer = () => {
   const [showProducts, setShowProducts] = useState(false);
+  const [showServices, setShowServices] = useState(false);
   return (
     <footer className="bg-[#fafbfb] py-8">
       <div className="container mx-auto px-20 flex flex-wrap justify-between gap-8">
@@ -77,7 +78,27 @@ const Footer = () => {
               )}
             </li>
             <li>
-              <a href="/service/startup">Services</a>
+              <button
+                onClick={() => setShowServices(!showServices)}
+                className="flex items-center"
+              >
+                Services{" "}
+                {showServices ? (
+                  <FaChevronUp className="ml-2" />
+                ) : (
+                  <FaChevronDown className="ml-2" />
+                )}
+              </button>
+              {showServices && (
+                <ul className="ml-4 mt-2 space-y-1">
+                  <li>
+                    <a href="/service/startup">Startup</a>
+                  </li>
+                  <li>
+                    <a href="/service/stable">Stable Enterprise</a>
+                  </li>
+                </ul>
+              )}
             </li>
           </ul>
         </div>

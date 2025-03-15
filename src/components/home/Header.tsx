@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
@@ -15,6 +15,8 @@ const Header: React.FC<HeaderProps> = ({ showCareers }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const dropDownRef = useRef<HTMLDivElement>(null);
+  const serviceDropDownRef = useRef<HTMLDivElement>(null);
 
   const pathname = usePathname();
 
@@ -27,13 +29,30 @@ const Header: React.FC<HeaderProps> = ({ showCareers }) => {
       setIsScrolled(window.scrollY >= 1500);
     };
 
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropDownRef.current &&
+        !dropDownRef.current.contains(event.target as Node)
+      ) {
+        setIsDropdownOpen(false);
+      }
+      if (
+        serviceDropDownRef.current &&
+        !serviceDropDownRef.current.contains(event.target as Node)
+      ) {
+        setIsServiceDropdownOpen(false);
+      }
+    };
+
     handleResize();
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -47,6 +66,9 @@ const Header: React.FC<HeaderProps> = ({ showCareers }) => {
     if (linkPath === "/products") {
       return pathname.startsWith("/product") ? "text-[#8f04f7]" : "text-current";
     }
+    if (linkPath === "/service") {
+      return pathname.startsWith("/service") ? "text-[#8f04f7]" : "text-current";
+    }
     return pathname === linkPath ? "text-[#8f04f7]" : "text-current";
   };
 
@@ -56,10 +78,12 @@ const Header: React.FC<HeaderProps> = ({ showCareers }) => {
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+    setIsServiceDropdownOpen(false);
   };
 
   const toggleServiceDropdown = () => {
     setIsServiceDropdownOpen(!isServiceDropdownOpen);
+    setIsDropdownOpen(false);
   };
 
   return (
@@ -86,7 +110,7 @@ const Header: React.FC<HeaderProps> = ({ showCareers }) => {
             <Link href="/" className={`${isActive("/")} hover:text-[#8f04f7]`} onClick={handleLinkClick}>
               Home
             </Link>
-            <div className="relative">
+            <div className="relative" ref={dropDownRef}>
               <button className={`${isActive("/products")} hover:text-[#8f04f7]`} onClick={toggleDropdown}>
                 Products
               </button>
@@ -104,13 +128,13 @@ const Header: React.FC<HeaderProps> = ({ showCareers }) => {
             {/* <Link href="/service/stable" className={`${isActive("/service/stable")} hover:text-[#8f04f7]`} onClick={handleLinkClick}>
               Service
             </Link> */}
-            <div className="relative">
+            <div className="relative"  ref={serviceDropDownRef}>
               <button className={`${isActive("/service")} hover:text-[#8f04f7]`} onClick={toggleServiceDropdown}>
                 Service
               </button>
 
               {isServiceDropdownOpen && (
-                <div className="absolute left-0 mt-2 bg-white border rounded shadow-lg z-20">
+                <div className="absolute left-0 mt-2 bg-white border rounded shadow-lg z-20 w-max min-w-[150px]">
                   <Link href="/service/startup" className="block px-4 py-2 hover:bg-gray-200 text-black" onClick={handleLinkClick}>
                     Startup
                   </Link>

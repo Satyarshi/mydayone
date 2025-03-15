@@ -1,5 +1,6 @@
 import React from "react";
 import ImageTitle from "../Title/ImageTitle";
+import Image from "next/image";
 
 const FeatureSection: React.FC = () => {
   return (
@@ -8,11 +9,15 @@ const FeatureSection: React.FC = () => {
         {/* Left Side - Image */}
 
         <div className="flex justify-center md:justify-start mb-8">
-          <img
-            src="/Image.svg"
-            alt="Person with laptop"
-            className="w-[500px] h-auto"
-          />
+          <div className="h-auto relative">
+            <Image
+              src="/Image.svg"
+              alt="Person with laptop"
+              width={500}
+              height={300}
+              className="object-contain"
+            />
+          </div>
         </div>
 
         {/* Right Side - Features */}
@@ -34,8 +39,13 @@ const FeatureSection: React.FC = () => {
                   alt="Check Icon"
                   className="mr-2 w-4 h-4 mt-1"
                 />
-                <div >
-                  <p className="text-base md:text-lg"><span className="font-semibold text-base md:text-lg">Customisable Talent Acceleration Paths: </span>Adaptable journeys aligned with roles.</p>
+                <div>
+                  <p className="text-base md:text-lg">
+                    <span className="font-semibold text-base md:text-lg">
+                      Customisable Talent Acceleration Paths:{" "}
+                    </span>
+                    Adaptable journeys aligned with roles.
+                  </p>
                 </div>
               </li>
               <li className="flex items-start text-base">
@@ -44,8 +54,13 @@ const FeatureSection: React.FC = () => {
                   alt="Check Icon"
                   className="mr-2 w-4 h-4 mt-1"
                 />
-                <div >
-                  <p className="text-base md:text-lg"><span className="font-semibold text-base md:text-lg">Insightful Analytics: </span>Real-time tracking to refine learning strategies.</p>
+                <div>
+                  <p className="text-base md:text-lg">
+                    <span className="font-semibold text-base md:text-lg">
+                      Insightful Analytics:{" "}
+                    </span>
+                    Real-time tracking to refine learning strategies.
+                  </p>
                 </div>
               </li>
               <li className="flex items-start text-base">
@@ -54,8 +69,13 @@ const FeatureSection: React.FC = () => {
                   alt="Check Icon"
                   className="mr-2 w-4 h-4 mt-1"
                 />
-                <div >
-                  <p className="text-base md:text-lg"><span className="font-semibold text-base md:text-lg">Effortless Integration: </span> Integrates smoothly with current platforms.</p>
+                <div>
+                  <p className="text-base md:text-lg">
+                    <span className="font-semibold text-base md:text-lg">
+                      Effortless Integration:{" "}
+                    </span>{" "}
+                    Integrates smoothly with current platforms.
+                  </p>
                 </div>
               </li>
               <li className="flex items-start text-base">
@@ -64,8 +84,13 @@ const FeatureSection: React.FC = () => {
                   alt="Check Icon"
                   className="mr-2 w-4 h-4 mt-1"
                 />
-                <div >
-                  <p className="text-base md:text-lg"><span className="font-semibold text-base md:text-lg">Clear ROI Metrics: </span>Concrete results that reflect readiness levels.</p>
+                <div>
+                  <p className="text-base md:text-lg">
+                    <span className="font-semibold text-base md:text-lg">
+                      Clear ROI Metrics:{" "}
+                    </span>
+                    Concrete results that reflect readiness levels.
+                  </p>
                 </div>
               </li>
             </ul>
