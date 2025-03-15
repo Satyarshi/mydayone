@@ -3,11 +3,9 @@ import React, { useState } from "react";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Mousewheel, Pagination } from "swiper/modules";
-import Image from "next/image";
 import { Swiper as SwiperType } from "swiper";
 import ImageTitle from "../Title/ImageTitle";
-import { image } from "framer-motion/client";
-import { release } from "os";
+import Image from "next/image";
 
 interface Stat {
   label: string;
@@ -30,12 +28,11 @@ interface VerticalSwiperProps {
 const ProgressBars = ({
   activePage,
   onBarClick,
-  pages
+  pages,
 }: {
   activePage: number;
   onBarClick: (index: number) => void;
   pages: Page[]; // Declare the type for the `pages` prop here
-
 }) => (
   <div className=" invisible md:visible flex flex-col items-center justify-center space-y-2 md:space-y-4">
     {pages.map((page, index) => (
@@ -52,14 +49,18 @@ const ProgressBars = ({
 
 const SectionPage = ({ page }: { page: Page }) => (
   <div className="section-page flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 lg:space-x-8 h-[880px] sm:h-[620px] bg-[#fbfbfc] ">
-    <div className="w-0 md:w-1/3 rounded-lg lg:flex lg:items-start lg:justify-center h-48 lg:h-auto hidden">
-      <img
+    <div className="w-0 md:w-1/3 rounded-lg lg:flex lg:items-start lg:justify-center hidden">
+      <Image
         src={page.image}
         alt={page.title}
-        className="object-contain h-auto w-full"
-        style={{ height: "auto" }}
+        className="object-contain"
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "100%", height: "auto" }}
       />
     </div>
+
     <div className=" relative px-4 w-full lg:w-2/3 text-left min-h-[500px] flex flex-col">
       <div>
         <div className="max-w-[700px]">
@@ -73,7 +74,9 @@ const SectionPage = ({ page }: { page: Page }) => (
         <h2 className="text-xl md:text-2xl t= font-semibold text-[#4A4A4A]">
           {page.heading}
         </h2>
-        <p className=" text-gray-500 text-base lg:text-lg">{page.description}</p>
+        <p className=" text-gray-500 text-base lg:text-lg">
+          {page.description}
+        </p>
       </div>
       <div className="mt-4 flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
         {page.stats.map((stat: any, idx: number) => (
@@ -119,7 +122,11 @@ const VerticalSwiper = ({ pages }: VerticalSwiperProps) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <ProgressBars activePage={activePage} onBarClick={handleBarClick} pages={pages}/>
+      <ProgressBars
+        activePage={activePage}
+        onBarClick={handleBarClick}
+        pages={pages}
+      />
     </div>
   );
 };

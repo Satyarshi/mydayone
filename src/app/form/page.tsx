@@ -1,5 +1,6 @@
 import React from "react";
 import ServiceSection from "@/components/form/ServiceSection";
+import { SubmitForm } from "../actions/form-submit";
 
 export const metadata = {
   title: "MyDayOne | Contact us",
@@ -12,7 +13,7 @@ const Form: React.FC = () => {
     <>
       {/* Hero Section */}
       <section className="flex justify-center items-center p-4 overflow-hidden">
-        <ServiceSection />
+        <ServiceSection saveFunction={SubmitForm}/>
       </section>
     </>
   );

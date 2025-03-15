@@ -52,12 +52,15 @@ const ProgressBars = ({
 
 const SectionPage = ({ page }: { page: Page }) => (
   <div className="section-page flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 lg:space-x-8 h-[880px] sm:h-[620px] bg-[#fbfbfc] ">
-    <div className="w-0 md:w-1/3 rounded-lg lg:flex lg:items-start lg:justify-center h-48 lg:h-auto hidden">
-      <img
+    <div className="w-0 md:w-1/3 rounded-lg lg:flex lg:items-start lg:justify-center hidden">
+      <Image
         src={page.image}
         alt={page.title}
-        className="object-contain h-auto w-full"
-        style={{ height: "auto" }}
+        className="object-contain"
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "100%", height: "auto" }}
       />
     </div>
     <div className=" relative px-4 w-full lg:w-2/3 text-left min-h-[500px] flex flex-col">

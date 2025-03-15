@@ -1,5 +1,6 @@
 import React from "react";
 import ImageTitle from "../Title/ImageTitle";
+import Image from "next/image";
 
 const WhoSection: React.FC = () => {
   return (
@@ -63,11 +64,15 @@ const WhoSection: React.FC = () => {
 
         {/* Right Side - Illustration */}
         <div className="flex justify-center mt-8 md:mt-0">
-          <img
-            src="/newwho.svg"
-            alt="Growth Illustration"
-            className="w-[300px] md:w-[500px] h-auto"
-          />
+          <div className="h-auto relative">
+            <Image
+              src="/newwho.svg"
+              alt="Person with laptop"
+              width={500}
+              height={300}
+              className="object-contain"
+            />
+          </div>
         </div>
       </div>
     </section>

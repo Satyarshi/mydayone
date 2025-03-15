@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Aos from "aos";
-import { PlayIcon } from "@radix-ui/react-icons";
+import Image from "next/image";
 import "aos/dist/aos.css";
 import ImageTitle from "../Title/ImageTitle";
 import { motion } from "framer-motion";
@@ -139,9 +139,12 @@ const FeatureSection: React.FC = () => {
                   data-aos-delay="50"
                 >
                   <div className="h-[150px] bg-gray-300 rounded-2xl mb-3 overflow-hidden">
-                    <img
+                    <Image
                       src="/sparcle-img-1.svg"
                       alt="Placeholder"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -156,14 +159,17 @@ const FeatureSection: React.FC = () => {
                   data-aos-delay="50"
                 >
                   <div className="h-[150px] bg-gray-300 rounded-2xl mb-3 flex items-center justify-center overflow-hidden">
-                    <img
+                    <Image
                       src="/sparcle-img-2.svg"
                       alt="Placeholder"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <h2 className="text-sm font-medium mb-1">
-                  Comprehensive solution for role based development
+                    Comprehensive solution for role based development
                   </h2>
                 </div>
               </div>

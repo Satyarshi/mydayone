@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import ImageTitle from "../Title/ImageTitle";
 import ProgressRing from "../home/ProgressRing";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const featureCards = [
   {
@@ -128,9 +129,12 @@ const InsightSection: React.FC = () => {
                   data-aos-delay="50"
                 >
                   <div className="h-[150px] bg-gray-300 rounded-2xl mb-3 overflow-hidden">
-                    <img
+                    <Image
                       src="/talent-img-1.svg"
                       alt="Placeholder"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -145,9 +149,12 @@ const InsightSection: React.FC = () => {
                   data-aos-delay="50"
                 >
                   <div className="h-[150px] bg-gray-300 rounded-2xl mb-3 flex items-center justify-center overflow-hidden">
-                    <img
+                    <Image
                       src="/talent-img-2.svg"
                       alt="Placeholder"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
                       className="w-full h-full object-cover"
                     />
                   </div>

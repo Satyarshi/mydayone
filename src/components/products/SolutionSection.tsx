@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Mousewheel } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper";
 import ImageTitle from "../Title/ImageTitle";
+import Image from "next/image";
 
 // Define the types for the `pages` prop and individual page structure
 interface Stat {
@@ -69,12 +70,15 @@ const SectionPage = ({ page }: { page: Page }) => (
         ))}
       </div>
     </div>
-    <div className="w-full lg:w-1/3 rounded-lg flex items-center justify-center h-48 lg:h-auto invisible lg:visible">
-      <img
+    <div className="w-full lg:w-1/3 rounded-lg flex items-center justify-center invisible lg:visible">
+      <Image
         src={page.image}
         alt="skills"
-        className="w-full object-contain"
-        style={{ height: "auto" }}
+        className="object-contain"
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "100%", height: "auto" }}
       />
     </div>
   </div>

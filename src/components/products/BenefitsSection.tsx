@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import ImageTitle from "../Title/ImageTitle";
+import Image from "next/image";
 
 interface BenefitsSectionProps {
   title: string;

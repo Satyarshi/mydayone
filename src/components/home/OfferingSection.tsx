@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import ImageTitle from "../Title/ImageTitle";
-import { a, div } from "framer-motion/client";
+import Image from "next/image";
 import ProgressRing from "./ProgressRing";
 
 const OfferingSection: React.FC = () => {
@@ -23,14 +23,36 @@ const OfferingSection: React.FC = () => {
   }, []);
 
   const tabContent: { [key: string]: () => React.JSX.Element } = {
-    Products:()=>
-    <>
-      Our innovative tech solutions, <span className="font-semibold text-gray-800"> SPARCLE </span>and <span className="font-semibold text-gray-800">talentSCOPE</span> revolutionize talent readiness and assessment in organizations. SPARCLE, powered by <span className="font-semibold text-gray-800">iTRAS (intelligent Talent Readiness Acceleration System)</span>, boosts readiness in core areas like role-based skills, leadership, product and process knowledge, and onboarding. talentSCOPE is an intelligent suite assessing skills, competencies, behaviors, product/process knowledge, and aptitude.
-    </>,
-    Services:()=>
-    <>
-      We provide customisable curation of consultation, coaching, content creation, program design, handholding and other bespoke support services tailored to meet unique requirements of your organisation. Our team of professionals is dedicated to ensure your <span className="font-semibold text-gray-800">talent and learning programs</span> are more effective, insightful, effortless, <span className="font-semibold text-gray-800">hyper personalised</span> at scale and provide desired ROI/outcomes.
-    </>
+    Products: () => (
+      <>
+        Our innovative tech solutions,{" "}
+        <span className="font-semibold text-gray-800"> SPARCLE </span>and{" "}
+        <span className="font-semibold text-gray-800">talentSCOPE</span>{" "}
+        revolutionize talent readiness and assessment in organizations. SPARCLE,
+        powered by{" "}
+        <span className="font-semibold text-gray-800">
+          iTRAS (intelligent Talent Readiness Acceleration System)
+        </span>
+        , boosts readiness in core areas like role-based skills, leadership,
+        product and process knowledge, and onboarding. talentSCOPE is an
+        intelligent suite assessing skills, competencies, behaviors,
+        product/process knowledge, and aptitude.
+      </>
+    ),
+    Services: () => (
+      <>
+        We provide customisable curation of consultation, coaching, content
+        creation, program design, handholding and other bespoke support services
+        tailored to meet unique requirements of your organisation. Our team of
+        professionals is dedicated to ensure your{" "}
+        <span className="font-semibold text-gray-800">
+          talent and learning programs
+        </span>{" "}
+        are more effective, insightful, effortless,{" "}
+        <span className="font-semibold text-gray-800">hyper personalised</span>{" "}
+        at scale and provide desired ROI/outcomes.
+      </>
+    ),
   };
   const handleToggle = (tabContent: string) => {
     if (tabContent !== activeTab) {
@@ -84,7 +106,11 @@ const OfferingSection: React.FC = () => {
           </p>
 
           {activeTab === "Products" ? (
-            <div className={`flex items-start justify-center gap-4 flex-wrap md:flex-nowrap ${isFading ? "opacity-0" : "opacity-100"}`}>
+            <div
+              className={`flex items-start justify-center gap-4 flex-wrap md:flex-nowrap ${
+                isFading ? "opacity-0" : "opacity-100"
+              }`}
+            >
               <div className="w-full md:w-[280px] flex items-center justify-center gap-4 flex-col">
                 <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow w-full p-6">
                   <ProgressRing
@@ -97,39 +123,60 @@ const OfferingSection: React.FC = () => {
                     Faster Skill Readiness
                   </p>
                 </div>
-                <img
+                <Image
                   src="/Meeting.svg"
                   alt="Meeting Presentation"
                   className="rounded-xl shadow w-full max-h-52 object-cover mt-auto"
+                  width={280}
+                  height={208}
                 />
               </div>
               <div className="w-full md:w-[436px] flex flex-col items-center justify-center gap-4 overflow-hidden">
-                <img
+                <Image
                   src="/productBento.svg"
                   alt="Statistics Graphic"
-                  className="rounded-xl object-cover md:w-[506px] "
+                  className="rounded-xl object-cover md:w-[506px]"
+                  width={506}
+                  height={280}
                 />
+
                 <div className="flex items-center w-full justify-center bg-white rounded-xl shadow p-6">
                   <p className="text-center text-base md:text-base font-semibold">
-                  Revolutionizing how talent readiness is accelerated and
+                    Revolutionizing how talent readiness is accelerated and
                     assessed in organisations.
                   </p>
                 </div>
               </div>
               <div className="w-full md:w-[285px] flex flex-col gap-4">
-                <img
+                <Image
                   src="/productpic1.png"
                   alt="Meeting Presentation"
                   className="rounded-xl w-full object-cover"
+                  width={285}
+                  height={160}
                 />
+
                 <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6">
-                  <img src="/SPARCLELogo.png" alt="" className="h-10" />
+                  <Image
+                    src="/SPARCLELogo.svg"
+                    alt=""
+                    className="h-10"
+                    width={180}
+                    height={40}
+                  />
                   <p className="mt-2 text-center text-gray-600 text-base md:text-base">
                     Accelerating Talent Readiness
                   </p>
                 </div>
                 <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-6">
-                  <img src="/talentscope2.png" alt="" className="h-10" />
+                  <Image
+                    src="/talentscope2.svg"
+                    alt=""
+                    className="h-10"
+                    width={200}
+                    height={40}
+                    unoptimized
+                  />
                   <p className="mt-2 text-center text-gray-600 text-base md:text-base">
                     Assessing your Talent
                   </p>
@@ -140,10 +187,13 @@ const OfferingSection: React.FC = () => {
             <div className={`${isFading ? "opacity-0" : "opacity-100"}`}>
               <div className="flex items-start justify-center  flex-wrap md:flex-nowrap mt-10 gap-4">
                 <div>
-                  <img
+                  <Image
                     src="/serviceTab1.png"
-                    alt=""
-                    className="max-h-[200px]"
+                    alt="Service Tab 1"
+                    width={0}
+                    height={0} 
+                    sizes="100vw" 
+                    className="w-auto max-h-[200px]"
                   />
                 </div>
                 <div className="bg-white text-black rounded-xl shadow p-6 h-[200px] w-[200px] flex flex-col justify-end">
@@ -168,10 +218,13 @@ const OfferingSection: React.FC = () => {
                   </p>
                 </div>
                 <div>
-                  <img
+                  <Image
                     src="/serviceTab2.png"
-                    className="max-h-[200px]"
-                    alt=""
+                    alt="Service Tab 2"
+                    width={0}
+                    height={0} 
+                    sizes="100vw" 
+                    className="w-auto max-h-[200px]"
                   />
                 </div>
               </div>

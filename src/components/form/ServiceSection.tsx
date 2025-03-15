@@ -5,11 +5,20 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ImageTitle from "../Title/ImageTitle";
 import { useState, useEffect } from "react";
+import { FormData as FormField } from "@/app/actions/form-submit";
+import { set } from "mongoose";
 
-const ServiceSection: React.FC = () => {
+interface FormSectionProps {
+  saveFunction: (
+    formData: FormField
+  ) => Promise<{ success: boolean; message: string }>;
+}
+
+const ServiceSection: React.FC<FormSectionProps> = ({saveFunction}) => {
   const [selectedValue, setSelectedValue] = useState<string>("");
   const [serviceValue, setServiceValue] = useState<string>("");
   const [orientation, setOrientation] = useState<string>("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedValue(event.target.value);
@@ -28,8 +37,9 @@ const ServiceSection: React.FC = () => {
     return () => window.removeEventListener("resize", updateOrientation);
   }, []);
   // Function to handle form submission
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(); // Prevent default form submission behavior
+    setLoading(true);
     const formData = {
       name: (e.target as HTMLFormElement).Name.value,
       companyName: (e.target as HTMLFormElement).companyName.value,
@@ -39,52 +49,18 @@ const ServiceSection: React.FC = () => {
       services: (e.target as HTMLFormElement).services.value,
       message: (e.target as HTMLFormElement).message.value,
     };
-
-    const emailDomain = formData.email.split("@")[1];
-    const publicDomains = [
-      "gmail.com",
-      "yahoo.com",
-      "outlook.com",
-      "hotmail.com",
-      "aol.com",
-      "icloud.com",
-    ];
-
-    if (publicDomains.some((domain) => emailDomain.endsWith(domain))) {
-      toast.error("Please use a business email address.", {
-        position: "top-center",
-        autoClose: 2000,
-      });
-      return;
+    try{
+      const response = await saveFunction(formData);
+      if(response.success){
+        toast.success(response.message,{ position: "top-center", autoClose: 2000 });
+      }else{
+        toast.error(response.message,{ position: "top-center", autoClose: 2000 });
+      }
+    }catch(error){
+      toast.error("An error occurred. Please try again.",{ position: "top-center", autoClose: 2000 });
+    }finally {
+      setLoading(false);
     }
-    console.log(formData);
-    fetch("http://localhost:8123/api/form-submit", {
-      headers: {
-        "Content-Type": "application/json",
-      },
-
-      method: "POST",
-      body: JSON.stringify(formData),
-    })
-      .then((response) => {
-        if (response.ok) {
-          toast.success("Form submitted successfully!", {
-            position: "top-center",
-            autoClose: 2000,
-          });
-        } else {
-          toast.error("Failed to submit form. Please try again.", {
-            position: "top-center",
-            autoClose: 2000,
-          });
-        }
-      })
-      .catch(() => {
-        toast.error("An error occurred. Please try again.", {
-          position: "top-center",
-          autoClose: 2000,
-        });
-      });
   };
 
   return (
@@ -243,9 +219,12 @@ const ServiceSection: React.FC = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-[#7030A0] text-white py-3 px-8 rounded-xl hover:bg-purple-700"
+            className={`w-full bg-[#7030A0] text-white py-3 px-8 rounded-xl hover:bg-purple-700 ${
+              loading ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            disabled={loading}
           >
-            Submit
+            {loading ? "Submitting..." : "Submit"}
           </button>
         </form>
       </div>
