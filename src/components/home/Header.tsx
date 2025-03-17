@@ -139,7 +139,7 @@ const Header: React.FC<HeaderProps> = ({ showCareers }) => {
                     Startup
                   </Link>
                   <Link href="/service/stable" className="block px-4 py-2 hover:bg-gray-200 text-black" onClick={handleLinkClick}>
-                    Stable Enterprise
+                    ScaleUp
                   </Link>
                 </div>
               )}
@@ -196,7 +196,7 @@ const Header: React.FC<HeaderProps> = ({ showCareers }) => {
                       Startup
                     </Link>
                     <Link href="/service/stable" className="block px-4 py-2 hover:bg-gray-200" onClick={handleLinkClick}>
-                      Stable Enterprise
+                      ScaleUp
                     </Link>
                   </div>
                 )}

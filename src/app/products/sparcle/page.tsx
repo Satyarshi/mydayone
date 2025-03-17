@@ -7,28 +7,32 @@ import ServiceSection from "@/components/products/ServiceSection";
 import SolutionSection from "@/components/products/SolutionSection";
 import ImageSection from "@/components/products/ImageSection";
 import FeatureSection from "@/components/products/FeatureSection";
-import { productData,page,solution } from "@/components/Data";
+import { productData, page, solution } from "@/components/Data";
 import ResourceSection from "@/components/products/ResourceSection";
 import UnlockPotentialSection from "@/components/home/UnlockPotentialSection";
 import PageHeader from "@/components/ui/PageHeader";
 import BlogsSection from "@/components/home/BlogSection";
-
+import Image from "next/image";
 
 export const metadata = {
   title: "MyDayOne | SPARCLE",
   description: "Revolutionize Talent Development with AI Precision",
   keywords: "AI, Talent Development, Revolutionize, Precision",
-}; 
+};
 
 const Product1: React.FC = () => {
   return (
     <>
-    <PageHeader title="SPARCLE" description="Revolutionize Talent Development with AI Precision" />
+      <PageHeader
+        title="SPARCLE"
+        description="Revolutionize Talent Development with AI Precision"
+      />
       <section className="flex justify-center items-center p-4 overflow-hidden mt-10 md:mt-24">
         <ImageSection
           heading={productData.heroSection.heading}
           subheading={productData.heroSection.subheading}
           buttonText={productData.heroSection.buttonText}
+          image="/SPARCLELogo.svg"
         />
       </section>
 
@@ -68,9 +72,8 @@ const Product1: React.FC = () => {
 
       {/* Services Section */}
       <section className="flex justify-center items-center md:px-10 ">
-        <ServiceSection pages={solution.sparcle}/>
+        <ServiceSection pages={solution.sparcle} />
       </section>
-
 
       {/* Pricing Section */}
       <section className="flex justify-center items-center p-4 overflow-hidden">
@@ -78,9 +81,15 @@ const Product1: React.FC = () => {
       </section>
 
       <BlogsSection />
-    
-      <UnlockPotentialSection buttonText="Join Us" ctaText="Start today" description="Book Your Free Demo Today!" title="See SPARCLE in Action" link="/form#service-form"  />
-      </>
+
+      <UnlockPotentialSection
+        buttonText="Join Us"
+        ctaText="Start today"
+        description="Book Your Free Demo Today!"
+        title="See SPARCLE in Action"
+        link="/form#service-form"
+      />
+    </>
   );
 };
 

@@ -7,6 +7,7 @@ interface ImageSectionProps {
   heading: string;
   subheading: string;
   buttonText: string;
+  image?: string;
 }
 
 const ImageSection: React.FC<ImageSectionProps> = ({
@@ -14,9 +15,15 @@ const ImageSection: React.FC<ImageSectionProps> = ({
   heading,
   subheading,
   buttonText,
+  image,
 }) => {
   return (
     <section className="flex flex-col items-center text-center py-5">
+      {image && (
+        <div className="relative w-full flex justify-center">
+          <Image src={image} alt="image" width={100} height={50} />
+        </div>
+      )}
       <HeroSection 
         shinyText={shinyText || undefined}
         heading={heading}

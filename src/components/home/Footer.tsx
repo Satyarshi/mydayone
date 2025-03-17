@@ -95,7 +95,7 @@ const Footer = () => {
                     <a href="/service/startup">Startup</a>
                   </li>
                   <li>
-                    <a href="/service/stable">Stable Enterprise</a>
+                    <a href="/service/stable">ScaleUp</a>
                   </li>
                 </ul>
               )}

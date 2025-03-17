@@ -32,6 +32,7 @@ const Product1: React.FC = () => {
           heading={productsData.heroSection.heading}
           subheading={productsData.heroSection.subheading}
           buttonText={productsData.heroSection.buttonText}
+          image="/talentscope2.svg"
         />
       </section>
 
