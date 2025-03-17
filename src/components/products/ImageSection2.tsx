@@ -21,7 +21,7 @@ const ImageSection: React.FC<ImageSectionProps> = ({
     <section className="flex flex-col items-center text-center py-5">
       {image && (
         <div className="relative w-full flex justify-center">
-          <Image src={image} alt="image" width={150} height={50} />
+          <Image src={image} alt="image" width={180} height={50} />
         </div>
       )}
       <HeroSection 
