@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import HeroSection from "../HeroSection";
+import { HeroVideo } from "../HeroVideo";
 
 interface ImageSectionProps {
   shinyText?: string;
@@ -32,8 +33,8 @@ const ImageSection: React.FC<ImageSectionProps> = ({
       />
       
       {/* Image Section */}
-      <div className="relative w-full flex justify-center">
-        <Image src="/sparcle product mockup.png" alt="image" width={1024} height={758} />
+      <div className="relative w-8/12 flex justify-center">
+        <HeroVideo />
       </div>
     </section>
   );
