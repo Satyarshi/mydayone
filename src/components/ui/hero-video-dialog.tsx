@@ -88,12 +88,12 @@ export default function HeroVideoDialog({
           alt={thumbnailAlt}
           width={1920}
           height={1080}
-          className="w-full rounded-md border shadow-lg transition-all duration-200 ease-out group-hover:brightness-[0.8]"
+          className="w-full rounded-md transition-all duration-200 ease-out group-hover:brightness-[0.8]"
         />
         <div className="absolute inset-0 flex scale-[0.9] items-center justify-center rounded-2xl transition-all duration-200 ease-out group-hover:scale-100">
           <div className="flex size-28 items-center justify-center rounded-full bg-primary/10 backdrop-blur-md">
             <div
-              className={`relative flex size-20 scale-100 items-center justify-center rounded-full bg-gradient-to-b from-[#C7397C] to-[#73319F] shadow-md transition-all duration-200 ease-out group-hover:scale-[1.2]`}
+              className={`relative flex size-20 scale-100 items-center justify-center rounded-full bg-gradient-to-b from-[#C7397C] to-[#73319F] transition-all duration-200 ease-out group-hover:scale-[1.2]`}
             >
               <Play
                 className="size-8 scale-100 fill-white text-white transition-transform duration-200 ease-out group-hover:scale-105"
@@ -124,12 +124,12 @@ export default function HeroVideoDialog({
                 <XIcon className="size-5" />
               </motion.button>
               <div className="relative isolate z-[1] size-full overflow-hidden rounded-2xl border-2 border-white">
-                <iframe
+                <video
                   src={videoSrc}
                   className="size-full rounded-2xl"
-                  allowFullScreen
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                ></iframe>
+                  controls
+                  autoPlay
+                ></video>
               </div>
             </motion.div>
           </motion.div>

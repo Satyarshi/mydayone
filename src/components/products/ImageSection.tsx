@@ -33,7 +33,7 @@ const ImageSection: React.FC<ImageSectionProps> = ({
       />
       
       {/* Image Section */}
-      <div className="relative w-8/12 flex justify-center">
+      <div className="relative w-full md:w-8/12 flex justify-center">
         <HeroVideo />
       </div>
     </section>
